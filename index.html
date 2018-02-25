@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta nom="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+
+    <title>Material Design</title>
+</head>
+<style>
+    body,html{
+        margin: 0;
+    }
+
+    .input-field label {
+     color: rgb(39, 65, 87);
+     margin: 0%;
+    
+   }
+
+   .row .col.s12
+   {
+       padding: 0;
+   }
+
+   .input-field{
+    padding: 0;
+    margin: 0;
+   }
+
+    h1
+    {
+        font-family: 'Patua One', cursive;
+        font-size: 7em;
+    }
+
+    #InscriptionTitre
+    {
+        font-family: "Oswald", sans-serif;
+    }  
+    #ligne1
+    {
+        min-height: 50vh;
+    }
+    #colonne1
+    {
+        height: 100%;
+    }
+
+    #ligne2
+    {
+        min-height: 50vh;
+    }
+    #formulaire
+    {
+        margin-top: 25px;
+    }
+</style>
+<body>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+     <!--Import jQuery before materialize.js-->
+
+     <div class=" row " >
+         <div class="col s12 blue lighten-1 " id="ligne1">
+            <div class="col offset-s5 s2 white z-depth-4 blue" id="formulaire">
+                    <h3 id="InscriptionTitre" class="center-align">Inscrivez-vous</h3>
+                <form>
+                    <div class="input-field">
+                    <input type="text" id="nom">
+                    <label class="active" for="nom">Nom</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="prenom">
+                        <label class="active" for="prenom">Prénom</label>
+                    </div>
+                    <div class="input-field">
+                    <input type="email" id="email" class="validate">
+                    <label class="active" for="email">Email</label>
+                    </div>
+                    <div class="input-field">
+                            <input type="password" id="motDePasse">
+                            <label class="active" for="motDePasse">Mot de passe</label>
+                    </div>
+                    <div class="input-field">
+                            <input type="password" id="motDePasseC">
+                            <label class="active" for="motDePasseC">Confirmer mot de passe</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+         <div class="col s12 blue lighten-3" id="ligne2">
+                <div class="col s2 amber accent-4" id="colonne1">
+                        <h5>InterPeople, c'est :</h5><br />
+                        <p>Plus de 5000 connexions par jour</p><br />
+                        <p>Des rencontres possibles chaque jour</p><br />
+                        <p>Notre site est disponible dans plus de 70 pays</p><br />
+                        <p>Une plateforme sans limite</p><br />
+                </div>
+        
+                <div class="col s6 offset-s1 center-align">
+                        <h1>InterPeople</h1>
+                        <p>Connect people, open your mind</p>
+                </div>
+        
+                <div class="col s2 offset-s1 amber accent-4">
+                        <h5>Nos fonctionnaliés : </h5><br />
+                        <p>Une liste d'amis facile à gérer</p><br />
+                        <p>Partager les postes de votre mur avec vos amis</p><br />
+                        <p>Gérer des groupes</p><br />
+                        <p>Chatter directement avec vos amis en LIVE !</p><br />
+                </div>
+             </div>
+           
+     </div>
+
+  
+        
+    </body>
+</html>         
