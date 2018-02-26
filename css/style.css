@@ -1,0 +1,86 @@
+body,html{
+    margin: 0;
+}
+
+.input-field label {
+ color: rgb(61, 29, 29);
+ margin: 0%;
+font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+.row .col.s12
+{
+   padding: 0;
+   margin-bottom:0;
+}
+
+.input-field{
+padding-top: 0;
+margin-top: 0;
+}
+
+h1
+{
+    font-family: 'Patua One', cursive;
+    font-size: 7em;
+}
+
+#InscriptionTitre
+{
+    font-family: "Oswald", sans-serif;
+}  
+#ligne1
+{
+    min-height: 50vh;
+}
+#colonne1
+{
+    height: 100%;
+    transition: all 0.75s;
+}
+#colonne2
+{
+    height: 100%;
+    transition: all 0.75s;
+}
+
+#ligne2
+{
+    min-height: 50vh;
+}
+#formulaire
+{
+    margin-top: 25px;
+}
+#BoutonLogIn
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+}
+
+#modal1 form
+{
+   width: 50%;
+   display: inline-block;
+}
+
+#TitreLogo p
+{
+   font-size:x-large;
+}
+
+#TitreLogo h1
+{
+   font-size:9.0em;
+}
+
+h4
+{
+    font-family: "Oswald", sans-serif;
+}
+p
+{
+    font-family: 'Poppins', sans-serif;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta nom="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+
+    <title>Interpeople Material</title>
+</head>
+<style>
+    body,html{
+        margin: 0;
+    }
+
+    .input-field label {
+     color: rgb(61, 29, 29);
+     margin: 0%;
+    font-family: 'Roboto', Helvetica, sans-serif;
+   }
+
+   form
+   {
+       width: 50%;
+       display: inline-block;
+   }
+
+   .row .col.s12
+   {
+       padding: 0;
+   }
+
+   .input-field{
+    padding-top: 0;
+    margin-top: 0;
+   }
+
+    h1
+    {
+        font-family: 'Patua One', cursive;
+        font-size: 7em;
+    }
+
+    #InscriptionTitre
+    {
+        font-family: "Oswald", sans-serif;
+    }  
+    #ligne1
+    {
+        min-height: 50vh;
+    }
+    #colonne1
+    {
+        height: 100%;
+        transition: all 0.75s;
+    }
+    #colonne2
+    {
+        height: 100%;
+        transition: all 0.75s;
+    }
+
+    #ligne2
+    {
+        min-height: 50vh;
+    }
+    #formulaire
+    {
+        margin-top: 25px;
+    }
+    #BoutonLogIn
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+    }
+
+    h4
+    {
+        font-family: "Oswald", sans-serif;
+    }
+    p
+    {
+        font-family: 'Patua One', cursive;
+    }
+
+</style>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+     <!--Import jQuery before materialize.js-->
+
+     <script>
+     $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });</script>
+
+<body>
+ <!-- Modal Trigger -->
+ <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+ <!-- Modal Structure -->
+ <div id="modal1" class="modal">
+   <div class="modal-content center-align">
+           <h4>Connexion à InterPeople</h4>
+       <form class="center-align">
+            <div class="input-field ">
+                    <input type="email" id="email" class="validate">
+                    <label class="active" for="email">Email</label>
+            </div>
+            </form>
+            <form >
+            <div class="input-field">
+                    <input type="password" id="motDePasse">
+                    <label class="active" for="motDePasse">Mot de passe</label>
+            </div>
+       </form>
+     <p>Bienvenue chère utilisateur, dérnière connexion le </p>
+   </div>
+   <div class="modal-footer">
+     <a href="#!" class=" blue white-text modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+   </div>
+ </div>
+         
+        
+    </body>
+</html>         
