@@ -37,7 +37,13 @@ html{
 {
     font-family: "Oswald", sans-serif;
     width: 100%;
+    margin-bottom: 0;
 }  
+
+#boutonInscription
+{
+    margin-bottom: 20px;
+}
 
 #formulaire
 {
@@ -48,6 +54,7 @@ html{
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: #FCFFF5;
 }
 
 #formulaire form
@@ -148,18 +155,18 @@ h1
     min-height: 50vh;
     padding: 0;
     margin: 0;
-    background-color:#91AAB4;
+    background-color:#3E606F;
 }
 
 #colonne1
 {
     transition: all 0.75s;
     margin-bottom: 0;
-    background-color: #42506A;
+    background-color: #193441;
 }
 #colonne2
 {
-    background-color: #42506A;    
+    background-color: #193441;    
     transition: all 0.75s;
 }
 
