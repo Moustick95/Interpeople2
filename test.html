@@ -12,125 +12,123 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+              <!--Import jQuery before materialize.js-->
+              <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+              <script type="text/javascript" src="js/materialize.min.js"></script>
 
     <title>Interpeople Material</title>
 </head>
 <style>
-    body,html{
-        margin: 0;
-    }
+  #fondNav {
+	max-width:100%;
+  -webkit-filter: brightness(10%); /* Safari */
+    filter: brightness(10%);
+    -webkit-filter: opacity(60%); /* Safari */
+    filter: opacity(60%);
+    -webkit-filter: contrast(60%); /* Safari 6.0 - 9.0 */
+    filter: contrast(60%);
+}
 
-    .input-field label {
-     color: rgb(61, 29, 29);
-     margin: 0%;
-    font-family: 'Roboto', Helvetica, sans-serif;
-   }
 
-   form
-   {
-       width: 50%;
-       display: inline-block;
-   }
+.user-view
+{
+  margin: 0 !important;
+}
 
-   .row .col.s12
-   {
-       padding: 0;
-   }
+#navProfil span
+{
+  width: 100%;
+  display: inline-block;
+}
 
-   .input-field{
-    padding-top: 0;
-    margin-top: 0;
-   }
+#navProfil
+{
+  display: flex;
+  flex-wrap: wrap;
+justify-content: flex-start;
+align-content: center;
+align-items: center;
+font-family: 'Roboto',sans-serif;
+}
 
-    h1
-    {
-        font-family: 'Patua One', cursive;
-        font-size: 7em;
-    }
+#name
+{
+  font-size: 2.0em;
+}
 
-    #InscriptionTitre
-    {
-        font-family: "Oswald", sans-serif;
-    }  
-    #ligne1
-    {
-        min-height: 50vh;
-    }
-    #colonne1
-    {
-        height: 100%;
-        transition: all 0.75s;
-    }
-    #colonne2
-    {
-        height: 100%;
-        transition: all 0.75s;
-    }
+#email
+{
+  font-size: 1.10em;
+}
+#navTexte
+{
+  width: 65%;
+  margin-left: 15px;
+}
 
-    #ligne2
-    {
-        min-height: 50vh;
-    }
-    #formulaire
-    {
-        margin-top: 25px;
-    }
-    #BoutonLogIn
-    {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0;
-    }
-
-    h4
-    {
-        font-family: "Oswald", sans-serif;
-    }
-    p
-    {
-        font-family: 'Patua One', cursive;
-    }
-
+#navTexte p
+{
+  margin: 0;
+}
+    
 </style>
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-     <!--Import jQuery before materialize.js-->
 
-     <script>
-     $(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    $('.modal').modal();
-  });</script>
+
+    
 
 <body>
- <!-- Modal Trigger -->
- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
- <!-- Modal Structure -->
- <div id="modal1" class="modal">
-   <div class="modal-content center-align">
-           <h4>Connexion à InterPeople</h4>
-       <form class="center-align">
-            <div class="input-field ">
-                    <input type="email" id="email" class="validate">
-                    <label class="active" for="email">Email</label>
+    <ul id="slide-out" class="side-nav">
+        <li><div class="user-view">
+            <div class="background">
+              <img id="fondNav" src="image/FondProfil.jpg">
             </div>
-            </form>
-            <form >
-            <div class="input-field">
-                    <input type="password" id="motDePasse">
-                    <label class="active" for="motDePasse">Mot de passe</label>
+            <div id="navProfil">
+            <a href="#!user"><img class="circle" src="image/index.png"></a>
+            <div id="navTexte">
+            <span class="white-text name" id="name"><p>John Doe</p></span>
+            <span class="white-text email" id="email"><p>jdandturk@gmail.com</p></span>
+            <br>
             </div>
-       </form>
-     <p>Bienvenue chère utilisateur, dérnière connexion le </p>
-   </div>
-   <div class="modal-footer">
-     <a href="#!" class=" blue white-text modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-   </div>
- </div>
-         
+          </div>
+          </div>
+        </li>
+        <li>
+            <div class="subheader center-align">Gestion de votre profil</div>
+        </li>
+        <li>
+          <a href="#"><i class="material-icons">account_circle</i> Profil</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <div class="subheader center-align">Vos relations</div>
+        </li>
+        <li>
+          <a href="#"><i class="material-icons">contacts</i>Amis</a>
+        </li>
+        <li>
+            <a href="#"><i class="material-icons">group</i>Groupes</a>
+          </li>
+          <li>
+              <div class="divider"></div>
+            </li>
+            <li>
+                <div class="subheader center-align">Autres</div>
+            </li>
+        <li>
+          <a href="#"><i class="material-icons">exit_to_app</i>Logout</a>
+        </li>
+      </ul>
+      <a href="" data-activates="slide-out" class="btn btn-large red darken-3 white-text waves-effect" id="btnSide"><i class="material-icons" >chevron_right</i></a>
+
+    <script type="text/Javascript">
+       $(document).ready(function(){
+          // Init Sidenav
+          $('#btnSide').sideNav();
+        });
+       </script>
         
     </body>
 </html>         
