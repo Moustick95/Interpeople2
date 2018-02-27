@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta nom="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,39 +34,39 @@
 
     <div class=" row " >
         <!-- Début de la ligne 1 -->
-        <div class="col s12 blue lighten-1 " id="ligne1">
+        <div class="col s12" id="ligne1">
 
              <!-- Formulaire d'inscription -->
-            <div class="col offset-s5 s2 white z-depth-5 blue" id="formulaire">
-                    <h3 id="InscriptionTitre" class="center-align">Inscrivez-vous</h3>
+            <div class="col offset-s5 s4  offset-l4 l4 white z-depth-3 blue" id="formulaire">
+                    <h3 id="InscriptionTitre center-align" >Inscrivez-vous</h3>
                 <form>
                     <div class="input-field">
                     <input type="text" id="nom">
-                    <label class="active" for="nom">Nom</label>
+                    <label class="active" for="nom" required>Nom</label>
                     </div>
                     <div class="input-field">
                         <input type="text" id="prenom">
-                        <label class="active" for="prenom">Prénom</label>
+                        <label class="active" for="prenom" required>Prénom</label>
                     </div>
                     <div class="input-field">
                     <input type="email" id="email" class="validate">
-                    <label class="active" for="email">Email</label>
+                    <label class="active" for="email" data-error="Votre mail doit être de forme exemple@domaine.fr" data-success="OK" required>Email</label>
                     </div>
                     <div class="input-field">
                             <input type="password" id="motDePasse">
-                            <label class="active" for="motDePasse">Mot de passe</label>
+                            <label class="active" for="motDePasse" required>Mot de passe</label>
                     </div>
                     <div class="input-field">
                             <input type="password" id="motDePasseC">
-                            <label class="active" for="motDePasseC">Confirmer mot de passe</label>
+                            <label class="active" for="motDePasseC" required>Confirmer mot de passe</label>
                     </div>
                 </form>
             </div>
             <!-- Formulaire d'inscription -->
 
             <!-- Bouton de connexion -->
-            <div class="col  offset-s3" id="BoutonLogIn">
-                <a class="btn btn-large blue  waves-effect waves-light modal-trigger " href="#modal1">Connexion</a>
+            <div class="col  offset-s3 offset-l3" id="BoutonLogIn">
+                <a class="btn btn-large indigo lighten-1  waves-effect waves-light modal-trigger " href="#modal1">Connexion</a>
             </div>
             <!-- Bouton de connexion -->
 
@@ -84,19 +84,19 @@
                                 <label class="active" for="motDePasse">Mot de passe</label>
                             </div>
                         </form>
-                    <p>Bienvenue chère utilisateur, dérnière connexion le </p>
+                    <p>Bienvenue cher utilisateur</p>
                 </div>
                 <div class="modal-footer">
-                    <a href="#!" class=" blue white-text modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    <a href="PageProfil.html" class=" green white-text modal-action modal-close waves-effect waves-green btn-flat">Valider</a>
                 </div>
             </div>
         </div>
         <!-- Fin de la ligne1 -->
         
         <!-- Début de la ligne 2 -->
-         <div class="col s12 blue lighten-3 z-depth-5" id="ligne2">
+         <div class="col s12 z-depth-5" id="ligne2">
              <!-- Colonne de gauche -->
-                <div class="col s2 red darken-1 z-depth-2 center-align" id="colonne1">
+                <div class="col s2 xl2  z-depth-5 left-align" id="colonne1">
                         <h5>InterPeople, c'est :</h5><br />
                         <p>Plus de 5000 connexions par jour</p><br />
                         <p>Des rencontres possibles chaque jour</p><br />
@@ -111,8 +111,8 @@
                 </div>
 
                 <!-- Colonne de droite -->
-                <div class="col s2 offset-s1 red darken-1 z-depth-2 center-align "id="colonne2">
-                        <h5>Nos fonctionnaliés : </h5><br />
+                <div class="col s2 offset-s1 z-depth-5 left-align "id="colonne2">
+                        <h5>Fonctionnaliés : </h5><br />
                         <p>Une liste d'amis facile à gérer</p><br />
                         <p>Partager les postes de votre mur avec vos amis</p><br />
                         <p>Gérer des groupes</p><br />

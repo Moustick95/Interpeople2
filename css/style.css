@@ -1,57 +1,120 @@
 body,html{
     margin: 0;
+    padding: 0;
+    -ms-overflow-style:none;
+}
+html{
+    margin-right:-14px!important;
+    overflow-y:scroll;
+    overflow-x:hidden;
 }
 
-.input-field label {
- color: rgb(61, 29, 29);
- margin: 0%;
-font-family: 'Roboto', Helvetica, sans-serif;
-}
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
 
-.row .col.s12
+.row
 {
-   padding: 0;
-   margin-bottom:0;
+    margin-bottom: 0;
 }
 
-.input-field{
-padding-top: 0;
-margin-top: 0;
-}
+/* ---------------------- Début Ligne 1 --------------------------*/
 
-h1
+#ligne1
 {
-    font-family: 'Patua One', cursive;
-    font-size: 7em;
+    min-height: 50vh;
+    padding: 0;
+    background-color:#CBDBD7;
 }
+
+/* ---------------------- Début Formulaire --------------------------*/
 
 #InscriptionTitre
 {
     font-family: "Oswald", sans-serif;
+    width: 100%;
 }  
-#ligne1
-{
-    min-height: 50vh;
-}
-#colonne1
-{
-    height: 100%;
-    transition: all 0.75s;
-}
-#colonne2
-{
-    height: 100%;
-    transition: all 0.75s;
-}
 
-#ligne2
-{
-    min-height: 50vh;
-}
 #formulaire
 {
-    margin-top: 25px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
+#formulaire form
+{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#formulaire div
+{
+    width: 65% ;
+    display: inline-block;
+}
+
+#formulaire .input-field
+{
+    max-height: 60px;
+}
+
+/* ---------------------- Début Input --------------------------*/
+
+.input-field{
+    padding-top: 0;
+    margin-top: 0;
+}
+
+  /* label color */
+  .input-field label {
+    color: rgb(12, 69, 83)!important ;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid rgb(78, 105, 255) !important;
+    box-shadow: 0 1px 0 0 rgb(24, 31, 71) !important;
+  }
+
+  .input-field input[type=email]:focus {
+    border-bottom: 1px solid rgb(78, 105, 255) !important;
+    box-shadow: 0 1px 0 0 rgb(24, 31, 71) !important;
+  }
+
+  .input-field input[type=password]:focus {
+    border-bottom: 1px solid rgb(78, 105, 255) !important;
+    box-shadow: 0 1px 0 0 rgb(24, 31, 71) !important;
+  }
+
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+    color: rgb(34, 33, 56) !important;
+  }
+
+/* ---------------------- Fin Input --------------------------*/
+
+/* ---------------------- Fin Formulaire --------------------------*/
+
+/* ------------------- Fin Ligne 1 -------------------*/
+
+
+/* Bouton de connexion */
+
 #BoutonLogIn
 {
     position: absolute;
@@ -60,10 +123,44 @@ h1
     padding: 0;
 }
 
+/* Bouton de connexion */
+
+h1
+{
+    font-family: 'Patua One', cursive;
+    font-size: 7em;
+}
+
+/* Début Boite Modal */
+
 #modal1 form
 {
    width: 50%;
    display: inline-block;
+}
+
+/*Fin Boite Modal */
+
+/* ----------------------- Ligne 2 -------------------------*/
+
+#ligne2
+{
+    min-height: 50vh;
+    padding: 0;
+    margin: 0;
+    background-color:#91AAB4;
+}
+
+#colonne1
+{
+    transition: all 0.75s;
+    margin-bottom: 0;
+    background-color: #42506A;
+}
+#colonne2
+{
+    background-color: #42506A;    
+    transition: all 0.75s;
 }
 
 #TitreLogo p
@@ -84,3 +181,26 @@ p
 {
     font-family: 'Poppins', sans-serif;
 }
+
+
+/*----------------------------- Ligne 2 -----------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
