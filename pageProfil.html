@@ -85,22 +85,40 @@ font-family: 'Roboto',sans-serif;
 {
   margin: 0;
 }
+
+#groupeListe > li , #groupeListe > li > a
+{
+    padding: 0px 0px !important;
+    margin: 0px 0px !important;
+    border-bottom: none !important;
+}
+
+#slide-out
+{
+    overflow-y: scroll;
+}
+
+#titreNav
+{
+    font-family: 'Oswald';
+    font-size: 2.5em;
+    
+}
     
 </style>
 <body>
-    <script type="text/Javascript">
-        $(window).load(function() {
-                    // Animate loader off screen
-                    $(".loader").fadeOut("slow");
-                    });
-    </script>
-
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="js/pageProfil.js"></script>
     <!--Import jQuery before materialize.js-->
 
+    <script type="text/Javascript">
+        $(window).load(function() {
+                    // Animate loader off screen
+                    $(".loader").fadeOut("slow");
+                    });
+    </script>
 
     <!-- Animation durant le chargement de la page -->
         <div class="loader center-align">
@@ -117,7 +135,8 @@ font-family: 'Roboto',sans-serif;
             </div>
         </div>
     <!-- Animation durant le chargement de la page -->
-    
+
+    <!-- Navbar -->
     <ul id="slide-out" class="side-nav">
             <li><div class="user-view">
                 <div class="background">
@@ -149,8 +168,19 @@ font-family: 'Roboto',sans-serif;
               <a href="#"><i class="material-icons">contacts</i>Amis</a>
             </li>
             <li>
-                <a href="#"><i class="material-icons">group</i>Groupes</a>
-              </li>
+                <a href="#" id="groupeButton"><i class="material-icons">group</i>Groupes</a>
+            </li>
+                <li>
+                     <!-- Navbar -->
+
+                     <!-- Structure bouton -->
+           <ul class="collection" id="groupeListe">
+                <li class="collection-item"><a class="black-text" href="#!">Link 1</a></li>
+                <li class="collection-item"><a class="black-text" href="#!">Link 2</a></li>
+                <li class="collection-item"><a class="black-text" href="#!">Link 3</a></li>
+                <li class="collection-item"><a class="black-text" href="#!">Link 4</a></li>
+            </ul>
+                </li>
               <li>
                   <div class="divider"></div>
                 </li>
@@ -161,16 +191,51 @@ font-family: 'Roboto',sans-serif;
               <a href="#"><i class="material-icons">exit_to_app</i>Logout</a>
             </li>
           </ul>
+          <div class="fixed-action-btn">
           <a href="" data-activates="slide-out" class="btn btn-large red darken-3 white-text waves-effect" id="btnSide"><i class="material-icons" >chevron_right</i></a>
+            </div>
+                     
+                     <!-- Structure bouton -->
 
+          <nav>
+                <div class="nav-wrapper" id="navTop">
+                  <a href="#" class="brand-logo center" id="titreNav">Profil</a>
+                </div>
+              </nav>
+              
+          <!--  
+              <div class="row">
+            <div class="s6">
+                <img class="materialboxed" width="650" src="images/sample-1.jpg">
+            </div>
+        </div>
+    </div>
+                                <div id="imageProfil">
+                                    -->
+
+          
+  
 
           <script type="text/Javascript">
-            
-
         $(document).ready(function(){
           // Init Sidenav
-          $('#btnSide').sideNav();
+        $('#btnSide').sideNav();
+
+          $('#groupeListe').hide();
+          
         });
+        $("#groupeButton").click(function(){
+            var $this = $(this);
+            if($this.data('clicked')) {
+                $this.data('clicked', false);
+                $('#groupeListe').hide();
+            }
+            else {
+                $this.data('clicked', true);
+                $('#groupeListe').show();
+            }
+        });
+
         </script>
 
 </body>
