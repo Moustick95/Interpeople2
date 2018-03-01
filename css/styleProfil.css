@@ -110,3 +110,9 @@ font-family: 'Roboto',sans-serif;
 {
     margin-top: 0px !important;
 }
+
+@media screen and (max-width: 1366px) {
+    .texteProfil {
+      font-size: 80%;
+    }
+  }

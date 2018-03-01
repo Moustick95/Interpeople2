@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
+
     $(".loader").hide();/*je cache le loader après le chargement de la page*/    
         // Init Sidenav
-    $('#btnSide').sideNav();
-
+    
     $('#groupeListe').hide();
 
     $("#groupeButton").click(function(){
@@ -18,6 +18,5 @@ $(document).ready(function(){
             $('#groupeListe').show();
         }
 });
-        
 });
-
+$(".button-collapse").sideNav(); 
