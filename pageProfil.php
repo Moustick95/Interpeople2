@@ -14,10 +14,10 @@ $InfoGeneral = $bdd->query('SELECT `Nom`,`Prenom`,`Email`, `Photo`, `Photo_Fond`
 $info = $InfoGeneral->fetchAll(PDO::FETCH_ASSOC);
 $profile = $_SESSION['id'];
 
-if (ISSET($_GET['Profil']) && $_GET['Profil'] != $id ) {
-$ProfileVisite = $bdd->query('SELECT `Profil_ID`,`Nom`,`Prenom`,`Photo`,`Photo_Fond` FROM `utilisateur` WHERE `Profil_ID` = "'.$_GET['Profil'].'" ');
-$InfoVisite = $ProfileVisite->fetchAll(PDO::FETCH_ASSOC);
-$profile = $_GET['Profil'];
+if (ISSET($_GET['Profil'])) {
+    $ProfileVisite = $bdd->query('SELECT `Profil_ID`,`Nom`,`Prenom`,`Photo`,`Photo_Fond` FROM `utilisateur` WHERE `Profil_ID` = "'.$_GET['Profil'].'" ');
+    $InfoVisite = $ProfileVisite->fetchAll(PDO::FETCH_ASSOC);
+    $profile = $_GET['Profil'];
 }
 
 $PubliGeneral = $bdd->query('SELECT `Contenu` FROM `publication` WHERE `Profil_ID` = "'.$profile.'" ');
@@ -82,18 +82,12 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
             <div class="user-view">
                 <div class="background">
                 <?php
-                if($info[0]['Photo_Fond'] == null)
-                    echo '<img id="fondNav" src="image/FondProfil.jpg">';
-                else
                     echo '<img id="fondNav" src='.$info[0]['Photo_Fond'].'>';
                 ?>
                 </div>
                 <div id="navProfil">
                 <?php
-                if ($info[0]['Photo'] == null)
-                    $pp = "image/index.png";
-                else
-                    $pp = $info[0]['Photo'];
+                $pp = $info[0]['Photo'];
                 echo '<a href="?Profil='.$_SESSION['id'].'"><img class="circle" src='.$pp.'></a>';
                 ?>
                     <div id="navTexte">
@@ -155,7 +149,7 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
 
     <!-- Bouton Navbar -->
     <div  id="btnSide">
-        <a data-activates="slide-out" class="btn btn-large red darken-3 white-text waves-effect button-collapse" ><i class="material-icons" >chevron_right</i></a>
+        <a data-activates="slide-out" class="btn btn-large blue darken-3 white-text waves-effect button-collapse" ><i class="material-icons" >chevron_right</i></a>
     </div>
     <!-- Bouton Navbar -->
                      
@@ -164,7 +158,7 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
 
      <!-- Début Header -->
     <nav>
-        <div class="nav-wrapper" id="navTop">
+        <div class="nav-wrapper indigo lighten-2" id="navTop">
             <a href="PageProfil.php" class="brand-logo center" id="titreNav">Profil</a>
         </div>
     </nav>
@@ -172,12 +166,15 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
 
     <!--  Ligne 1 -->
     <div class="row">
+        <div class="col s12">
+                <h4 class="center-align">John Doe</h4>
+        </div>
 
         <!-- Image Profil -->
         <div class="col s3 offset-s1 ">     
             <div class="card-panel white z-depth-3 center-align hauteur"  >
                 <?php
-                echo '<img class="responsive-img z-depth-1" width="200" src='.$pp.' alt="Image-Profil">';
+                echo '<img class="responsive-img z-depth-1" width="200" src='.$InfoVisite[0]['Photo'].' alt="Image-Profil">';
                 ?>
                 <div id="modifierImage">
                     <?php
@@ -190,21 +187,45 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
         <!-- Image Profil -->
 
         <!-- Description Utilisateur -->
-        <div class="col s4 offset-s2 ">
-            <div class="card-panel white z-depth-3 hauteur">
-                <div class="card-content black-text">
-                    <span class="card-title " id="titreCarte"> <h5>Card Title</h5></span>
-                        <p class="flow-text texteProfil">I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
-                            <p class="flow-text texteProfil">I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
-                        <p class="flow-text texteProfil">I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                        <p class="flow-text texteProfil">I am a very simple card. I am good at containing small bits of information.
-                                I am convenient because I require little markup to use effectively.</p>
-                </div>
-            </div>
-        </div>
+        <div class="col s12 m7">
+                            <div class="card horizontal z-depth-3">
+                              <div class="card-stacked">
+                                <div class="card-content">
+                                        <div class="card-tabs">
+                                                <ul class="tabs tabs-fixed-width">
+                                                  <li class="tab"><a href="#test4">Description</a></li>
+                                                  <li class="tab"><a class="active" href="#test5">Informations générales</a></li>
+                                                  <li class="tab"><a href="#test6">Compte</a></li>
+                                                </ul>
+                                              </div>
+                                              <div class="card-content grey lighten-4">
+                                                <div id="test4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                                </div>
+                                                <div id="test5">
+                                                    <ul class="">
+                                                        <li >Âge  : </li>
+                                                        <li >Nom : </li>
+                                                        <li >Prénom :</li>
+                                                        <li >Hobbies : </li>
+                                                    </ul>
+
+                                                </div>
+                                                <div id="test6">
+                                                    <ul class="">
+                                                        <li class="btn red">Changer de mot passe  </li>
+
+                                                    </ul>
+
+                                                </div>
+                                              </div>
+                                </div>
+                                <div class="card-action">
+                                    <button class="btn blue waves-effect z-depth-2">Modifier le texte</button>                                    
+                                </div>
+                              </div>
+                            </div>
+                          </div>
         <!-- Description Utilisateur -->
 
     </div>
@@ -213,26 +234,41 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
 
     <!--  Ligne 2 -->
     <div class="row">
+        <div class="col offset-s1">
+            <h4>Mes postes</h4>            
+        </div>
         <!-- Postes Utilisateurs -->
-        <div class="col s9 offset-s1 white z-depth-3 ">
-            <div class="col s8" >
-                <h4>Mes postes</h4>
-                    <div class="card-panel grey z-depth-2">
-                        <div class="card-content white-text">
-                            <span class="card-title"></span>
-                            
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
-                            
+        <div class="col s10 offset-s1 white z-depth-3 Postes">
+                
+                <div>
+                        <div class="card-panel grey z-depth-2">
+                                <div class="card-content white-text">
+                                    <span class="card-title ">Card Title</span>
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                                        <button class="btn green waves-effect waves-light" >Editer</button>                       
+                                        <button class="btn red waves-effect waves-light" >Supprimer</button>
+                                </div>
                         </div>
-                    </div>
-            </div>
-            <div class=" col s2 offset-s1 center-align " >
-                <div class="card-panel grey z-depth-2" style="margin-top:30%;">
-                    <button class="btn waves-effect waves-light" style="margin-top:10px;">Editer</button>
-                    <button class="btn waves-effect waves-light" style="margin-top:10px;">Supprimer</button>
+                        <div class="card-panel grey z-depth-2">
+                                <div class="card-content white-text">
+                                    <span class="card-title ">Card Title</span>
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                                        <button class="btn green waves-effect waves-light" >Editer</button>                       
+                                        <button class="btn red waves-effect waves-light" >Supprimer</button>
+                                </div>
+                        </div>
+                        <div class="card-panel grey z-depth-2">
+                                <div class="card-content white-text">
+                                    <span class="card-title ">Card Title</span>
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                                        <button class="btn green waves-effect waves-light" >Editer</button>                       
+                                        <button class="btn red waves-effect waves-light" >Supprimer</button>
+                                </div>
+                        </div>
                 </div>
-            </div>
         </div>
         <!-- Postes Utilisateurs -->
         
@@ -240,9 +276,38 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
     <!-- Fin Ligne 2 -->
 
     <div class="row">
-        <div class="col s9 offset-s1">
-            <div class="card-panel grey">2</div>
-        </div>
+            <div class="col offset-s1">
+                    <h4>Mes commentaires</h4>            
+            </div>
+            <div class="col s10 offset-s1 white z-depth-3 Postes">
+                            <div class="card-panel grey z-depth-2">
+                                    <div class="card-content white-text">
+                                        <span class="card-title ">Card Title</span>
+                                        <p>I am a very simple card. I am good at containing small bits of information.
+                                        I am convenient because I require little markup to use effectively.</p>
+                                            <button class="btn green waves-effect waves-light" >Editer</button>                       
+                                            <button class="btn red waves-effect waves-light" >Supprimer</button>
+                                    </div>
+                            </div>
+                            <div class="card-panel grey z-depth-2">
+                                    <div class="card-content white-text">
+                                        <span class="card-title ">Card Title</span>
+                                        <p>I am a very simple card. I am good at containing small bits of information.
+                                        I am convenient because I require little markup to use effectively.</p>
+                                            <button class="btn green waves-effect waves-light" >Editer</button>                       
+                                            <button class="btn red waves-effect waves-light" >Supprimer</button>
+                                    </div>
+                            </div>
+                            <div class="card-panel grey z-depth-2">
+                                    <div class="card-content white-text">
+                                        <span class="card-title ">Card Title</span>
+                                        <p>I am a very simple card. I am good at containing small bits of information.
+                                        I am convenient because I require little markup to use effectively.</p>
+                                            <button class="btn green waves-effect waves-light" >Editer</button>                       
+                                            <button class="btn red waves-effect waves-light" >Supprimer</button>
+                                    </div>
+                            </div>
+                    </div>
     </div>
 
     <script src="js/pageProfil.js"></script>
