@@ -15,9 +15,11 @@ $info = $InfoGeneral->fetchAll(PDO::FETCH_ASSOC);
 $profile = $_SESSION['id'];
 
 if (ISSET($_GET['Profil'])) {
-    $ProfileVisite = $bdd->query('SELECT `Profil_ID`,`Nom`,`Prenom`,`Photo`,`Photo_Fond` FROM `utilisateur` WHERE `Profil_ID` = "'.$_GET['Profil'].'" ');
+    $ProfileVisite = $bdd->query('SELECT * FROM `utilisateur` WHERE `Profil_ID` = "'.$_GET['Profil'].'" ');
     $InfoVisite = $ProfileVisite->fetchAll(PDO::FETCH_ASSOC);
     $profile = $_GET['Profil'];
+    if (sizeof($InfoVisite) == 0)
+        header('location:?Profil='.$_SESSION['id']);
 }
 
 $PubliGeneral = $bdd->query('SELECT `Contenu` FROM `publication` WHERE `Profil_ID` = "'.$profile.'" ');
@@ -167,7 +169,9 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
     <!--  Ligne 1 -->
     <div class="row">
         <div class="col s12">
-                <h4 class="center-align">John Doe</h4>
+            <?php
+                echo '<h4 class="center-align">'.$InfoVisite[0]['Prenom']." ".$InfoVisite[0]['Nom'].'</h4>';
+            ?>
         </div>
 
         <!-- Image Profil -->
@@ -179,7 +183,7 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
                 <div id="modifierImage">
                     <?php
                     if (ISSET($_GET['Profil']) && $_SESSION['id'] == $_GET['Profil'])
-                    echo '<a href="#" class="btn-floating orange btn-large z-depth-2"><i class="large material-icons ">mode_edit</i></a>';
+                    echo '<a class="btn-floating orange btn-large z-depth-2"><i class="large material-icons ">mode_edit</i></a>';
                     ?>
                 </div>
             </div>
@@ -195,34 +199,50 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
                                                 <ul class="tabs tabs-fixed-width">
                                                   <li class="tab"><a href="#test4">Description</a></li>
                                                   <li class="tab"><a class="active" href="#test5">Informations générales</a></li>
-                                                  <li class="tab"><a href="#test6">Compte</a></li>
+                                                  <?php
+                                                  if ($_SESSION['id'] == $_GET['Profil'])
+                                                  echo '<li class="tab"><a href="#test6">Compte</a></li>';
+                                                  ?>
                                                 </ul>
                                               </div>
                                               <div class="card-content grey lighten-4">
-                                                <div id="test4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                                </div>
+                                              <?php
+                                              if ($InfoVisite[0]['Description'] != null)
+                                                echo '<div id="test4">'.$InfoVisite[0]['Description'].'</div>';
+                                                ?>
                                                 <div id="test5">
                                                     <ul class="">
-                                                        <li >Âge  : </li>
-                                                        <li >Nom : </li>
-                                                        <li >Prénom :</li>
-                                                        <li >Hobbies : </li>
+                                                    <?php
+                                                    if ($InfoVisite[0]['Date_Naissance'] != null) {
+                                                        date_default_timezone_set('Europe/Paris');
+                                                        sscanf($InfoVisite[0]['Date_Naissance'], "%4d-%2s-%2d", $annee, $mois, $jour);
+                                                        setlocale(LC_TIME, 'fr');
+                                                        $date = utf8_encode(strftime("%d %B %Y",strtotime($mois."/".$jour."/".$annee)));
+                                                        echo '<li >Date de naissance  : '.$date.'</li>';
+                                                    }
+                                                    if ($InfoVisite[0]['Hobbies'] != null)
+                                                        echo '<li >Hobbies : '.$InfoVisite[0]['Hobbies'].'</li>' ;
+                                                    ?>
                                                     </ul>
 
                                                 </div>
                                                 <div id="test6">
                                                     <ul class="">
-                                                        <li class="btn red">Changer de mot passe  </li>
-
+                                                    <?php
+                                                    if ($_SESSION['id'] == $_GET['Profil'])
+                                                        echo '<li class="btn red">Changer de mot passe  </li>';
+                                                    ?>
                                                     </ul>
 
                                                 </div>
                                               </div>
                                 </div>
-                                <div class="card-action">
-                                    <button class="btn blue waves-effect z-depth-2">Modifier le texte</button>                                    
-                                </div>
+                                <?php
+                                if ($_SESSION['id'] == $_GET['Profil'])
+                                echo '<div class="card-action">                                
+                                      <button class="btn blue waves-effect z-depth-2">Modifier le texte</button>
+                                      </div>';
+                                ?>
                               </div>
                             </div>
                           </div>
@@ -241,33 +261,23 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
         <div class="col s10 offset-s1 white z-depth-3 Postes">
                 
                 <div>
-                        <div class="card-panel grey z-depth-2">
-                                <div class="card-content white-text">
-                                    <span class="card-title ">Card Title</span>
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
-                                        <button class="btn green waves-effect waves-light" >Editer</button>                       
-                                        <button class="btn red waves-effect waves-light" >Supprimer</button>
-                                </div>
-                        </div>
-                        <div class="card-panel grey z-depth-2">
-                                <div class="card-content white-text">
-                                    <span class="card-title ">Card Title</span>
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
-                                        <button class="btn green waves-effect waves-light" >Editer</button>                       
-                                        <button class="btn red waves-effect waves-light" >Supprimer</button>
-                                </div>
-                        </div>
-                        <div class="card-panel grey z-depth-2">
-                                <div class="card-content white-text">
-                                    <span class="card-title ">Card Title</span>
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
-                                        <button class="btn green waves-effect waves-light" >Editer</button>                       
-                                        <button class="btn red waves-effect waves-light" >Supprimer</button>
-                                </div>
-                        </div>
+                    <?php
+                    $postes = $bdd->query(' SELECT `Contenu`,`DatePubli` FROM `publication` WHERE `Profil_ID` = "'.$_GET['Profil'].'" ORDER BY `DatePubli` ASC ');
+                    $PostesContenu = $postes->fetchAll(PDO::FETCH_ASSOC);
+                    if (sizeof($PostesContenu) != 0) {
+                        foreach($PostesContenu as $PosteContenu) {
+                            echo '<div class="card-panel grey z-depth-2">
+                                  <div class="card-content white-text">
+                                    <span class="card-title ">'.$InfoVisite[0]['Prenom'].' '.$InfoVisite[0]['Nom'].'</span>
+                                        <p>'.$PosteContenu['Contenu'].'</p>';
+                                        if ($_SESSION['id'] == $_GET['Profil'])
+                                        echo '<button class="btn green waves-effect waves-light" >Editer</button>                    
+                                              <button class="btn red waves-effect waves-light" >Supprimer</button>';
+                                   echo '</div>
+                            </div>';
+                        }
+                    }
+                    ?>
                 </div>
         </div>
         <!-- Postes Utilisateurs -->
@@ -280,33 +290,27 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
                     <h4>Mes commentaires</h4>            
             </div>
             <div class="col s10 offset-s1 white z-depth-3 Postes">
-                            <div class="card-panel grey z-depth-2">
+                        <?php
+                        $commentaires = $bdd->query(' SELECT `CommentaireContenu`, `PublicationApp_ID` FROM `commentaire` WHERE `ProfilApp_ID` = "'.$_GET['Profil'].'" ORDER BY `CommentaireDate` ASC ');
+                        $CommentairesInfo = $commentaires->fetchAll(PDO::FETCH_ASSOC);
+                        foreach ($CommentairesInfo as $CommentaireInfo) {
+                            $PubliComm = $bdd->query(' SELECT `DatePubli`,`Contenu`,`Profil_ID` FROM `publication` WHERE `Publication_ID` = "'.$CommentaireInfo['PublicationApp_ID'].'" ');
+                            $PubliComm = $PubliComm->fetchAll(PDO::FETCH_ASSOC);
+                            $CreateurPubli = $bdd->query(' SELECT `Nom`,`Prenom` FROM `utilisateur` WHERE `Profil_ID` = "'.$PubliComm[0]['Profil_ID'].'"  ');
+                            $CreateurPubli = $CreateurPubli->fetchAll(PDO::FETCH_ASSOC);
+                            echo '<div class="card-panel grey z-depth-2">
                                     <div class="card-content white-text">
-                                        <span class="card-title ">Card Title</span>
-                                        <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
-                                            <button class="btn green waves-effect waves-light" >Editer</button>                       
-                                            <button class="btn red waves-effect waves-light" >Supprimer</button>
+                                        <span class="card-title ">'.$CreateurPubli[0]['Prenom'].' '.$CreateurPubli[0]['Nom'].'</span>';
+                                echo    '<p>'.$PubliComm[0]['Contenu'].'</p>
+                                         <p>'.$CommentaireInfo['CommentaireContenu'].'</p>';
+                                         if ($_SESSION['id'] == $_GET['Profil'])
+                                            echo   '<button class="btn green waves-effect waves-light" >Editer</button>                       
+                                                    <button class="btn red waves-effect waves-light" >Supprimer</button>
                                     </div>
-                            </div>
-                            <div class="card-panel grey z-depth-2">
-                                    <div class="card-content white-text">
-                                        <span class="card-title ">Card Title</span>
-                                        <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
-                                            <button class="btn green waves-effect waves-light" >Editer</button>                       
-                                            <button class="btn red waves-effect waves-light" >Supprimer</button>
-                                    </div>
-                            </div>
-                            <div class="card-panel grey z-depth-2">
-                                    <div class="card-content white-text">
-                                        <span class="card-title ">Card Title</span>
-                                        <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
-                                            <button class="btn green waves-effect waves-light" >Editer</button>                       
-                                            <button class="btn red waves-effect waves-light" >Supprimer</button>
-                                    </div>
-                            </div>
+                            </div>';
+                        }
+                        ?>
+                            
                     </div>
     </div>
 
