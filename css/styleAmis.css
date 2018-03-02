@@ -5,15 +5,17 @@
     width: 10em;
 }
 
+.container
+{
+  width: 85% !important;
+}
+
 .card-content
 {
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-    font-size: 1.15em !important;
-    border-radius: 0px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
+
 
 .card-action
 {
@@ -37,6 +39,18 @@
     width: 10em !important;
 }
 
+.Contenant
+{
+  width: 11em;
+}
+
+.s12
+{
+  display:flex !important; 
+  justify-content:flex-start !important;
+}
+
+
 #bouton
 {
     width: 100% !important;
@@ -49,43 +63,4 @@
     border-top-right-radius: 0px !important; 
 }
 
-#navProfil span
-{
-  width: 100%;
-  display: inline-block;
-}
-
-#navProfil
-{
-  display: flex;
-  flex-wrap: wrap;
-justify-content: flex-start;
-align-content: center;
-align-items: center;
-font-family: 'Roboto',sans-serif;
-}
-
-#fondNav {
-	max-width:100%;
-  -webkit-filter: brightness(10%); /* Safari */
-    filter: brightness(10%);
-    -webkit-filter: opacity(60%); /* Safari */
-    filter: opacity(60%);
-    -webkit-filter: contrast(60%); /* Safari 6.0 - 9.0 */
-    filter: contrast(60%);
-}
-
-#btnSide > a 
-{
-    height: 64px ;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
-
-#btnSide i
-{
-    height: 64px !important;
-    margin-top: 25%;
-}
 
