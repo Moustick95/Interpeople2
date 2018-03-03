@@ -1,8 +1,11 @@
 $(document).ready(function(){
+
+    $('input#input_text, textarea#textarea1').characterCounter();
+
     $(".loader").hide();/*je cache le loader après le chargement de la page*/    
         // Init Sidenav
     
-        $('.modal').modal();
+    $('.modal').modal();
 
     $('#groupeListe').hide();
 
@@ -17,7 +20,7 @@ $(document).ready(function(){
             $this.data('clicked', true);
             $('#groupeListe').show();
         }
-});
+    });
 
 $('#case1').click(function(){
     $('#boutonDescription').text('Modifier la description');

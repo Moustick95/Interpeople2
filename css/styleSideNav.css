@@ -28,11 +28,11 @@
 
 #slide-out
 {
-    display: block;
-overflow:hidden;
-overflow-x: hidden;
-overflow-y: auto;
-overflow : -moz-scrollbars-vertical;
+  display: block;
+  overflow:hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow : -moz-scrollbars-vertical;
 }
 
 #navProfil span
