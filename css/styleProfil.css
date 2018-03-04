@@ -139,3 +139,18 @@ color: grey !important;
 {
     width: 60%;
 }
+
+@media screen and (max-width: 1400px)
+
+{
+    .messageType
+    {
+        width: 100%;
+    }
+
+    h5
+    {
+        font-size: 1.35em;
+    }
+
+}
