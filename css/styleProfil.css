@@ -3,6 +3,13 @@ html,body
     margin: 0;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
+}
+
+h4
+{
+    font-family: 'Poppins',sans-serif;
+    margin: 0px;
 }
 
 .loader
@@ -86,6 +93,8 @@ html,body
 #carteDescription
 {
     margin:10px !important;
+    margin-bottom: 20px !important;
+    height: 315px !important;
 }
 
 #espaceBouton
@@ -103,4 +112,30 @@ html,body
 
 color: grey !important;
 
+}
+
+.modal
+{
+    width: 60% !important;
+    margin: auto !important;
+}
+
+#groupeListe li > a
+{
+    width: 100% !important;
+}
+
+#modal2 input
+{
+    margin-bottom: 5px !important;
+}
+
+.TitreMessage
+{
+    margin-bottom:5px;
+}
+
+.messageType
+{
+    width: 60%;
 }

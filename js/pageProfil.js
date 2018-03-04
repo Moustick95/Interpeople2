@@ -1,9 +1,10 @@
 $(document).ready(function(){
 
+    Materialize.updateTextFields();
+
     $('input#input_text, textarea#textarea1').characterCounter();
 
-    $(".loader").hide();/*je cache le loader après le chargement de la page*/    
-        // Init Sidenav
+    $(".loader").hide();
     
     $('.modal').modal();
 

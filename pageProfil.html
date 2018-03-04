@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <!--Import Google Icon Font-->
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-     <!--Import materialize.css-->
-     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
- 
-     <!--Import Fonts -->
-     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
-     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
- 
-     <!-- Import CSS -->
-     <link rel="stylesheet" href="css/styleProfil.css">
-     <link rel="stylesheet" href="css/styleSideNav.css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Import Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="css/styleProfil.css">
+    <link rel="stylesheet" href="css/styleSideNav.css">
     <title>Profil/Interpeople</title>
 
 </head>
 
-
 <body>
-
     <!--Import jQuery before materialize.js-->
-    
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--Import jQuery before materialize.js-->
 
     <!-- Animation durant le chargement de la page -->
     <div class="loader center-align">
-        <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-blue-only">
-                <div class="circle-clipper left">
-                    <div class="circle"></div>
-                </div><div class="gap-patch">
-                    <div class="circle"></div>
-                </div><div class="circle-clipper right">
-                    <div class="circle"></div>
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Animation durant le chargement de la page -->
+        <!-- Animation durant le chargement de la page -->
 
     <!-- Navbar -->
     <ul id="slide-out" class="side-nav">
@@ -56,10 +56,16 @@
                     <img id="fondNav" src="image/FondProfil.jpg">
                 </div>
                 <div id="navProfil">
-                    <a href="#!user"><img class="circle" src="image/index.png"></a>
+                    <a href="#!user">
+                        <img class="circle" src="image/index.png">
+                    </a>
                     <div id="navTexte">
-                        <span class="white-text name" id="name"><p>John Doe</p></span>
-                        <span class="white-text email" id="email"><p>jdandturk@gmail.com</p></span>
+                        <span class="white-text name" id="name">
+                            <p>John Doe</p>
+                        </span>
+                        <span class="white-text email" id="email">
+                            <p>jdandturk@gmail.com</p>
+                        </span>
                         <br>
                     </div>
                 </div>
@@ -69,7 +75,8 @@
             <div class="subheader center-align">Gestion de votre profil</div>
         </li>
         <li>
-            <a href="#"><i class="material-icons">account_circle</i> Profil</a>
+            <a href="#">
+                <i class="material-icons ">account_circle</i> Profil</a>
         </li>
         <li>
             <div class="divider"></div>
@@ -78,17 +85,36 @@
             <div class="subheader center-align">Vos relations</div>
         </li>
         <li>
-            <a href="pageAmis.html"><i class="material-icons">contacts</i>Amis</a>
+            <a href="pageAmis.html" >
+                <i class="material-icons blue-text" >contacts</i>Amis</a>
         </li>
         <li>
-            <a href="#" id="groupeButton"><i class="material-icons">group</i>Groupes</a>
+                <a href="pageAmis.html" >
+                    <i class="material-icons red-text" >public</i>Votre mur</a>
+            </li>
+        <li>
+            <a href="#" id="groupeButton">
+                <i class="material-icons green-text">group</i>Groupes</a>
         </li>
         <li>
-           <ul class="collection" id="groupeListe">
-                <li class="collection-item"><a class="black-text" href="#!">Link 1</a></li>
-                <li class="collection-item"><a class="black-text" href="#!">Link 2</a></li>
-                <li class="collection-item"><a class="black-text" href="#!">Link 3</a></li>
-                <li class="collection-item"><a class="black-text" href="#!">Link 4</a></li>
+            <ul class="collection" id="groupeListe">
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 1</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 2</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 3</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 4</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">
+                        <i class="material-icons">add_circle</i>
+                    </a>
+                </li>
             </ul>
         </li>
         <li>
@@ -98,218 +124,355 @@
             <div class="subheader center-align">Autres</div>
         </li>
         <li>
-            <a href="#"><i class="material-icons">exit_to_app</i>Logout</a>
+            <a href="#">
+                <i class="material-icons">exit_to_app</i>Logout</a>
         </li>
     </ul>
     <!-- Navbar -->
 
     <!-- Bouton Navbar -->
-    <div  id="btnSide">
-        <a href="#" data-activates="slide-out" class="btn btn-large blue darken-3 white-text waves-effect button-collapse" ><i class="material-icons" >chevron_right</i></a>
+    <div id="btnSide">
+        <a href="#" data-activates="slide-out" class="btn btn-large blue darken-3 white-text waves-effect button-collapse">
+            <i class="material-icons">chevron_right</i>
+        </a>
     </div>
     <!-- Bouton Navbar -->
-                     
+
     <!-- Composant de la page -->
     <!-- ------------------------- -->
 
-     <!-- Début Header -->
+    <!-- Début Header -->
     <nav>
-        <div class="nav-wrapper indigo lighten-2" id="navTop">
+        <div class="nav-wrapper blue lighten-2" id="navTop">
             <a href="#" class="brand-logo center" id="titreNav">Interpeople</a>
         </div>
     </nav>
-     <!-- Fin Header -->              
+    <!-- Fin Header -->
+
+    <!-- Petite ligne -->
+    <div class="col s12  blue lighten" style="height:3px;">
+    </div>
+    <!-- Petite ligne -->
+
 
     <!--  Ligne 1 -->
     <div class="row">
-        <div class="col s12">
-                <h4 class="center-align">John Doe</h4>
+        
+        <div class="col s12 light-blue darken-4 z-depth-1 white-text">
+            <h4 class="center-align">John Doe</h4>
         </div>
 
-
         <!-- Image Profil -->
-        <div class="col s3 offset-s1 ">     
-            <div class="card-panel white z-depth-3 center-align hauteur"  >
+        <div class="col s3 offset-s1">
+            <div class="card-panel white z-depth-3 center-align hauteur">
                 <img class="responsive-img z-depth-1" width="200" src="image/index.png" alt="Image-Profil">
                 <div id="modifierImage">
-                    <a href="#" class="btn-floating orange btn-large z-depth-2"><i class="large material-icons ">mode_edit</i></a>
+                    <a href="#" class="btn-floating orange btn-large z-depth-2">
+                        <i class="large material-icons ">mode_edit</i>
+                    </a>
                 </div>
             </div>
         </div>
         <!-- Image Profil -->
 
         <!-- Description Utilisateur -->
-        <div class="col s12 m7">
-                            <div class="card horizontal z-depth-3">
-                              <div class="card-stacked indigo lighten-4">
-                                <div class="card-content z-depth-1 white" id="carteDescription">
-                                        <div class="card-tabs ">
-                                                <ul class="tabs tabs-fixed-width">
-                                                  <li class="tab" ><a id="case1" href="#test4">Description</a></li>
-                                                  <li class="tab"><a id="case2" class="active" href="#test5">Informations générales</a></li>
-                                                  <li class="tab"><a id="case3" href="#test6">Compte</a></li>
-                                                </ul>
-                                              </div>
-                                              <div class="card-content grey lighten-4" id="infosUtilisateur">
-                                                <div id="test4">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                                    </p>
-                                                </div>
-                                                <div id="test5">
-                                                        <ul class="collection " id="colonne1">
-                                                                <li class="collection-item">Prénom :</li>
-                                                                <li class="collection-item">Nom :</li>
-                                                                <li class="collection-item">Date de naissance</li>
-                                                                <li class="collection-item">Hobbies :</li>
-                                                              </ul>
-                                                              <ul class="collection" id="colonne2">
-                                                                    <li class="collection-item">John</li>
-                                                                    <li class="collection-item">Doe</li>
-                                                                    <li class="collection-item">01/01/1995</li>
-                                                                    <li class="collection-item">Musique </li>
-                                                                  </ul>
-                                                </div>
-                                                <div id="test6">
-                                                    <ul class="">
-                                                        <li class="btn red">Changer de mot passe  </li>
-                                                    </ul>
-                                                </div>
-                                              </div>
-                                </div>
-                                <div class="card-action z-depth-1 white center-align" id="espaceBouton">
-                                    <a class="btn blue waves-effect z-depth-2 modal-trigger" id="boutonDescription">Modifier la description</a>                                    
-                                </div>
-                              </div>
+        <div class="col s12 m6 offset-m1">
+            <div class="card horizontal z-depth-3">
+                <div class="card-stacked indigo lighten-4">
+                    <div class="card-content z-depth-1 white" id="carteDescription">
+                        <div class="card-tabs ">
+                            <ul class="tabs tabs-fixed-width">
+                                <li class="tab">
+                                    <a id="case1" href="#test4">Description</a>
+                                </li>
+                                <li class="tab">
+                                    <a id="case2" class="active" href="#test5">Informations générales</a>
+                                </li>
+                                <li class="tab">
+                                    <a id="case3" href="#test6">Compte</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-content grey lighten-4" id="infosUtilisateur">
+                            <!-- Contenu panneau Description -->
+                            <div id="test4">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
+                                    dolor sit amet, consectetur adipisicing elit.
+                                </p>
                             </div>
-                          </div>
+                            <!-- Contenu panneau Description -->
+                            <!-- Contenu panneau Informations générales -->
+                            <div id="test5">
+                                <ul class="collection " id="colonne1">
+                                    <li class="collection-item">Prénom :</li>
+                                    <li class="collection-item">Nom :</li>
+                                    <li class="collection-item">Date de naissance</li>
+                                    <li class="collection-item">Hobbies :</li>
+                                </ul>
+                                <ul class="collection" id="colonne2">
+                                    <li class="collection-item">John</li>
+                                    <li class="collection-item">Doe</li>
+                                    <li class="collection-item">01/01/1995</li>
+                                    <li class="collection-item">Musique </li>
+                                </ul>
+                            </div>
+                            <!-- Contenu panneau Informations générales -->
+                            <!-- Contenu panneau Compte -->
+                            <div id="test6">
+                                <ul class="">
+                                    <li class="btn red">Changer de mot passe </li>
+                                </ul>
+                            </div>
+                            <!-- Contenu panneau Compte -->
+                        </div>
+                    </div>
+                    <a class="btn blue accent-2 hoverable waves-effect z-depth-2 modal-trigger" id="boutonDescription">Modifier la description</a>
+                </div>
+            </div>
+        </div>
         <!-- Description Utilisateur -->
-
     </div>
     <!--  Fin Ligne 1 -->
 
-
-    <!--  Ligne 2 -->
-    <div class="row">
-        <div class="col s12 offset-1">
-        <div class="col offset-s1">
-                <h4>Mes postes</h4>            
+    <!-- Debut ligne 2-->
+    <div class="row ">
+        <div class="col offset-s1 TitreMessage">
+            <h4>Mes postes</h4>
         </div>
-        <!-- Postes Utilisateurs -->
-        <div class="col s10 offset-s1 white z-depth-3 Postes">
-                
-                <div>
-                        <div class="card-panel grey z-depth-2">
-                                <div class="card-content white-text">
-                                    <span class="card-title ">Card Title</span>
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
-                                        <button class="btn green waves-effect waves-light" ><i class="material-icons">edit</i></button>                       
-                                        <button class="btn red waves-effect waves-light" > <i class="material-icons">delete</i></button>
-                                </div>
-                        </div>
-                        <div class="card-panel grey z-depth-2">
-                                <div class="card-content white-text">
-                                    <span class="card-title ">Card Title</span>
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
-                                        <button class="btn green waves-effect waves-light" >Editer</button>                       
-                                        <button class="btn red waves-effect waves-light" >Supprimer</button>
-                                </div>
-                        </div>
-                        <div class="card-panel grey z-depth-2">
-                                <div class="card-content white-text">
-                                    <span class="card-title ">Card Title</span>
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
-                                        <button class="btn green waves-effect waves-light" >Editer</button>                       
-                                        <button class="btn red waves-effect waves-light" >Supprimer</button>
-                                </div>
-                        </div>
+        <!-- Commenaires de l'utilisateurs -->
+        <div class="col s10 offset-s1  z-depth-3 Postes cyan lighten-5">
+            <!-- 1 commentaire -->
+            <div class="row">
+                <!-- Auteur -->
+                <div class="col s2 left-align valign-wrapper " style="height:12em;">
+                    <div class="col s10 offset-s1 center-align">
+                        <h5 style="padding-left:10px;margin-top:0;">Nom Auteur</h5>
+                        <img src="image/FondProfil.jpg" class="z-depth-2" width="150" alt="Auteur">
+                    </div>
                 </div>
-        </div>
-        <!-- Postes Utilisateurs -->
-    </div>
-        
-        
-    </div>
-    <!-- Fin Ligne 2 -->
-
-    <div class="row">
-            <div class="col offset-s1">
-                    <h4>Mes commentaires</h4>            
+                <!-- Auteur -->
+                <!-- Message -->
+                <div class="col s8 valign-wrapper" style="height:12em;margin-top:0.5em;">
+                    <div class="card-panel grey lighten-4 z-depth-2">
+                        <div class="card-content messageType">
+                            <span class="card-title ">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Message -->
+                <!-- Boutons  -->
+                <div class="col s1 offset-s1 valign-wrapper" style="display:flex;flex-direction:column;height:12em;padding-top:1.25em;margin-top:0.5em;">
+                    <button class="btn green lighten waves-effect waves-light" style="margin-bottom:1em;">
+                        <i class="material-icons">edit</i>
+                    </button>
+                    <button class="btn red lighten waves-effect waves-light" style="margin-bottom:1em;">
+                        <i class="material-icons">delete</i>
+                    </button>
+                    <button class="btn blue lighten waves-effect waves-light">
+                        <i class="material-icons">message</i>
+                    </button>
+                </div>
+                <!-- Boutons  -->
             </div>
-            <div class="col s10 offset-s1 white z-depth-3 Postes">
-                            <div class="card-panel grey z-depth-2">
-                                    <div class="card-content white-text">
-                                        <span class="card-title ">Card Title</span>
-                                        <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
-                                            <button class="btn green waves-effect waves-light" >Editer</button>                       
-                                            <button class="btn red waves-effect waves-light" >Supprimer</button>
-                                    </div>
-                            </div>
-                            <div class="card-panel grey z-depth-2">
-                                    <div class="card-content white-text">
-                                        <span class="card-title ">Card Title</span>
-                                        <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
-                                            <button class="btn green waves-effect waves-light" >Editer</button>                       
-                                            <button class="btn red waves-effect waves-light" >Supprimer</button>
-                                    </div>
-                            </div>
-                            <div class="card-panel grey z-depth-2">
-                                    <div class="card-content white-text">
-                                        <span class="card-title ">Card Title</span>
-                                        <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
-                                            <button class="btn green waves-effect waves-light" >Editer</button>                       
-                                            <button class="btn red waves-effect waves-light" >Supprimer</button>
-                                    </div>
-                            </div>
-                    </div>           
+            <!-- 1 commentaire -->
+            <div class="row">
+                <!-- Auteur -->
+                <div class="col s2 left-align valign-wrapper " style="height:12em;">
+                    <div class="col s10 offset-s1 center-align">
+                        <h5 style="padding-left:10px;margin-top:0;">Nom Auteur</h5>
+                        <img src="image/FondProfil.jpg" class="z-depth-2" width="150" alt="Auteur">
+                    </div>
+                </div>
+                <!-- Auteur -->
+                <!-- Message -->
+                <div class="col s8 valign-wrapper" style="height:12em;margin-top:0.5em;">
+                    <div class="card-panel grey lighten-4 z-depth-2">
+                        <div class="card-content messageType">
+                            <span class="card-title ">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Message -->
+                <!-- Boutons  -->
+                <div class="col s1 offset-s1 valign-wrapper" style="display:flex;flex-direction:column;height:12em;padding-top:1.25em;margin-top:0.5em;">
+                    <button class="btn green lighten waves-effect waves-light" style="margin-bottom:1em;">
+                        <i class="material-icons">edit</i>
+                    </button>
+                    <button class="btn red lighten waves-effect waves-light" style="margin-bottom:1em;">
+                        <i class="material-icons">delete</i>
+                    </button>
+                    <button class="btn blue lighten waves-effect waves-light">
+                        <i class="material-icons">message</i>
+                    </button>
+                </div>
+                <!-- Boutons  -->
+            </div>
+            <!-- 1 commentaire -->
+            <!-- Commenaires de l'utilisateurs -->
+        </div>
     </div>
+    <!-- Debut ligne 2 -->
 
-     <!-- Modal Structure -->
-  <div id="modal1" class="modal bottom-sheet">
-        <div class="modal-content">
-          <h4>Description</h4>
-          <form action="" style="width:60%;">
-            <label for="textarea1">Saisissez votre nouvelle description</label>              
-            <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4">Confirmer</a>
-        </form>
+    <!-- Debut ligne 3-->
+    <div class="row">
+        <div class="col offset-s1 ">
+            <h4>Mes commentaires</h4>
+        </div>
+        <!-- Commenaires de l'utilisateurs -->
+        <div class="col s10 offset-s1 white z-depth-3 Postes light-blue lighten-4">
+            <!-- 1 commentaire -->
+            <div class="row">
+                <!-- Auteur -->
+                <div class="col s2 left-align valign-wrapper " style="height:12em;">
+                    <div class="col s10 offset-s1 center-align">
+                        <h5 style="padding-left:10px;margin-top:0;">Nom Auteur</h5>
+                        <img src="image/FondProfil.jpg" class="z-depth-2" width="150" alt="Auteur">
+                    </div>
+                </div>
+                <!-- Auteur -->
+                <!-- Message -->
+                <div class="col s8 valign-wrapper" style="height:12em;margin-top:0.5em;">
+                    <div class="card-panel grey lighten-4 z-depth-2">
+                        <div class="card-content messageType">
+                            <span class="card-title ">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Message -->
+                <!-- Boutons  -->
+                <div class="col s1 offset-s1 valign-wrapper" style="display:flex;flex-direction:column;height:12em;padding-top:1.25em;margin-top:0.5em;">
+                    <button class="btn green lighten waves-effect waves-light" style="margin-bottom:1em;">
+                        <i class="material-icons">edit</i>
+                    </button>
+                    <button class="btn red lighten waves-effect waves-light" style="margin-bottom:1em;">
+                        <i class="material-icons">delete</i>
+                    </button>
+                    <button class="btn blue lighten waves-effect waves-light">
+                        <i class="material-icons">message</i>
+                    </button>
+                </div>
+                <!-- Boutons  -->
+            </div>
+            <!-- 1 commentaire -->
+            <div class="row">
+                <!-- Auteur -->
+                <div class="col s2 left-align valign-wrapper " style="height:12em;">
+                    <div class="col s10 offset-s1 center-align">
+                        <h5 style="padding-left:10px;margin-top:0;">Nom Auteur</h5>
+                        <img src="image/FondProfil.jpg" class="z-depth-2" width="150" alt="Auteur">
+                    </div>
+                </div>
+                <!-- Auteur -->
+                <!-- Message -->
+                <div class="col s8 valign-wrapper" style="height:12em;margin-top:0.5em;">
+                    <div class="card-panel grey lighten-4 z-depth-2">
+                        <div class="card-content messageType">
+                            <span class="card-title ">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Message -->
+                <!-- Boutons  -->
+                <div class="col s1 offset-s1 valign-wrapper" style="display:flex;flex-direction:column;height:12em;padding-top:1.25em;margin-top:0.5em;">
+                    <button class="btn green lighten waves-effect waves-light" style="margin-bottom:1em;">
+                        <i class="material-icons">edit</i>
+                    </button>
+                    <button class="btn red lighten waves-effect waves-light" style="margin-bottom:1em;">
+                        <i class="material-icons">delete</i>
+                    </button>
+                    <button class="btn blue lighten waves-effect waves-light">
+                        <i class="material-icons">message</i>
+                    </button>
+                </div>
+                <!-- Boutons  -->
+            </div>
+            <!-- 1 commentaire -->
+            <!-- Commenaires de l'utilisateurs -->
+        </div>
+    </div>
+    <!-- Debut ligne 3 -->
+
+    <!-- Modal Description -->
+    <div id="modal1" class="modal bottom-sheet">
+        <div class="modal-content center-align">
+            <h4>Description</h4>
+            <div class="container">
+                <div class="row">
+                    <div class="col s8 offset-s2">
+                        <!-- Formulaire -->
+                        <form action="">
+                            <label for="textarea1">Saisissez votre nouvelle description</label>
+                            <textarea id="textarea1" class="materialize-textarea blue lighten-5" data-length="120" maxlength="120"></textarea>
+                        </form>
+                        <!-- Formulaire -->
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4 black-text">Confirmer</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="modal-footer">
         </div>
-      </div>
-      <!-- Modal Structure  -->
+    </div>
+    <!-- Modal Description  -->
 
-       <!-- Modal Structure -->
-  <div id="modal2" class="modal bottom-sheet">
-        <div class="modal-content">
-          <h4>Modal 2</h4>
-          <p>A bunch of text</p>
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal bottom-sheet">
+        <div class="modal-content center-align">
+            <div class="container">
+                <h4>Informations générales</h4>
+                <div class="row">
+                    <!-- Formulaire -->
+                    <div class="input-field col s4 offset-s4">
+                        <input value="John" id="prenom" type="text" class="validate">
+                        <label class="active" for="prenom">Prénom</label>
+                    </div>
+                    <div class="input-field col s4 offset-s4">
+                        <input value="Doe" id="nom" type="text" class="validate">
+                        <label class="active" for="nom">Nom</label>
+                    </div>
+                    <div class="input-field col s4 offset-s4">
+                        <input value="01/02/1995" id="dateNaissance" type="text" class="validate">
+                        <label class="active" for="dateNaissance">Date de naissance</label>
+                    </div>
+                    <div class="input-field col s4 offset-s4">
+                        <input value="Musique" id="hobbie" type="text" class="validate">
+                        <label class="active" for="hobbie">Hobbies</label>
+                    </div>
+                    <!-- Formulaire -->
+                </div>
+            </div>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4 black-text">Confirmer</a>
         </div>
         <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
-      </div>
-      <!-- Modal Structure  -->
+    </div>
+    <!-- Modal Structure  -->
 
-      <!-- Modal Structure -->
-  <div id="modal3" class="modal bottom-sheet">
+    <!-- Modal Structure WIP  //!\\  -->
+    <div id="modal3" class="modal bottom-sheet">
         <div class="modal-content">
-          <h4>Modal 3</h4>
-          <p>A bunch of text</p>
+            <h4>Modal 3</h4>
+            <p>A bunch of text</p>
         </div>
         <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
-      </div>
-      <!-- Modal Structure  -->
+    </div>
+    <!-- Modal Structure WIP  //!\\  -->
+
+    
 
     <script src="js/pageProfil.js"></script>
 
 </body>
+
 </html>
