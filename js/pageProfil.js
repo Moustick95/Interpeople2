@@ -57,6 +57,12 @@ $('#boutonDescription').click(function(){
     }
 
 });
+
+$('button').click(function(){
+    $('#pTest').text('test')
+})
+
+
 });
 
 $(".button-collapse").sideNav( ); 
