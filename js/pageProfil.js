@@ -58,9 +58,28 @@ $('#boutonDescription').click(function(){
 
 });
 
-$('button').click(function(){
-    $('#pTest').text('test')
-})
+$('#nouvelleDescription').click(function(){
+    var temp=$('#formDescription').val();
+    $('#test4').text(temp);
+});
+
+$('#nouvellesInfos').click(function(){
+    var prenom=$('#prenom').val();
+    $('#prenomCollection').text(prenom);
+
+    var nom=$('#nom').val();
+    $('#nomCollection').text(nom);
+
+    var naissance=$('#dateNaissance').val();
+    $('#dateCollection').text(naissance);
+
+    var hobbie=$('#hobbie').val();
+    $('#hobbieCollection').text(hobbie);
+
+
+});
+
+
 
 
 });
