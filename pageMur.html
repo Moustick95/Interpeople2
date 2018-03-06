@@ -1,28 +1,174 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    
-        <!--Import Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    
-        <!-- Import CSS -->
-        <link rel="stylesheet" href="css/styleProfil.css">
-        <link rel="stylesheet" href="css/styleSideNav.css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Import Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="css/styleMur.css">
+
+    <link rel="stylesheet" href="css/styleSideNav.css">
     <title>Interpeopl/Mur</title>
 </head>
 
 <body>
-    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+
+    <!-- Navbar -->
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img id="fondNav" src="image/FondProfil.jpg">
+                </div>
+                <div id="navProfil">
+                    <a href="#!user">
+                        <img class="circle" src="image/index.png">
+                    </a>
+                    <div id="navTexte">
+                        <span class="white-text name" id="name">
+                            <p>John Doe</p>
+                        </span>
+                        <span class="white-text email" id="email">
+                            <p>jdandturk@gmail.com</p>
+                        </span>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="subheader center-align">Gestion de votre profil</div>
+        </li>
+        <li>
+            <a href="#">
+                <i class="material-icons ">account_circle</i> Profil</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <div class="subheader center-align">Vos relations</div>
+        </li>
+        <li>
+            <a href="pageAmis.html">
+                <i class="material-icons blue-text">contacts</i>Amis</a>
+        </li>
+        <li>
+            <a href="pageMur.html">
+                <i class="material-icons red-text">public</i>Accueil</a>
+        </li>
+        <li>
+            <a href="#" id="groupeButton">
+                <i class="material-icons green-text">group</i>Groupes</a>
+        </li>
+        <li>
+            <ul class="collection" id="groupeListe">
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 1</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 2</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 3</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 4</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">
+                        <i class="material-icons">add_circle</i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <div class="subheader center-align">Autres</div>
+        </li>
+        <li>
+            <a href="#">
+                <i class="material-icons">exit_to_app</i>Logout</a>
+        </li>
+    </ul>
+    <!-- Navbar -->
+
+    <!-- Bouton Navbar -->
+    <div id="btnSide">
+        <a href="#" data-activates="slide-out" class="btn btn-large blue darken-3 white-text waves-effect button-collapse">
+            <i class="material-icons">chevron_right</i>
+        </a>
+    </div>
+    <!-- Bouton Navbar -->
+
+    <!-- Début Header -->
+    <nav>
+        <div class="nav-wrapper indigo" id="navTop">
+            <a href="#" class="brand-logo center" id="titreNav">Interpeople</a>
+        </div>
+    </nav>
+    <!-- Fin Header -->
+
+    <!-- Petite ligne -->
+    <div class="col s12  indigo lighten-3" style="height:3px;">
+    </div>
+    <!-- Petite ligne -->
+
+    <div class="row blue-grey lighten-3">
+        <div class="col s8 offset-s2 " id="fenetreEnsemble">
+            <div class="col s6 offset-s1 " id="poste">
+                <div class="card blue-grey darken-1 center-align z-depth-3" id="cartePoste">
+                    <div id="espaceTitre">
+                            <span class="card-title white-text">Card Title</span>
+                            <span id="nombreCommentaire" >5 </span>
+                    </div>
+                    
+                    <div class="card-content white-text left-align">
+                        <div class="card-image">
+                            <img src="image/FondProfil.jpg">
+                        </div>
+                        <p id="texteCarte">I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 blue-grey lighten-1  z-depth-3  "  id="fenetreCommentaire">
+                <div class="col s12 blue-grey  z-depth-2" style="margin-top:5px;">
+                    <div class="col s12 valign-wrapper " id="auteurCommentaire">
+                        <div class="col s12 valign-wrapper">
+                            <img src="image/FondProfil.jpg" class="z-depth-2 responsive-img " width="65" alt="Auteur">
+                        </div>
+                        <div class="col s12 valign-wrapper">
+                            <h7 style="padding-left:10px;margin-top:0;">Nom Auteur</h7>
+                        </div>
+                    </div>
+                    <div class="col s12" style="width:100%;word-wrap: break-word; ">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing epppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/pageMur.js" type="text/javascript"></script>
 </body>
+
 </html>

@@ -66,6 +66,9 @@ $('#nouvelleDescription').click(function(){
 $('#nouvellesInfos').click(function(){
     var prenom=$('#prenom').val();
     $('#prenomCollection').text(prenom);
+    $('#name').html(prenom);
+    $('#prenomTitre').text(prenom);
+    
 
     var nom=$('#nom').val();
     $('#nomCollection').text(nom);

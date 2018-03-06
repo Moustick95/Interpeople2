@@ -1,0 +1,57 @@
+html
+{
+    background-color: rgb(176,190,191);
+}
+
+#poste
+{
+    padding: 0 !important;
+}
+
+#imagePoste
+{
+    padding: 0 !important;
+    height: 174px;
+}
+
+#texteCarte
+{
+    margin-top: 7px !important;
+}
+
+.card-title
+{
+    font-size: 2.5em !important;
+    font-family: 'Patua+One',sans-serif;
+}
+
+#fenetreEnsemble
+{
+    margin-top: 15px;
+}
+
+#fenetreCommentaire
+{
+    margin-top:0.5em;
+    overflow: auto;
+}
+
+#auteurCommentaire
+{
+    margin-top: 10px;
+}
+
+#espaceTitre
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    padding-bottom: 0;
+}
+
+.card
+{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}

@@ -140,6 +140,11 @@ color: grey !important;
     width: 60%;
 }
 
+#messageCommentaire
+{
+    width: 100%;
+}
+
 @media screen and (max-width: 1400px)
 
 {
