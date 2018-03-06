@@ -26,13 +26,14 @@ $(document).ready(function(){
 $('#case1').click(function(){
     $('#boutonDescription').text('Modifier la description');
     $("#boutonDescription").attr("href", "#modal1");
-    
+    $('#boutonDescription').removeClass('disabled');    
 });
 
 
 $('#case2').click(function(){
     $('#boutonDescription').text('Modifier des informations');
     $("#boutonDescription").attr("href", "#modal2");
+    $('#boutonDescription').removeClass('disabled');
 });
 
 
@@ -40,6 +41,7 @@ $('#case2').click(function(){
 $('#case3').click(function(){
     $('#boutonDescription').text('Modifier votre compte');
     $("#boutonDescription").attr("href", "#modal3");
+    $('#boutonDescription').addClass('disabled');
 });
 
 $('#boutonDescription').click(function(){
@@ -51,11 +53,6 @@ $('#boutonDescription').click(function(){
     if($('#case2').hasClass('active')){
         $('#modal2').modal('open');
     }
-
-    if($('#case3').hasClass('active')){
-        $('#modal3').modal('open');
-    }
-
 });
 
 $('#nouvelleDescription').click(function(){

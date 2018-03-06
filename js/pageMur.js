@@ -3,7 +3,8 @@ $(document).ready(function(){
 $('#groupeListe').hide();
 
 (function(){
-    let nCommentaire = $('.blue-grey').length;
+    let nCommentaire = $('.fenetreCommentaire').length;
+    $('#nombreCommentaire').html(nCommentaire);
 })()
 
 $("#groupeButton").click(function(){
@@ -22,11 +23,11 @@ $("#groupeButton").click(function(){
 $(".button-collapse").sideNav( ); 
 
 $( window ).resize(function() {
-    var result = $("#cartePoste").height();
-    $('#fenetreCommentaire').height(result);
+    var result = $(".cartePoste").height();
+    $('.fenetreCommentaire').height(result);
 });
 
-var result = $("#cartePoste").height();
-$('#fenetreCommentaire').height(result);
+var result = $(".cartePoste").height();
+$('.fenetreCommentaire').height(result);
 
 });
