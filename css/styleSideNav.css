@@ -63,7 +63,7 @@ font-family: 'Roboto',sans-serif;
 
 #btnSide > a 
 {
-    height: 64px ;
+    height: 62px ;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -73,7 +73,6 @@ font-family: 'Roboto',sans-serif;
 
 #btnSide i
 {
-    height: 64px !important;
     margin-top: 25%;
 }
 

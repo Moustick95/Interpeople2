@@ -20,6 +20,8 @@
     <!-- Import CSS -->
     <link rel="stylesheet" href="css/styleProfil.css">
     <link rel="stylesheet" href="css/styleSideNav.css">
+    <!-- Import CSS -->
+    
     <title>Profil/Interpeople</title>
 
 </head>
@@ -89,8 +91,8 @@
                 <i class="material-icons blue-text" >contacts</i>Amis</a>
         </li>
         <li>
-                <a href="pageAmis.html" >
-                    <i class="material-icons red-text" >public</i>Votre mur</a>
+                <a href="pageMur.html" >
+                    <i class="material-icons red-text" >public</i>Accueil</a>
             </li>
         <li>
             <a href="#" id="groupeButton">
@@ -143,14 +145,14 @@
 
     <!-- Début Header -->
     <nav>
-        <div class="nav-wrapper blue lighten-2" id="navTop">
+        <div class="nav-wrapper indigo" id="navTop">
             <a href="#" class="brand-logo center" id="titreNav">Interpeople</a>
         </div>
     </nav>
     <!-- Fin Header -->
 
     <!-- Petite ligne -->
-    <div class="col s12  blue lighten" style="height:3px;">
+    <div class="col s12  indigo lighten-3" style="height:3px;">
     </div>
     <!-- Petite ligne -->
 
@@ -211,10 +213,10 @@
                                     <li class="collection-item">Hobbies :</li>
                                 </ul>
                                 <ul class="collection" id="colonne2">
-                                    <li class="collection-item">John</li>
-                                    <li class="collection-item">Doe</li>
-                                    <li class="collection-item">01/01/1995</li>
-                                    <li class="collection-item">Musique </li>
+                                    <li class="collection-item" id="prenomCollection">John</li>
+                                    <li class="collection-item" id="nomCollection">Doe</li>
+                                    <li class="collection-item" id="dateCollection">01/01/1995</li>
+                                    <li class="collection-item" id="hobbieCollection">Musique </li>
                                 </ul>
                             </div>
                             <!-- Contenu panneau Informations générales -->
@@ -410,11 +412,11 @@
                     <div class="col s8 offset-s2">
                         <!-- Formulaire -->
                         <form action="">
-                            <label for="textarea1">Saisissez votre nouvelle description</label>
-                            <textarea id="textarea1" class="materialize-textarea blue lighten-5" data-length="120" maxlength="120"></textarea>
+                            <label for="formDescription">Saisissez votre nouvelle description</label>
+                            <textarea id="formDescription" class="materialize-textarea blue lighten-5" data-length="120" maxlength="120"></textarea>
                         </form>
                         <!-- Formulaire -->
-                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4 black-text">Confirmer</a>
+                        <button id="nouvelleDescription" class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4 black-text">Confirmer</button>
                     </div>
                 </div>
             </div>
@@ -424,7 +426,7 @@
     </div>
     <!-- Modal Description  -->
 
-    <!-- Modal Structure -->
+    <!-- Modal Informations générales -->
     <div id="modal2" class="modal bottom-sheet">
         <div class="modal-content center-align">
             <div class="container">
@@ -450,12 +452,12 @@
                     <!-- Formulaire -->
                 </div>
             </div>
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4 black-text">Confirmer</a>
+            <button id="nouvellesInfos"  class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4 black-text">Confirmer</button>
         </div>
         <div class="modal-footer">
         </div>
     </div>
-    <!-- Modal Structure  -->
+    <!-- Modal Infos générales  -->
 
     <!-- Modal Structure WIP  //!\\  -->
     <div id="modal3" class="modal bottom-sheet">
