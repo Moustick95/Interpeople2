@@ -1,14 +1,15 @@
 <?php
 session_start();
 
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', 'root', 'root');
+}
+catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+
 if (ISSET($_POST['connection']) && ISSET($_POST['mailCo']) && ISSET($_POST['mdpCo'])) {
 
-    try {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', 'root', 'root');
-    }
-    catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
     $mail = $_POST['mailCo'];
     $mdp = $_POST['mdpCo'];
 
@@ -25,6 +26,35 @@ if (ISSET($_POST['connection']) && ISSET($_POST['mailCo']) && ISSET($_POST['mdpC
     else {
         $failure = '<script language="Javascript">alert("Mauvais mot de passe ou mauvais mail")</script>';
     }
+}
+
+if (ISSET($_GET['logout']) && ISSET($_SESSION['id'])) {
+    echo '<script language="Javascript">alert("Vous êtes bien déconnecté")</script>';
+    $bdd->query('UPDATE `utilisateur` SET `Status` = "Déconnecté" WHERE `Profil_ID` = "'.$_SESSION['id'].'" ');
+    session_unset();
+    session_destroy();
+}
+
+if (ISSET($_POST['inscription']) && ISSET($_POST['mdp']) && ISSET($_POST['nom']) && ISSET($_POST['prenom']) && ISSET($_POST['mail'])) {
+    //Inscription:
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $mdp = password_hash($_POST['mdp'], PASSWORD_BCRYPT);
+    $mail = $_POST['mail'];
+
+    $verif = $bdd->query(' SELECT `Email` FROM `utilisateur` WHERE `Email` = "'.$mail.'" ');
+    $donnees = $verif->fetch();
+    if ($mail != $donnees['Email'] && $mail  != null) {
+        $reponse = $bdd->query(' INSERT INTO `utilisateur`(`Profil_ID`, `Nom`, `Prenom`, `Email`, `MDP`, `Photo`, `Photo_Fond`) VALUES (null, "'. $nom .'" , "'. $prenom .'" , "'. $mail .'" , "'. $mdp .'" , "image/index.png", "image/FondProfil.jpg" )');
+        header('location:index.php');
+    }
+    else {
+        echo '<script language="Javascript">alert("Adresse mail déjà utilisé")</script>';
+    }
+}
+
+if (isset($failure)) {
+    echo $failure;
 }
 
 ?>
@@ -187,43 +217,3 @@ if (ISSET($_POST['connection']) && ISSET($_POST['mailCo']) && ISSET($_POST['mdpC
 
 
 <!-- A RECUPERER -->
-
-
-
-
-<?php
-if (ISSET($_POST['inscription']) && ISSET($_POST['mdp']) && ISSET($_POST['nom']) && ISSET($_POST['prenom']) && ISSET($_POST['mail'])) {
-    try {
-        $bdd = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', 'root', 'root');
-    }
-    catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
-    echo '<script language="Javascript">alert(document.getElementById("motDePasse").value;)</script>';
-    //Inscription:
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $mdp = password_hash($_POST['mdp'], PASSWORD_BCRYPT);
-    $mail = $_POST['mail'];
-
-    $verif = $bdd->query(' SELECT `Email` FROM `utilisateur` WHERE `Email` = "'.$mail.'" ');
-    //$verif->execute();
-    $donnees = $verif->fetch();
-    if ($mail != $donnees['Email'] && $mail  != null) {
-        $reponse = $bdd->query(' INSERT INTO `utilisateur`(`Profil_ID`, `Nom`, `Prenom`, `Email`, `MDP`, `Photo`, `Photo_Fond`) VALUES (null, "'. $nom .'" , "'. $prenom .'" , "'. $mail .'" , "'. $mdp .'" , "image/index.png"), "image/FondProfil.jpg" ');
-    }
-    else {
-        echo '<script language="Javascript">alert("Adresse mail déjà utilisé")</script>';
-    }
-}
-
-if (isset($failure)) {
-    echo $failure;
-}
-
-if ($_GET['logout']==1) {
-    unset($_SESSION['id']);
-    echo '<script language="Javascript">alert("Vous êtes bien déconnecté")</script>';
-}
-
-?>
