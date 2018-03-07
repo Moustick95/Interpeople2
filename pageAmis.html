@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <!--Import Google Icon Font-->
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-     <!--Import materialize.css-->
-     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
- 
-     <!--Import Fonts -->
-     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
-     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
- 
-     <!-- Import CSS -->
-     <link rel="stylesheet" href="css/styleAmis.css">
-     <link rel="stylesheet" href="css/styleSideNav.css">
-     
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Import Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="css/styleAmis.css">
+    <link rel="stylesheet" href="css/styleSideNav.css">
+
     <title>Profil/Interpeople</title>
 
 </head>
+
 <body>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--Import jQuery before materialize.js-->
 
-         <!-- Début Header -->
-         <nav>
-                <div class="nav-wrapper indigo lighten-2" id="navTop">
-                    <a href="#" class="brand-logo center" id="titreNav">Interpeople</a>
-                </div>
-            </nav>
-             <!-- Fin Header -->     
+    <!-- Début Header -->
+    <nav>
+        <div class="nav-wrapper indigo lighten-2" id="navTop">
+            <a href="#" class="brand-logo center" id="titreNav">Interpeople</a>
+        </div>
+    </nav>
+    <!-- Fin Header -->
 
- <!-- Navbar -->
- <ul id="slide-out" class="side-nav">
+    <!-- Navbar -->
+    <ul id="slide-out" class="side-nav grey lighten-4">
         <li>
             <div class="user-view">
                 <div class="background">
                     <img id="fondNav" src="image/FondProfil.jpg">
                 </div>
                 <div id="navProfil">
-                    <a href="#!user"><img class="circle" src="image/index.png"></a>
+                    <a href="#!user">
+                        <img class="circle" src="image/index.png">
+                    </a>
                     <div id="navTexte">
-                        <span class="white-text name" id="name"><p>John Doe</p></span>
-                        <span class="white-text email" id="email"><p>jdandturk@gmail.com</p></span>
+                        <span class="white-text name" id="name">
+                            <p>John Doe</p>
+                        </span>
+                        <span class="white-text email" id="email">
+                            <p>jdandturk@gmail.com</p>
+                        </span>
                         <br>
                     </div>
                 </div>
@@ -58,7 +66,8 @@
             <div class="subheader center-align">Gestion de votre profil</div>
         </li>
         <li>
-            <a href="#"><i class="material-icons">account_circle</i> Profil</a>
+            <a href="pageProfil.html">
+                <i class="material-icons indigo-text ">account_circle</i> Profil</a>
         </li>
         <li>
             <div class="divider"></div>
@@ -67,17 +76,36 @@
             <div class="subheader center-align">Vos relations</div>
         </li>
         <li>
-            <a href="#"><i class="material-icons">contacts</i>Amis</a>
+            <a href="pageAmis.html">
+                <i class="material-icons blue-text">contacts</i>Amis</a>
         </li>
         <li>
-            <a href="#" id="groupeButton"><i class="material-icons">group</i>Groupes</a>
+            <a href="pageMur.html">
+                <i class="material-icons red-text">public</i>Accueil</a>
         </li>
         <li>
-           <ul class="collection" id="groupeListe">
-                <li class="collection-item"><a class="black-text" href="#!">Link 1</a></li>
-                <li class="collection-item"><a class="black-text" href="#!">Link 2</a></li>
-                <li class="collection-item"><a class="black-text" href="#!">Link 3</a></li>
-                <li class="collection-item"><a class="black-text" href="#!">Link 4</a></li>
+            <a href="#" id="groupeButton">
+                <i class="material-icons green-text">group</i>Groupes</a>
+        </li>
+        <li>
+            <ul class="collection" id="groupeListe">
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 1</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 2</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 3</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 4</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">
+                        <i class="material-icons">add_circle</i>
+                    </a>
+                </li>
             </ul>
         </li>
         <li>
@@ -87,58 +115,62 @@
             <div class="subheader center-align">Autres</div>
         </li>
         <li>
-            <a href="#"><i class="material-icons">exit_to_app</i>Logout</a>
+            <a href="#">
+                <i class="material-icons orange-text">exit_to_app</i>Logout</a>
         </li>
     </ul>
     <!-- Navbar -->
 
     <!-- Bouton Navbar -->
-    <div  id="btnSide">
-        <a href="#" data-activates="slide-out" class="btn btn-large blue darken-3 white-text waves-effect button-collapse" ><i class="material-icons" >chevron_right</i></a>
+    <div id="btnSide">
+        <a href="#" data-activates="slide-out" class="btn btn-large blue darken-3 white-text waves-effect button-collapse">
+            <i class="material-icons">chevron_right</i>
+        </a>
     </div>
     <!-- Bouton Navbar -->
     <div class="container">
-            <div class="row">
-          
-              <div class="col s12 left-align">
+        <div class="row">
+
+            <div class="col s12 left-align">
                 <!-- Carte Amis -->
-            <div class="Contenant" >
-                  <div class="card ">
-                      <div class="card-image">
-                          <img class="responsive-img"   src="image/index.png">
-                      </div>
-                      <div class="card-content center-align  light-blue darken-4 white-text">
-                          <p>Bradley Cooper</p>
-                      </div>
-                      <a href="#" class="btn waves-effect" id="bouton">Profil</a>                    
-                  </div>
-                </div>
-                <!-- Carte Amis -->
-                   <!-- Carte Amis -->
-            <div class="Contenant" >
+                <div class="Contenant">
                     <div class="card ">
                         <div class="card-image">
-                            <img class="responsive-img"   src="image/index.png">
+                            <img class="responsive-img" src="image/index.png">
                         </div>
                         <div class="card-content center-align  light-blue darken-4 white-text">
                             <p>Bradley Cooper</p>
                         </div>
-                        <a href="#" class="btn waves-effect" id="bouton">Profil</a>                    
+                        <a href="#" class="btn waves-effect" id="bouton">Profil</a>
                     </div>
-                  </div>
-                  <!-- Carte Amis -->
-    </div>
-        
+                </div>
+                <!-- Carte Amis -->
+                <!-- Carte Amis -->
+                <div class="Contenant">
+                    <div class="card ">
+                        <div class="card-image">
+                            <img class="responsive-img" src="image/index.png">
+                        </div>
+                        <div class="card-content center-align  light-blue darken-4 white-text">
+                            <p>Bradley Cooper</p>
+                        </div>
+                        <a href="#" class="btn waves-effect" id="bouton">Profil</a>
+                    </div>
+                </div>
+                <!-- Carte Amis -->
+            </div>
+
 
         </div>
-        </div>
+    </div>
 
-            <script src="js/pageProfil.js"></script>
-    
+    <script src="js/pageProfil.js"></script>
+
 
 
 
     </div>
-</div>
+    </div>
 </body>
+
 </html>

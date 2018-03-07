@@ -145,6 +145,19 @@ color: grey !important;
     width: 100%;
 }
 
+#test6 ul
+{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+#test6 li
+{
+    margin-bottom: 10px;
+    width: 50%;
+}
+
 @media screen and (max-width: 1400px)
 
 {
