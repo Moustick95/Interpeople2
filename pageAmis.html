@@ -34,11 +34,20 @@
     <!-- Début Header -->
     <nav>
         <div class="nav-wrapper indigo lighten-2" id="navTop">
-            <a href="#" class="brand-logo center" id="titreNav">Interpeople</a>
+            <a href="#" class="brand-logo center" id="titreNav">Amis</a>
+            <div>
+            </div>
         </div>
+        
     </nav>
     <!-- Fin Header -->
-
+    <div id="boutonAmi">
+    <button class="btn btn-large blue "> 
+            Ajouter un ami 
+            <i class="material-icons left medium">add_box</i>
+            
+        </button>
+    </div>
     <!-- Navbar -->
     <ul id="slide-out" class="side-nav grey lighten-4">
         <li>
@@ -65,8 +74,8 @@
         <li>
             <div class="subheader center-align">Gestion de votre profil</div>
         </li>
-        <li>
-            <a href="pageProfil.html">
+        <li id="listeProfil">
+            <a href="pageProfil.html" id="lienProfil">
                 <i class="material-icons indigo-text ">account_circle</i> Profil</a>
         </li>
         <li>
@@ -75,12 +84,12 @@
         <li>
             <div class="subheader center-align">Vos relations</div>
         </li>
-        <li>
-            <a href="pageAmis.html">
+        <li id="listeAmis">
+            <a href="pageAmis.html" id="lienAmis">
                 <i class="material-icons blue-text">contacts</i>Amis</a>
         </li>
-        <li>
-            <a href="pageMur.html">
+        <li id="listeMur">
+            <a href="pageMur.html" id="lienMur">
                 <i class="material-icons red-text">public</i>Accueil</a>
         </li>
         <li>
@@ -128,49 +137,29 @@
         </a>
     </div>
     <!-- Bouton Navbar -->
-    <div class="container">
-        <div class="row">
-
-            <div class="col s12 left-align">
-                <!-- Carte Amis -->
-                <div class="Contenant">
-                    <div class="card ">
-                        <div class="card-image">
-                            <img class="responsive-img" src="image/index.png">
+    <div class="row">
+        <div class="col s10 offset-s1 z-depth-2 blocAmis">
+            <div class="row">
+                <div class="col s12 left-align">
+                    <!-- Carte Amis -->
+                    <div class="Contenant">
+                        <div class="card z-depth-3">
+                            <div class="card-image">
+                                <img class="responsive-img" src="image/index.png">
+                            </div>
+                            <div class="card-content center-align  light-blue darken-4 white-text">
+                                <p>Bradley Cooper</p>
+                            </div>
+                            <a href="#" class="btn waves-effect" id="bouton">Profil</a>
                         </div>
-                        <div class="card-content center-align  light-blue darken-4 white-text">
-                            <p>Bradley Cooper</p>
-                        </div>
-                        <a href="#" class="btn waves-effect" id="bouton">Profil</a>
                     </div>
+                    <!-- Carte Amis -->
                 </div>
-                <!-- Carte Amis -->
-                <!-- Carte Amis -->
-                <div class="Contenant">
-                    <div class="card ">
-                        <div class="card-image">
-                            <img class="responsive-img" src="image/index.png">
-                        </div>
-                        <div class="card-content center-align  light-blue darken-4 white-text">
-                            <p>Bradley Cooper</p>
-                        </div>
-                        <a href="#" class="btn waves-effect" id="bouton">Profil</a>
-                    </div>
-                </div>
-                <!-- Carte Amis -->
             </div>
-
-
         </div>
     </div>
-
     <script src="js/pageProfil.js"></script>
-
-
-
-
-    </div>
-    </div>
+    
 </body>
 
 </html>

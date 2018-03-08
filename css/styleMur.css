@@ -41,6 +41,13 @@ html
     margin-top: 10px;
 }
 
+.auteurCommentaire img
+{
+    min-width: 0;
+    max-width: 65px;
+    
+}
+
 .espaceTitre
 {
     display: flex;
@@ -90,4 +97,16 @@ h6
 {
     display: flex;
     justify-content: center;
+}
+
+.imageAuteur
+{
+    min-height: 0; 
+    height: 50px;
+}
+
+.imagePoste
+{
+    min-height:0px;
+    max-height: 240px;
 }
