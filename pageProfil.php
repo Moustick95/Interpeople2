@@ -15,7 +15,9 @@ $info = $InfoGeneral->fetchAll(PDO::FETCH_ASSOC);
 $profile = $_SESSION['id'];
 
 if (ISSET($_GET['Profil'])) {
-    $ProfileVisite = $bdd->query('SELECT * FROM `utilisateur` WHERE `Profil_ID` = "'.$_GET['Profil'].'" ');
+    $ProfileVisite = $bdd->prepare('SELECT * FROM `utilisateur` WHERE `Profil_ID` = :Profil ');
+    $ProfileVisite -> bindParam(":Profil", $_GET['Profil']);
+    $ProfileVisite -> execute();
     $InfoVisite = $ProfileVisite->fetchAll(PDO::FETCH_ASSOC);
     $profile = $_GET['Profil'];
     if (sizeof($InfoVisite) == 0)
@@ -23,12 +25,19 @@ if (ISSET($_GET['Profil'])) {
 }
 
 if (ISSET($_POST['formDescription']) && ISSET($_POST['nouvelleDescription'])) {
-    $bdd->query(' UPDATE `utilisateur` SET `Description` = "'.$_POST['formDescription'].'" WHERE `utilisateur`.`Profil_ID` = "'.$_SESSION['id'].'" ');
+    $Description = $bdd->prepare(' UPDATE `utilisateur` SET `Description` = :formDescription WHERE `utilisateur`.`Profil_ID` = "'.$_SESSION['id'].'" ');
+    $Description -> bindParam(":formDescription", $_POST['formDescription']);
+    $Description -> execute();
     header('location:?Profil='.$_SESSION['id']);
 }
-
-if () {
-    
+if (ISSET($_POST['nom']) && ISSET($_POST['prenom']) && ISSET($_POST['date']) && ISSET($_POST['hobbies'])) {
+    $Information = $bdd->prepare('UPDATE `utilisateur` SET `Prenom` = :Prenom, `Nom` = :Nom, `Date_Naissance` = :DateAnniv, `Hobbies` = :Hobbies WHERE `Profil_ID` = "'.$id.'" ');
+    $Information -> bindParam(":Prenom", $_POST['prenom']);
+    $Information -> bindParam(":Nom", $_POST['nom']);
+    $Information -> bindParam(":DateAnniv", $_POST['date']);
+    $Information -> bindParam(":Hobbies", $_POST['hobbies']);
+    $Information -> execute();
+    header('location:?Profil='.$_SESSION['id'].'');
 }
 
 $PubliGeneral = $bdd->query('SELECT `Contenu` FROM `publication` WHERE `Profil_ID` = "'.$profile.'" ');
@@ -441,41 +450,43 @@ $bdd->query(' UPDATE `utilisateur` SET `Status` = "Connecté" WHERE `Profil_ID` 
     <!-- Modal Informations gÃ©nÃ©rales -->
     <div id="modal2" class="modal bottom-sheet">
         <div class="modal-content center-align">
-            <div class="container">
-                <h4>Informations générales</h4>
-                <div class="row">
-                    <!-- Formulaire -->
-                    <div class="input-field col s4 offset-s4">
-                        <?php
-                        echo '<input value='.$InfoVisite[0]['Prenom'].' name="prenom" id="prenom" type="text" class="validate">
-                        <label class="active" for="prenom">Prénom</label>';
-                        ?>
+            <form method="post" name = "NouvelleInfo">
+                <div class="container">
+                    <h4>Informations générales</h4>
+                    <div class="row">
+                        <!-- Formulaire -->
+                        <div class="input-field col s4 offset-s4">
+                            <?php
+                            echo '<input name="prenom" value='.$InfoVisite[0]['Prenom'].' name="prenom" id="prenom" type="text" class="validate">
+                            <label class="active" for="prenom">Prénom</label>';
+                            ?>
+                        </div>
+                        <div class="input-field col s4 offset-s4">
+                            <?php
+                            echo '<input name="nom" value='.$InfoVisite[0]['Nom'].' name="nom" id="nom" type="text" class="validate">
+                            <label class="active" for="nom">Nom</label>';
+                            ?>
+                        </div>
+                        <div class="input-field col s4 offset-s4">
+                            <?php
+                            echo '<input type="date" name="date" value='.$info[0]['Date_Naissance'].' id="dateNaissance" type="text" class="validate">
+                            <label class="active" for="dateNaissance">Date de naissance</label>';
+                            ?>
+                        </div>
+                        <div class="input-field col s4 offset-s4">
+                            <?php
+                            $hobbies = " ";
+                            if ($InfoVisite[0]['Hobbies'] != null)
+                                $hobbies = $InfoVisite[0]['Hobbies'];
+                            echo '<input name="hobbies" value="'.$hobbies.'" id="hobbie" type="text" class="validate">
+                            <label class="active" for="hobbie">Hobbies</label>';
+                            ?>
+                        </div>
+                        <!-- Formulaire -->
                     </div>
-                    <div class="input-field col s4 offset-s4">
-                        <?php
-                        echo '<input value='.$InfoVisite[0]['Nom'].' name="nom" id="nom" type="text" class="validate">
-                        <label class="active" for="nom">Nom</label>';
-                        ?>
-                    </div>
-                    <div class="input-field col s4 offset-s4">
-                        <?php
-                        echo '<input value='.$info[0]['Date_Naissance'].' id="dateNaissance" type="text" class="validate">
-                        <label class="active" for="dateNaissance">Date de naissance</label>';
-                        ?>
-                    </div>
-                    <div class="input-field col s4 offset-s4">
-                        <?php
-                        $hobbies = " ";
-                        if ($InfoVisite[0]['Hobbies'] != null)
-                            $hobbies = $InfoVisite[0]['Hobbies'];
-                        echo '<input value="'.$hobbies.'" id="hobbie" type="text" class="validate">
-                        <label class="active" for="hobbie">Hobbies</label>';
-                        ?>
-                    </div>
-                    <!-- Formulaire -->
                 </div>
-            </div>
-            <button id="nouvellesInfos"  class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4 black-text">Confirmer</button>
+                <button id="nouvellesInfos"  class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4 black-text">Confirmer</button>
+            </form>
         </div>
         <div class="modal-footer">
         </div>
