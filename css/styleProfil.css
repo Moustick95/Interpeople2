@@ -59,11 +59,6 @@ h4
     overflow-y: scroll;
 }
 
-.collection
-{
-    width:50% !important;
-}
-
 #test4 p
 {
     text-align: justify;
@@ -72,6 +67,16 @@ h4
 #test5
 {
     display: flex;
+}
+
+#colonne1.collection
+{
+    width: 50% !important;
+}
+
+#colonne2.collection
+{
+    width: 50% !important;
 }
 
 #colonne1 li

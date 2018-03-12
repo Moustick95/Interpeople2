@@ -36,7 +36,36 @@ $('#case2').click(function(){
     $('#boutonDescription').removeClass('disabled');
 });
 
+/* Edition des postes */
+$('.editerPoste').click(function(){
+    $('.messagePoste').addClass('contenteditable');
+    $(".messagePoste").attr("contenteditable", "true");
+    $(".messagePoste").focus();
 
+    jQuery('.messagePoste').append(' <div style="width:100%;margin-top:5px;" class="center-align"><button class="btn blue darken-4" id="boutonTexte" >Valider</button></div>');
+
+    $('#boutonTexte').click(function(){
+        $('#boutonTexte').remove();
+        $('.messagePoste').attr("contenteditable", "false");
+});
+});
+/* Edition des postes */
+
+/* Edition des commentaires */
+$('.editerCommentaire').click(function(){
+    $('.texteCommentaire').addClass('contenteditable');
+    $(".texteCommentaire").attr("contenteditable", "true");
+    $(".texteCommentaire").focus();
+
+    jQuery('.texteCommentaire').append(' <div style="width:100%;margin-top:5px;" class="center-align"><button class="btn blue darken-4" id="boutonTexte" >Valider</button></div>');
+
+    $('#boutonTexte').click(function(){
+        $('#boutonTexte').remove();
+        $('.texteCommentaire').attr("contenteditable", "false");
+});
+});
+
+/* Edition des commentaires */
 
 $('#case3').click(function(){
     $('#boutonDescription').text('');
@@ -57,8 +86,3 @@ $('#boutonDescription').click(function(){
 });
 
 $(".button-collapse").sideNav( ); 
-
-
-
-   
-
