@@ -21,12 +21,14 @@ h4
 
 .user-view
 {
-  margin: 0 !important;
+    margin: 0 !important;
 }
 
 #modifierImage
 {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .hauteur
@@ -41,42 +43,42 @@ h4
 
 @media screen and (max-width: 1366px) {
     .texteProfil {
-      font-size: 80%;
+    font-size: 80%;
     }
-  }
+}
 
-  .editerPostes
-  {
-      margin-top: 6em;
-  }
+.editerPostes
+{
+    margin-top: 6em;
+}
 
-  .Postes
-  {
+.Postes
+{
     display: block;
     height: 400px;
     overflow-y: scroll;
-  }
+}
 
-  .collection
-  {
-      width:50% !important;
-  }
+.collection
+{
+    width:50% !important;
+}
 
-  #test4 p
-  {
+#test4 p
+{
     text-align: justify;
-  }
+}
 
-  #test5
-  {
-      display: flex;
-  }
+#test5
+{
+    display: flex;
+}
 
-  #colonne1 li
-  {
+#colonne1 li
+{
     display: flex;
     justify-content: flex-start;
-  }
+}
 
 #colonne2 li
 {
@@ -156,6 +158,45 @@ color: grey !important;
 {
     margin-bottom: 10px;
     width: 50%;
+}
+
+.boutonCompte
+{
+    text-decoration-style: none;
+    color: white;
+    width: 100% !important;
+}
+
+.tab
+{
+    text-transform: capitalize !important;
+}
+
+.motdePasse
+{
+    margin-bottom: 0 !important;
+}
+
+.validate
+{
+    margin-bottom: 0 !important;
+}
+
+.fileupload {
+    width: 35%;
+    position: relative;
+    overflow: hidden;
+}
+
+.fileupload input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    opacity: 0.0;
+    filter: alpha(opacity=0);
+    font-size: 300px;
+    height: 200px;
 }
 
 @media screen and (max-width: 1400px)

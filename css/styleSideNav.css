@@ -28,7 +28,7 @@
 
 #slide-out
 {
-  height: calc(100% - 100px);
+  height: calc(100% - 1px);
   display: block;
   overflow:hidden;
   overflow-x: hidden;

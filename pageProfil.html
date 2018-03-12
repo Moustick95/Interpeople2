@@ -167,9 +167,12 @@
             <div class="card-panel white z-depth-3 center-align hauteur">
                 <img class="responsive-img z-depth-1" width="200" src="image/index.png" alt="Image-Profil">
                 <div id="modifierImage">
-                    <a href="#" class="btn-floating orange btn-large z-depth-2">
-                        <i class="large material-icons ">mode_edit</i>
-                    </a>
+                    <div class="fileupload">
+                        <input type="file" />
+                        <button class="btn-large red z-depth-2" id="boutonFile">
+                            <i class="material-icons">mode_edit</i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,7 +186,7 @@
                         <div class="card-tabs ">
                             <ul class="tabs tabs-fixed-width">
                                 <li class="tab">
-                                    <a id="case1" href="#test4">Description</a>
+                                    <a id="case1" href="#test4"> Description</a>
                                 </li>
                                 <li class="tab">
                                     <a id="case2" class="active" href="#test5">Informations générales</a>
@@ -226,10 +229,16 @@
                             <!-- Contenu panneau Compte -->
                             <div id="test6">
                                 <ul style="display:flex;flex-direction:column;">
-                                    <li class="btn red accent-2 waves-effect waves-light "><a href="#modal3">Changer de mot passe</a> </li>
-                                    <li class="btn blue accent-4 waves-effect waves-light">Changer de mail</li>
+                                    <li>
+                                        <a href="#modal3" class="boutonCompte btn red accent-2 waves-effect waves-light modal-trigger">Changer de mot passe</a>
+                                    </li>
+                                    <li>
+                                        <a class="boutonCompte btn blue accent-4 waves-effect waves-light modal-trigger" href="#modal4">Changer de mail</a>
+                                    </li>
                                     <li class="btn purple accent-3 waves-effect waves-light">Supprimer le compte</li>
-                                    <li class="btn green accent-3 waves-effect waves-light">Changer l'image de fond</li>
+                                    <li>
+                                        <a class="btn green accent-3 waves-effect waves-light modal-trigger" href="#modal5">Changer l'image de fond</a>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- Contenu panneau Compte -->
@@ -412,20 +421,82 @@
     </div>
     <!-- Modal Infos générales  -->
 
-    <!-- Modal Structure WIP  //!\\  -->
+    <!-- Modal Structure Nouveau mot de passe -->
     <div id="modal3" class="modal bottom-sheet">
-        <div class="modal-content">
-            <h4>Modal 3</h4>
-            <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <div class="modal-content center-align">
+            <div class="container">
+                <h4>Changement de mot passe</h4>
+                <div class="row">
+                    <!-- Formulaire -->
+                    <div class="input-field col s4 offset-s4 motdePasse">
+                        <input id="mdp1" type="password" class="validate">
+                        <label class="active" for="mdp1">Ancien mot de passe</label>
+                    </div>
+                    <div class="input-field col s4 offset-s4 motdePasse">
+                        <input id="mdp2" type="password" class="validate">
+                        <label class="active" for="mdp2">Nouveau mot de passe</label>
+                    </div>
+                    <div class="input-field col s4 offset-s4 motdePasse">
+                        <input id="ConfirmerMdp" type="password" class="validate">
+                        <label class="active" for="ConfirmerMdp">Confirmer mot de passe</label>
+                    </div>
+                    <!-- Formulaire -->
+                </div>
+            </div>
+            <button id="nouvellesInfos" class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4 black-text">Confirmer</button>
         </div>
     </div>
-    <!-- Modal Structure WIP  //!\\  -->
+    <!-- Modal Structure Nouveau mot de passe  -->
 
-
-
+    <!-- Modal Structure Nouveau Mail -->
+    <div id="modal4" class="modal bottom-sheet">
+        <div class="modal-content center-align">
+            <div class="container">
+                <h4>Changement de mail</h4>
+                <div class="row">
+                    <!-- Formulaire -->
+                    <form action="#">
+                        <div class="input-field col s4 offset-s4 motdePasse">
+                            <input id="changementMail" type="text" class="validate">
+                            <label class="active" for="changementMail">Nouveau mail</label>
+                        </div>
+                        <div class="input-field col s4 offset-s4 motdePasse">
+                            <input id="mdpMail" type="password" class="validate">
+                            <label class="active" for="mdpMail">Mot de passe</label>
+                        </div>
+                    </form>
+                    <!-- Formulaire -->
+                </div>
+            </div>
+            <button id="nouvellesInfos" class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4 black-text">Confirmer</button>
+        </div>
+    </div>
+    <!-- Modal Structure Nouveau Mail  -->
+    <!-- Modal Structure Nouveau Mail -->
+    <div id="modal5" class="modal bottom-sheet">
+        <div class="modal-content center-align">
+            <div class="container">
+                <h4>Changement d'image</h4>
+                <div class="row">
+                    <!-- Formulaire -->
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>Ajouter un fichier</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Formulaire -->
+                </div>
+            </div>
+            <button id="nouvellesInfos" class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4 black-text">Confirmer</button>
+        </div>
+    </div>
+    <!-- Modal Structure Nouveau Mail  -->
     <script src="js/pageProfil.js"></script>
 
 </body>

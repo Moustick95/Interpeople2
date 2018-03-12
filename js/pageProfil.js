@@ -39,8 +39,7 @@ $('#case2').click(function(){
 
 
 $('#case3').click(function(){
-    $('#boutonDescription').text('Modifier votre compte');
-    $("#boutonDescription").attr("href", "#modal3");
+    $('#boutonDescription').text('');
     $('#boutonDescription').addClass('disabled');
 });
 
@@ -54,12 +53,6 @@ $('#boutonDescription').click(function(){
         $('#modal2').modal('open');
     }
 });
-
-
-
-
-
-
 
 });
 

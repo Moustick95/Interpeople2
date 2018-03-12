@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta nom="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,159 +8,54 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-              <!--Import jQuery before materialize.js-->
-              <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-              <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 
     <title>Interpeople Material</title>
 </head>
 <style>
-  
-.container
-{
-  width: 85% !important;
-}
+    .fileupload {
+        width: 100px;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+        background: ...;
+        /* and other things to make it pretty */
+    }
 
-.Contenant
-{
-  width: 11em;
-}
-
-.card
-{
-  width:10em !important; 
-  margin-left: auto !important;
-  margin-right: auto !important;
-  
-}
-
-.s12
-{
-  display:flex !important; 
-  justify-content:flex-start !important;
-}
-
-.card-content
-{
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-}
-
-    
+    .fileupload input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        /* not left, because only the right part of the input seems to
+                         be clickable in some browser I can't remember */
+        cursor: pointer;
+        opacity: 0.0;
+        filter: alpha(opacity=0);
+        /* and all the other old opacity stuff you
+                                         want to support */
+        font-size: 300px;
+        /* wtf, but apparently the most reliable way to make
+                                 a large part of the input clickable in most browsers */
+        height: 200px;
+    }
 </style>
 
 <body>
-  <div class="container">
 
-  <div class="row">
+        <div class="fileupload">
+                <input type="file" />
+                <button class="btn-large red">
+                    <i class="material-icons">mode_edit</i>
+                </button>
+              </div>
 
-    <div class="col s12 left-align">
-      <!-- Carte Amis -->
-  <div class="Contenant" >
-        <div class="card ">
-            <div class="card-image">
-                <img class="responsive-img"   src="image/index.png">
-            </div>
-            <div class="card-content center-align  light-blue darken-4 white-text">
-                <p>Bradley Cooper</p>
-            </div>
-            <a href="#" class="btn waves-effect" id="bouton">Profil</a>                    
-        </div>
-      </div>
-      <!-- Carte Amis -->
+</body>
 
-       <!-- Carte Amis -->
-  <div class="Contenant" >
-      <div class="card ">
-          <div class="card-image">
-              <img class="responsive-img"   src="image/index.png">
-          </div>
-          <div class="card-content center-align  light-blue darken-4 white-text">
-              <p>Bradley Cooper</p>
-          </div>
-          <a href="#" class="btn waves-effect" id="bouton">Profil</a>                    
-      </div>
-    </div>
-    <!-- Carte Amis -->
-
-     <!-- Carte Amis -->
-  <div class="Contenant" >
-      <div class="card ">
-          <div class="card-image">
-              <img class="responsive-img"   src="image/index.png">
-          </div>
-          <div class="card-content center-align  light-blue darken-4 white-text">
-              <p>Bradley Cooper</p>
-          </div>
-          <a href="#" class="btn waves-effect" id="bouton">Profil</a>                    
-      </div>
-    </div>
-    <!-- Carte Amis -->
-
-     <!-- Carte Amis -->
-  <div class="Contenant" >
-      <div class="card ">
-          <div class="card-image">
-              <img class="responsive-img"   src="image/index.png">
-          </div>
-          <div class="card-content center-align  light-blue darken-4 white-text">
-              <p>Bradley Cooper</p>
-          </div>
-          <a href="#" class="btn waves-effect" id="bouton">Profil</a>                    
-      </div>
-    </div>
-    <!-- Carte Amis -->
-
-     <!-- Carte Amis -->
-  <div class="Contenant" >
-      <div class="card ">
-          <div class="card-image">
-              <img class="responsive-img"   src="image/index.png">
-          </div>
-          <div class="card-content center-align  light-blue darken-4 white-text">
-              <p>Bradley Cooper</p>
-          </div>
-          <a href="#" class="btn waves-effect" id="bouton">Profil</a>                    
-      </div>
-    </div>
-    <!-- Carte Amis -->
-
-     <!-- Carte Amis -->
-  <div class="Contenant" >
-      <div class="card ">
-          <div class="card-image">
-              <img class="responsive-img"   src="image/index.png">
-          </div>
-          <div class="card-content center-align  light-blue darken-4 white-text">
-              <p>Bradley Cooper</p>
-          </div>
-          <a href="#" class="btn waves-effect" id="bouton">Profil</a>                    
-      </div>
-    </div>
-    <!-- Carte Amis -->
-
-      <!-- Carte Amis -->
-  <div class="Contenant" >
-      <div class="card ">
-          <div class="card-image">
-              <img class="responsive-img"   src="image/index.png">
-          </div>
-          <div class="card-content center-align  light-blue darken-4 white-text">
-              <p>Bradley Cooper</p>
-          </div>
-          <a href="#" class="btn waves-effect" id="bouton">Profil</a>                    
-      </div>
-    </div>
-    <!-- Carte Amis -->
-      
-        
-      </div>
-</div>
-
-    </body>
-</html>         
+</html>
