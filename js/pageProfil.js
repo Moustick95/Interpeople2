@@ -23,6 +23,8 @@ $(document).ready(function(){
         }
     });
 
+    
+
 $('#case1').click(function(){
     $('#boutonDescription').text('Modifier la description');
     $("#boutonDescription").attr("href", "#modal1");
@@ -34,6 +36,10 @@ $('#case2').click(function(){
     $('#boutonDescription').text('Modifier des informations');
     $("#boutonDescription").attr("href", "#modal2");
     $('#boutonDescription').removeClass('disabled');
+});
+
+$('#supprimerCompte').click(function(){
+    confirm('T\'es sur de toi ?');
 });
 
 /* Edition des postes */
