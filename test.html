@@ -14,47 +14,68 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
     <title>Interpeople Material</title>
 </head>
 <style>
-    .fileupload {
-        width: 100px;
-        height: 50px;
-        position: relative;
-        overflow: hidden;
-        background: ...;
-        /* and other things to make it pretty */
+    #profil {
+        min-width: 0;
+        max-width: 35px;
     }
 
-    .fileupload input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        /* not left, because only the right part of the input seems to
-                         be clickable in some browser I can't remember */
-        cursor: pointer;
-        opacity: 0.0;
-        filter: alpha(opacity=0);
-        /* and all the other old opacity stuff you
-                                         want to support */
-        font-size: 300px;
-        /* wtf, but apparently the most reliable way to make
-                                 a large part of the input clickable in most browsers */
-        height: 200px;
+    #nouveauPoste {
+        margin-top: 10px;
+    }
+
+    #texteNouveau {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    #boutonNouveauPoste {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        height: 100% !important;
+    }
+
+    .btn {
+        width: 100%;
     }
 </style>
 
 <body>
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <div class="col s6 offset-s1 z-depth-2" id="nouveauPoste">
+                <div class="col s2 center-align">
+                    <br>
+                    <img src="image/FondProfil.jpg" id="profil" class="z-depth-2 responsive-img" alt="Auteur commentaire">
+                    <br>
+                <h6>John Doe</h6>                    
+                </div>
+                <div class="col s6 offset-s1" id="texteNouveau">
+                    <form action="">
+                        <div class="input-field">
+                            <textarea type="email" id="textarea" class="materialize-textarea"></textarea>
+                            <label class="active" for="textarea">Textarea</label>
+                        </div>
+                </div>
+                <div class="col s3 " id="boutonNouveauPoste">
+                    <div>
+                        <a class="btn red">Options</a>
+                    </div>
+                    <div>
+                        <a class="btn green">Valider</a>
+                    </div>
+                </div>
 
-        <div class="fileupload">
-                <input type="file" />
-                <button class="btn-large red">
-                    <i class="material-icons">mode_edit</i>
-                </button>
-              </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </body>
 
