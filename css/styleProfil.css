@@ -193,6 +193,22 @@ color: grey !important;
     overflow: hidden;
 }
 
+.panneauBoutons
+{
+    text-transform: none;
+}
+
+.panneauBoutons > button
+{
+    padding: 0;
+    width: 100%;
+    font-size: 0.85em;
+    text-align: left !important;
+    padding-left: 3px;
+    display: flex;
+    align-items: center;
+}
+
 .fileupload input {
     position: absolute;
     top: 0;
@@ -202,6 +218,12 @@ color: grey !important;
     filter: alpha(opacity=0);
     font-size: 300px;
     height: 200px;
+}
+
+.plop
+{
+    margin-left: 3px;
+    text-transform: none;
 }
 
 @media screen and (max-width: 1400px)
