@@ -8,11 +8,25 @@ html
     padding: 0 !important;
 }
 
+#boutonPoste
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ajouterCommentaire
+{
+    text-transform: none;
+}
+
+
 .imagePoste
 {
     padding: 0 !important;
     max-width: 100%;
-    max-height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .texteCarte
@@ -74,8 +88,19 @@ html
 {
     display:flex;
     justify-content:flex-start;
+    align-items: center;
     padding-right:10px;
     padding-left:10px;
+}
+
+.imageAuteur
+{
+    min-width: 0;
+    max-width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 5px;
 }
 
 .auteurPoste h5
@@ -98,16 +123,4 @@ h6
 {
     display: flex;
     justify-content: center;
-}
-
-.imageAuteur
-{
-    min-height: 0; 
-    height: 50px;
-}
-
-.imagePoste
-{
-    min-height:0px;
-    max-height: 240px;
 }
