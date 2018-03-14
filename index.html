@@ -32,48 +32,87 @@
      <!-- import JS -->
     <script src="js/PageInscription.js"></script>
 
-    <div class=" row " >
-        <!-- Début de la ligne 1 -->
-        <div class="col s12" id="ligne1">
+    <div class="row" id="ligne1">
 
-             <!-- Formulaire d'inscription -->
-            <div class="col offset-s5 s4  offset-l4 l4 " >
-                <div class="col s8 offset-s2 white z-depth-3 blue" id="formulaire">
-                    <h3 id="InscriptionTitre center-align" >Inscrivez-vous</h3>
-                <form>
-                    <div class="input-field">
-                    <input type="text" id="nom">
-                    <label class="active" for="nom" required>Nom</label>
+                <!-- Colonne de gauche -->
+                <div class="col s2 xl2  z-depth-5 left-align" id="colonne1">
+                    <h5>InterPeople, c'est :</h5>
+                    <br />
+                    <p>Plus de 5000 connexions par jour</p>
+                    <br />
+                    <p>Des rencontres possibles chaque jour</p>
+                    <br />
+                    <p>Notre site est disponible dans plus de 70 pays</p>
+                    <br />
+                    <p>Une plateforme sans limite</p>
+                    <br />
+                </div>
+    
+                <!-- Logo et titre centré -->
+                <div class="col s6 offset-s1 center-align" id="TitreLogo">
+                    <h1>InterPeople</h1>
+                    <p id="sousTitre">Connect people, open your mind</p>
+                </div>
+    
+                <!-- Colonne de droite -->
+                <div class="col s2 offset-s1 z-depth-5 left-align " id="colonne2">
+                    <h5>Fonctionnaliés : </h5>
+                    <br />
+                    <p>Une liste d'amis facile à gérer</p>
+                    <br />
+                    <p>Partager les postes de votre mur avec vos amis</p>
+                    <br />
+                    <p>Gérer des groupes</p>
+                    <br />
+                    <p>Chatter directement avec vos amis en LIVE !</p>
+                    <br />
+                </div>
+            </div>
+    
+    
+        <div class="row" id="ligne2">
+            <div class="col s4 offset-s4">
+                <div class="card-panel z-depth-5">
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="col s12 center-align">
+                                    <h5>Inscrivez-vous</h5>
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" id="nom">
+                                <label class="active" for="nom" required>Nom</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" id="prenom">
+                                <label class="active" for="prenom" required>Prénom</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="email" id="email" class="validate">
+                                <label class="active" for="email" data-error="Votre mail doit être de forme exemple@domaine.fr" data-success="OK" required>Email</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" id="motDePasse">
+                                <label class="active" for="motDePasse" required>Mot de passe</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" id="motDePasseC">
+                                <label class="active" for="motDePasseC" required>Confirmer mot de passe</label>
+                            </div>
+                            <div class="input-field center-align" id="boutonInscription">
+                                <button class="btn green waves-effect waves-light" type="submit" name="action">Valider
+                                    <i class="material-icons right">check</i>
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="input-field">
-                        <input type="text" id="prenom">
-                        <label class="active" for="prenom" required>Prénom</label>
-                    </div>
-                    <div class="input-field">
-                    <input type="email" id="email" class="validate">
-                    <label class="active" for="email" data-error="Votre mail doit être de forme exemple@domaine.fr" data-success="OK" required>Email</label>
-                    </div>
-                    <div class="input-field">
-                            <input type="password" id="motDePasse">
-                            <label class="active" for="motDePasse" required>Mot de passe</label>
-                    </div>
-                    <div class="input-field">
-                            <input type="password" id="motDePasseC">
-                            <label class="active" for="motDePasseC" required>Confirmer mot de passe</label>
-                    </div>
-
-                    <div class="input-field center-align" id="boutonInscription">
-                        <button class="btn green waves-effect waves-light" type="submit" name="action">Submit
-                            <i class="material-icons right">check</i>
-                        </button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-            <!-- Formulaire d'inscription -->
 
             <!-- Bouton de connexion -->
-            <div class="col  offset-s3 offset-l3" id="BoutonLogIn">
+            <div class="col  offset-s3 offset-l3 z-depth-3" id="BoutonLogIn">
                 <a class="btn btn-large indigo lighten  waves-effect waves-light modal-trigger " href="#modal1">Connexion</a>
             </div>
             <!-- Bouton de connexion -->
@@ -101,34 +140,6 @@
         </div>
         <!-- Fin de la ligne1 -->
         
-        <!-- Début de la ligne 2 -->
-         <div class="col s12 z-depth-5" id="ligne2">
-             <!-- Colonne de gauche -->
-                <div class="col s2 xl2  z-depth-5 left-align" id="colonne1">
-                        <h5>InterPeople, c'est :</h5><br />
-                        <p>Plus de 5000 connexions par jour</p><br />
-                        <p>Des rencontres possibles chaque jour</p><br />
-                        <p>Notre site est disponible dans plus de 70 pays</p><br />
-                        <p>Une plateforme sans limite</p><br />
-                </div>
         
-                <!-- Logo et titre centré -->
-                <div class="col s6 offset-s1 center-align" id="TitreLogo">
-                        <h1>InterPeople</h1>
-                        <p id="sousTitre">Connect people, open your mind</p>
-                </div>
-
-                <!-- Colonne de droite -->
-                <div class="col s2 offset-s1 z-depth-5 left-align "id="colonne2">
-                        <h5>Fonctionnaliés : </h5><br />
-                        <p>Une liste d'amis facile à gérer</p><br />
-                        <p>Partager les postes de votre mur avec vos amis</p><br />
-                        <p>Gérer des groupes</p><br />
-                        <p>Chatter directement avec vos amis en LIVE !</p><br />
-                </div>
-             </div>
-           <!-- Fin  de la ligne -->
-     </div>
-     <!-- Fin de Row -->
     </body>
 </html>         

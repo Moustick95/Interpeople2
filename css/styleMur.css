@@ -66,10 +66,15 @@ html
 .espaceTitre
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 7px;
     padding-bottom: 0;
+}
+
+.espaceTitre h5
+{
+    width: 35%;
 }
 
 .card
@@ -84,24 +89,46 @@ html
     flex-direction:columns;
 }
 
+.card-title {
+    display: flex;
+    flex-direction: row;
+}
+
+#titreCarteAuteur {
+    margin: 0;
+}
+
+#imageTitreAuteur {
+    padding-left: 0;
+}
+
+.datePoste
+{
+    margin-top: 5px !important;
+    text-align: right;
+}
+
+#nombreCommentaire
+{
+    font-size: 0.5em;
+}
+
 .auteurPoste
 {
     display:flex;
     justify-content:flex-start;
-    padding-right:10px;
-    padding-left:10px;
+}
+
+.titreAuteur
+{
+    width: 35%;
 }
 
 .imageAuteur
 {
-    max-width: 8%;
-    height: 8%;
+    max-width: 35%;
+    height: 35%;
     object-fit: cover;
-}
-
-.auteurPoste h5
-{
-    margin-right:15px;
 }
 
 h6

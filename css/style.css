@@ -30,7 +30,7 @@ html{
 {
     min-height: 50vh;
     padding: 0;
-    background-color:#CBDBD7;
+    background-color:#E8F8FF;
 }
 
 /* ---------------------- Début Formulaire --------------------------*/
@@ -128,7 +128,7 @@ html{
 {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 45%;
     padding: 0;
 }
 
@@ -157,19 +157,25 @@ h1
     min-height: 50vh;
     padding: 0;
     margin: 0;
-    background-color:#3E606F;
+    background-color:#B4DCED;
 }
 
 #colonne1
 {
     transition: all 0.75s;
     margin-bottom: 0;
-    background-color: #193441;
+    background-color: #91C9E8;
 }
 #colonne2
 {
-    background-color: #193441;    
+    background-color: #91C9E8;    
     transition: all 0.75s;
+}
+
+#TitreLogo
+{
+    height: 100% !important;
+    color: rgb(19, 48, 63);
 }
 
 #TitreLogo p
