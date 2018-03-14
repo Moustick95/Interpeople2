@@ -127,26 +127,32 @@
     </nav>
     <!-- Fin Header -->
 
-    <div id="boutonPoste">
-        <button class="btn btn-large blue ">
-            Ajouter un poste
-            <i class="material-icons left medium">add_box</i>
-        </button>
-    </div>
-
     <!-- Petite ligne -->
     <div class="col s12  indigo lighten-3" style="height:3px;">
     </div>
     <!-- Petite ligne -->
 
     <!-- Début ligne -->
-    <div class="row blue-grey lighten-3">
-        <div class="col s4 offset-s4 blue-grey darken-1">
-            <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Textarea</label>
-            </div>
 
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <div class="col s8 offset-s2 z-depth-2 valign-wrapper blue-grey darken-1">
+                <div class="col s2" id="partieImage">
+                    <img id="imageProfil" class="circle responsive-img z-depth-3" src="image/index.png" alt="Profil">
+                </div>
+                <div class="col s6" id="nouveauPoste">
+                    <form action="#">
+                        <div class="input-field">
+                            <textarea type="text" id="textarea" class="materialize-textarea"></textarea>
+                            <label class="active" for="textarea">Tapez votre message</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col s4" id="boutonProfil">
+                    <button class="btn indigo lighten-3" id="boutonNouveau">Valider</button>
+                    <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Options</a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -214,6 +220,21 @@
         <!-- Fin du poste -->
     </div>
     <!-- Fin de la ligne -->
+
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li>
+            <a href="#!">
+                <i class="material-icons">add_circle</i>image</a>
+        </li>
+        <li class="divider">
+        </li>
+        <li>
+            <a href="#!">two</a>
+        </li>
+    </ul>
+    <!-- Dropdown Structure -->
+    
     <script src="js/pageMur.js" type="text/javascript"></script>
 </body>
 

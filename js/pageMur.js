@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+    var result2 = $("#nouveauPoste").height();
+            $('#boutonProfil').height(result2);
+
+            $(window).resize(function () {
+                var result = $("#nouveauPoste").height();
+                $('#boutonProfil').height(result);
+            });
+
 $('#groupeListe').hide();
 
 (function(){

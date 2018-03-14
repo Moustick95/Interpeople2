@@ -13,48 +13,113 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+
 
     <title>Interpeople Material</title>
 </head>
 <style>
-    .fileupload {
-        width: 100px;
-        height: 50px;
-        position: relative;
-        overflow: hidden;
-        background: ...;
-        /* and other things to make it pretty */
+    #boutonProfil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    .fileupload input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        /* not left, because only the right part of the input seems to
-                         be clickable in some browser I can't remember */
-        cursor: pointer;
-        opacity: 0.0;
-        filter: alpha(opacity=0);
-        /* and all the other old opacity stuff you
-                                         want to support */
-        font-size: 300px;
-        /* wtf, but apparently the most reliable way to make
-                                 a large part of the input clickable in most browsers */
-        height: 200px;
+    #boutonNouveau {
+        margin-bottom: 5px;
+    }
+
+    #imageProfil {
+        padding: 2px;
+        background-color: rgb(124, 131, 223);
+        margin-top: 8px;
     }
 </style>
 
 <body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 
-        <div class="fileupload">
-                <input type="file" />
-                <button class="btn-large red">
-                    <i class="material-icons">mode_edit</i>
-                </button>
-              </div>
+
+    <div class="row">
+        <div class="col s8 offset-s2  ">
+            <div class="col s8 offset-s2 z-depth-2 valign-wrapper">
+                <div class="col s2" id="partieImage">
+                        <img id="imageProfil" class="circle responsive-img z-depth-3" src="image/index.png" alt="Profil">
+                    </div>
+                    <div class="col s6" id="nouveauPoste">
+                        <form action="#">
+                            <div class="input-field">
+                                <textarea type="text" id="textarea" class="materialize-textarea"></textarea>
+                                <label class="active" for="textarea">Tapez votre message</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col s4" id="boutonProfil">
+                        <button class="btn indigo lighten-3" id="boutonNouveau">Valider</button>
+                        <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Options</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 
+
+<div class="col s8 offset-s2 offset-s2 z-depth-2 valign-wrapper">
+                <div class="col s12">
+                    <form action="#">
+                        <div class="input-field">
+                            <div class="input-field col s12">
+                                <input id="titreNouveau" type="text">
+                                <label for="titreNouveau">Titre de votre</label>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+                <div class="col s12" id="imageProfil">
+                    <img class="circle responsive-img z-depth-3" src="image/index.png" alt="Profil">
+                </div>
+                <div class="col s6" id="nouveauPoste">
+                    <form action="#">
+                        <div class="input-field">
+                            <textarea type="text" id="textarea" class="materialize-textarea"></textarea>
+                            <label class="active" for="textarea">Tapez votre message</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col s3" id="boutonProfil">
+                    <button class="btn indigo lighten-3" id="boutonNouveau">Valider</button>
+                    <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
+                </div>
+            </div>
+ -->
+
+
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li>
+            <a href="#!">
+                <i class="material-icons">add_circle</i>image</a>
+        </li>
+        <li class="divider">
+        </li>
+        <li>
+            <a href="#!">two</a>
+        </li>
+    </ul>
+
+    <script>
+        $(document).ready(function () {
+            var result2 = $("#nouveauPoste").height();
+            $('#boutonProfil').height(result2);
+
+            $(window).resize(function () {
+                var result = $("#nouveauPoste").height();
+                $('#boutonProfil').height(result);
+            });
+        });
+    </script>
 
 </body>
 

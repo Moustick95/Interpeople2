@@ -120,3 +120,20 @@ h6
     display: flex;
     justify-content: center;
 }
+
+#boutonProfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#boutonNouveau {
+    margin-bottom: 5px;
+}
+
+#imageProfil {
+    padding: 2px;
+    background-color: rgb(124, 131, 223);
+    margin-top: 8px;
+}
+
