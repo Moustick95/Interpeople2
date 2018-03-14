@@ -88,19 +88,15 @@ html
 {
     display:flex;
     justify-content:flex-start;
-    align-items: center;
     padding-right:10px;
     padding-left:10px;
 }
 
 .imageAuteur
 {
-    min-width: 0;
-    max-width: 35px;
-    height: 35px;
+    max-width: 8%;
+    height: 8%;
     object-fit: cover;
-    border-radius: 50%;
-    margin-right: 5px;
 }
 
 .auteurPoste h5
