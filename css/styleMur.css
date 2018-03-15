@@ -81,6 +81,7 @@ html
 {
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
+    color: white !important;
 }
 
 #nouveauMessage
@@ -92,6 +93,15 @@ html
 {
     display:flex;
     flex-direction:columns;
+}
+
+.select-wrapper input.select-dropdown
+{
+    border-bottom: none !important;
+    background-color:rgb(117, 119, 209);
+    border-radius: 5px !important;
+    padding-left: 5px;
+    color: white !important;
 }
 
 .card-title {

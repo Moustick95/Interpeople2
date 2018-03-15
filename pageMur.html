@@ -150,7 +150,14 @@
                 </div>
                 <div class="col s4" id="boutonProfil">
                     <button class="btn indigo lighten-3" id="boutonNouveau">Valider</button>
-                    <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Options</a>
+                    <div class="input-field col s12" style="margin:0 !important;">
+                            <select>
+                                <option value="" disabled selected>Options</option>
+                                <option value="1">Ajouter une image</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
                 </div>
             </div>
         </div>
@@ -165,7 +172,7 @@
                     <!-- Auteur et image de profil MAJ -->
 
                     <div class="card-content white-text left-align">
-                    <span class="card-title">
+                        <span class="card-title">
                             <div class="titre">
                                 <div class="row valign-wrapper">
                                     <div class="col s4">
@@ -183,20 +190,20 @@
                                 </div>
                             </div>
                         </span>
-                    <!-- Auteur et image de profil MAJ -->
+                        <!-- Auteur et image de profil MAJ -->
 
-                    <!-- Contenu du poste -->
+                        <!-- Contenu du poste -->
 
                         <div class="card-image">
                             <img class="z-depth-2 imagePoste" src="image/FondProfil.jpg">
                         </div>
                         <p class="texteCarte">I am a very simple card. I am good at containing small bits of information. I am convenient because
                             I require little markup to use effectively.</p>
-                            <!-- DATE POSTE -->
-                            <div>
-                                <p class="datePoste">Date d'aujourd'hui</p>
-                            </div>
-                            <!-- DATE POSTE -->
+                        <!-- DATE POSTE -->
+                        <div>
+                            <p class="datePoste">Date d'aujourd'hui</p>
+                        </div>
+                        <!-- DATE POSTE -->
                     </div>
                     <!-- Contenu du poste -->
                 </div>
@@ -233,21 +240,6 @@
         <!-- Fin du poste -->
     </div>
     <!-- Fin de la ligne -->
-
-    <!-- Dropdown Structure -->
-    <ul id='dropdown1' class='dropdown-content'>
-        <li>
-            <a href="#!">
-                <i class="material-icons">add_circle</i>image</a>
-        </li>
-        <li class="divider">
-        </li>
-        <li>
-            <a href="#!">two</a>
-        </li>
-    </ul>
-    <!-- Dropdown Structure -->
-
     <script src="js/pageMur.js" type="text/javascript"></script>
 </body>
 

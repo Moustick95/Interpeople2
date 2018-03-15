@@ -20,14 +20,13 @@
     <title>Interpeople/NomDuGroupe</title>
 </head>
 
-<style>
-    .btn{
-        margin-bottom: 15px !important;
-        width: 100% !important;
-    }
-</style>
-
 <body>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+
     <!-- Navbar -->
     <ul id="slide-out" class="side-nav grey lighten-4">
         <li>
@@ -135,9 +134,9 @@
         <h4 class="center-align" id="titreGroupe">Nom du groupe</h4>
     </div>
 
-    <div class="row">
+    <div class="row" >
         <div class="container">
-            <div class="col s12 z-depth-3">
+            <div class="col s12 z-depth-3" id="bloc1">
                 <div class="center-align">
                     <h3>Tableau de bord</h3>
                 </div>
@@ -164,34 +163,42 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 center-align z-depth-3">
+            <div class="col s12 center-align z-depth-3 " id="bloc2">
                 <h3>Modifier votre groupe</h3>
                 <div class="Modification">
                     <div class="col s4 center-align">
                         <h5>Membres</h5>
                         <div class="left-align">
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Inviter des membres
-                                <i class="material-icons right">send</i>
+                            <button class="btn blue lighten waves-effect waves-light" type="submit" name="action">Inviter des membres
+                                <i class="material-icons right">group_add</i>
                             </button>
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Exclure un membre
-                                <i class="material-icons right">send</i>
+                            <button class="btn blue lighten waves-effect waves-light" type="submit" name="action">Exclure un membre
+                                <i class="material-icons right">remove_circle</i>
                             </button>
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Définir des rôles
-                                <i class="material-icons right">send</i>
+                            <button class="btn blue waves-effect waves-light" type="submit" name="action">Définir des rôles
+                                <i class="material-icons right">person</i>
                             </button>
                         </div>
                     </div>
                     <div class="col s4 center-align">
-                            <h5>Personnalisation</h5>
+                        <h5>Personnalisation</h5>
+                        <div class="left-align">
+                            <button class="btn indigo waves-effect waves-light" type="submit" name="action">Changer l'image
+                                <i class="material-icons right">image</i>
+                            </button>
+                            <button class="btn indigo waves-effect waves-light" type="submit" name="action">Changer de nom
+                                <i class="material-icons right">assignment_ind</i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col s4 center-align">
+                            <h5>Postes</h5>
                             <div class="left-align">
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Changer l'image
-                                    <i class="material-icons right">send</i>
+                                <button class="btn blue accent-4 waves-effect waves-light" type="submit" name="action">Nouveau poste
+                                    <i class="material-icons right">add_circle_outline</i>
                                 </button>
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Changer de nom
-                                    <i class="material-icons right">send</i>
-                                </button>
-                                <button class="btn waves-effect waves-light" type="submit" name="action">
-                                    <i class="material-icons right">send</i>
+                                <button class="btn blue accent-4 waves-effect waves-light" type="submit" name="action">Voir les postes
+                                    <i class="material-icons right">insert_comment</i>
                                 </button>
                             </div>
                         </div>
@@ -199,5 +206,7 @@
             </div>
         </div>
     </div>
-    <script src="pageGroupe.js"></script>
+
+    
+    <script src="js/pageGroupe.js"></script>
 </body>

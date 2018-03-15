@@ -38,45 +38,40 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
 
+
     <div class="row">
-        <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <!-- titre -->
-                    <span class="card-title">
-                        <div class="titre">
-                            <div class="row valign-wrapper">
-                                <div class="col s2">
-                                    <h5 id="titreCarteAuteur">Auteur</h5>
-                                </div>
-                                <div class="col s4 valign-wrapper" id="imageTitreAuteur">
-                                    <img src="image/index.png" width="60px" class="imageAuteur " alt="">
-                                </div>
-                                <div class="col s1 offset-s5">
-                                    <div id="statsCommentaires">
-                                        <span id="nombreCommentaire"></span>
-                                        <i class="material-icons">comment</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </span>
-                    <!-- titre -->
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
-                        require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                    <a href="#">This is a link</a>
+        <div class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">textsms</i>
+                    <input type="text" id="autocomplete-input" class="autocomplete">
+                    <label for="autocomplete-input">Autocomplete</label>
                 </div>
             </div>
         </div>
     </div>
 
 
-
-
     <script>
+        $(document).ready(function () {
+            
+  $('input.autocomplete').autocomplete({
+    data: {
+      "Apple": null,
+      "Microsoft": null,
+      "Google": 'https://placehold.it/250x250'
+    },
+    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+    onAutocomplete: function(val) {
+      // Callback function when value is autcompleted.
+    },
+    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+  });
+        
+
+
+            $('select').material_select();
+        });
     </script>
 
 </body>
