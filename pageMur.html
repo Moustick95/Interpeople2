@@ -25,7 +25,7 @@
 
 <body>
     <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--Import jQuery before materialize.js-->
 
@@ -136,8 +136,8 @@
 
     <div class="row">
         <div class="col s8 offset-s2" id="nouveauMessage">
-            <div class="col s8 offset-s2 z-depth-2 valign-wrapper blue-grey darken-1">
-                <div class="col s2" id="partieImage">
+            <div class="col s8 offset-s2 z-depth-2 valign-wrapper blue-grey darken-1 tailleBlocNouveau">
+                <div class="col s2 " id="partieImage">
                     <img id="imageProfil" class="circle responsive-img z-depth-3" src="image/index.png" alt="Profil">
                 </div>
                 <div class="col s6" id="nouveauPoste">
@@ -148,16 +148,16 @@
                         </div>
                     </form>
                 </div>
-                <div class="col s4" id="boutonProfil">
+                <div class="col s4 " id="boutonProfil">
                     <button class="btn indigo lighten-3" id="boutonNouveau">Valider</button>
-                    <div class="input-field col s12" style="margin:0 !important;">
-                            <select>
-                                <option value="" disabled selected>Options</option>
-                                <option value="1">Ajouter une image</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
-                        </div>
+                    <div class="input-field left-align" id="boutonOptions" style="margin:0 !important; padding:0 !important;">
+                        <select class="z-depth-2">
+                            <option value="" disabled selected >Options</option>
+                            <option value="1">Ajouter une image</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
@@ -229,11 +229,21 @@
                     </div>
                     <!-- Contenu du commentaires -->
                 </div>
-                <div class="col s12" style="margin-top:10px;">
-                    <button class="btn z-depth-2 waves-effect indigo ajouterCommentaire">Ajouter un commentaire</button>
+                <div class="col s12 blue-grey z-depth-2 black-text" style="margin-top:10px;" id="nouveauCommentaire">
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                                <label for="icon_prefix2">Nouveau commentaire</label>
+                            </div>
+                        </div>
+                        <input class="btn blue" style="margin-bottom:6px;" type="submit" value="Envoyer">
+                    </form>
                 </div>
-
-
+                <div class="col s12" style="margin-top:10px;">
+                    <button class="btn z-depth-2 waves-effect indigo " id="ajouterCommentaire">Ajouter un commentaire</button>
+                </div>
             </div>
             <!-- Fin Espace commentaires -->
         </div>

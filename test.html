@@ -18,17 +18,28 @@
     <title>Interpeople Material</title>
 </head>
 <style>
-    .card-title {
-        display: flex;
-        flex-direction: row;
+    .inputfile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
     }
-
-    #titreCarteAuteur {
-        margin: 0;
+    .inputfile + label {
+        font-size: 1.25em;
+        font-weight: 700;
+        color: white;
+        background-color: rgb(59, 133, 230);
+        display: inline-block;
     }
-
-    #imageTitreAuteur {
-        padding-left: 0;
+    
+    .inputfile:focus + label,
+    .inputfile + label:hover {
+        background-color: red;
+    }
+    .inputfile + label {
+        cursor: pointer; /* "hand" cursor */
     }
 </style>
 
@@ -37,41 +48,17 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
-
-
     <div class="row">
-        <div class="col s12">
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">textsms</i>
-                    <input type="text" id="autocomplete-input" class="autocomplete">
-                    <label for="autocomplete-input">Autocomplete</label>
-                </div>
-            </div>
+        <div class="col s3">
+
+                <i class="material-icons"></i><input type="file" name="file" id="file" class="inputfile" />add_circle</i>
+                <label for="file"> Modifier l'image </label>
+
         </div>
     </div>
 
 
     <script>
-        $(document).ready(function () {
-            
-  $('input.autocomplete').autocomplete({
-    data: {
-      "Apple": null,
-      "Microsoft": null,
-      "Google": 'https://placehold.it/250x250'
-    },
-    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
-    onAutocomplete: function(val) {
-      // Callback function when value is autcompleted.
-    },
-    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
-  });
-        
-
-
-            $('select').material_select();
-        });
     </script>
 
 </body>

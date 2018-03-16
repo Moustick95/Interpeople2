@@ -1,25 +1,27 @@
 $(document).ready(function () {
 
+    //Materialize pour la boite Option sous Valider
     $('select').material_select();
 
-    
+    $("#nouveauCommentaire").hide();
 
-
-    var result2 = $("#nouveauPoste").height();
-    $('#boutonProfil').height(result2);
-
-    $(window).resize(function () {
-        var result = $("#nouveauPoste").height();
-        $('#boutonProfil').height(result);
+// Apparition de la boite pour ajouter un commentaire     
+    $('#ajouterCommentaire').click(function () {
+        if ($('#ajouterCommentaire').hasClass('Annuler')) {
+            $("#nouveauCommentaire").slideToggle("slow");
+            $('#ajouterCommentaire').removeClass('Annuler');
+            $('#ajouterCommentaire').html('#ajouterCommentaire');            
+        } else {                              
+            $('#ajouterCommentaire').html('Annuler');
+            $("#nouveauCommentaire").slideToggle("slow");
+            $('#ajouterCommentaire').addClass('Annuler');
+        }
     });
 
+    //SideNav
     $('#groupeListe').hide();
 
-    (function () {
-        let nCommentaire = $('.fenetreCommentaire').length;
-        $('#nombreCommentaire').html(nCommentaire);
-    })()
-
+    //SideNav
     $("#groupeButton").click(function () {
         var $this = $(this);
 
@@ -33,13 +35,14 @@ $(document).ready(function () {
         }
     });
 
+    //SideNav
     $(".button-collapse").sideNav();
 
+    //Meme hieght du bloc Poste et Commentaire
     $(window).resize(function () {
         var result = $(".cartePoste").height();
         $('.fenetreCommentaire').height(result);
     });
-
     var result = $(".cartePoste").height();
     $('.fenetreCommentaire').height(result);
 
