@@ -15,11 +15,10 @@ html
     right: 0;
 }
 
-.ajouterCommentaire
+#ajouterCommentaire
 {
     text-transform: none;
 }
-
 
 .imagePoste
 {
@@ -89,6 +88,11 @@ html
     margin-top: 10px;
 }
 
+.tailleBlocNouveau
+{
+    min-height: 125px !important;    
+}
+
 #statsCommentaires
 {
     display:flex;
@@ -108,6 +112,10 @@ html
     display: flex;
     flex-direction: row;
 }
+
+textarea{
+    padding: 0 !important;
+    }
 
 #titreCarteAuteur {
     margin: 0;
