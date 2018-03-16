@@ -24,6 +24,9 @@ $(document).ready(function () {
     }, function () {
         $(this).css("border-bottom-left-radius", "0px 0px");
     });
+
+    
+
     $('.modal').modal({
         dismissible: true, // Modal can be dismissed by clicking outside of the modal
         opacity: .25, // Opacity of modal background
