@@ -8,22 +8,14 @@ $(document).ready(function () {
 // Apparition de la boite pour ajouter un commentaire     
     $('#ajouterCommentaire').click(function () {
         if ($('#ajouterCommentaire').hasClass('Annuler')) {
-            $("#nouveauCommentaire").hide();
+            $("#nouveauCommentaire").slideToggle("slow");
             $('#ajouterCommentaire').removeClass('Annuler');
-            $('#ajouterCommentaire').html('Ajouter un commentaire');            
-        } else {
+            $('#ajouterCommentaire').html('#ajouterCommentaire');            
+        } else {                              
             $('#ajouterCommentaire').html('Annuler');
-            $("#nouveauCommentaire").show();
+            $("#nouveauCommentaire").slideToggle("slow");
             $('#ajouterCommentaire').addClass('Annuler');
         }
-    });
-
-    //Meme height pour les div dans le nouveau poste
-    var result2 = $("#nouveauPoste").height();
-    $('#boutonProfil').height(result2);
-    $(window).resize(function () {
-        var result = $("#nouveauPoste").height();
-        $('#boutonProfil').height(result);
     });
 
     //SideNav

@@ -179,6 +179,13 @@ h6
 
 #boutonNouveau {
     margin-bottom: 5px;
+    width: 100% !important;
+}
+
+#boutonOptions
+{
+    width: 100%;
+    margin: 0 !important;
 }
 
 #imageProfil {
