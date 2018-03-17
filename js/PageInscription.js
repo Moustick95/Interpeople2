@@ -10,6 +10,19 @@ $(document).ready(function () {
         $('#email2').focus();
     });
 
+    $('#modal2Fermer').click(function(){
+        $('#modal2').modal('close');        
+    })
+
+    $('#modal1Fermer').click(function(){
+        $('#modal1').modal('close');        
+    })
+
+    $('#inscription').click(function () {
+        $('#modal2').modal('open');
+        $('#email2').focus();
+    });
+
     resize($('#ligne1'), $('#colonne1'));
     resize($('#ligne1'), $('#colonne2'));
 
@@ -32,7 +45,7 @@ $(document).ready(function () {
 
 
     $('.modal').modal({
-        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        dismissible: false, // Modal can be dismissed by clicking outside of the modal
         opacity: .25, // Opacity of modal background
         inDuration: 300, // Transition in duration
         outDuration: 150, // Transition out duration

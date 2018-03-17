@@ -39,6 +39,11 @@ h4
     height: 20.0em;
 }
 
+.auteur
+{
+    height:12em;
+}
+
 #titreCarte > h5
 {
     margin-top: 0px !important;
@@ -172,9 +177,26 @@ color: grey !important;
     width: 60%;
 }
 
+.invisible-scrollbar{
+    display: block;
+    width: 10em;
+    overflow: auto;
+    height: 10em;
+  }
+  .invisible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+#messagePoste
+{
+    width: 100%;
+    word-wrap: break-word;
+}
+
 #messageCommentaire
 {
     width: 100%;
+    word-wrap: break-word;    
 }
 
 #test6 ul

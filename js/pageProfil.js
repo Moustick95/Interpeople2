@@ -2,16 +2,12 @@ $(document).ready(function () {
 
     Materialize.updateTextFields();
 
-    
-
     $('input#input_text, textarea#textarea1').characterCounter();
-
     $(".loader").hide();
-
     $('.modal').modal();
-
     $('#groupeListe').hide();
 
+    //Fonction pour la sideNav
     $("#groupeButton").click(function () {
         var $this = $(this);
 
@@ -25,90 +21,91 @@ $(document).ready(function () {
         }
     });
 
-
-
+    //Affiche la Description
     $('#case1').click(function () {
         $('#boutonDescription').text('Modifier la description');
         $("#boutonDescription").attr("href", "#modal1");
         $('#boutonDescription').removeClass('disabled');
     });
 
-
+    //Affiche les  Informations générales
     $('#case2').click(function () {
         $('#boutonDescription').text('Modifier des informations');
         $("#boutonDescription").attr("href", "#modal2");
         $('#boutonDescription').removeClass('disabled');
     });
 
-    $('#supprimerCompte').click(function () {
-        confirm('T\'es sur de toi ?');
-    });
-
-    /* Edition des postes */
-    $('.editerPoste').click(function () {
-
-        message = $('.messagePoste');
-
-        function ajoutBouton() {
-            $('.messagePoste').addClass('contenteditable');
-            $('#editPoste').addClass('disabled');
-            $(".messagePoste").attr("contenteditable", "true");
-            $(".messagePoste").focus();
-            jQuery('.messagePoste').append(' <div style="width:100%;margin-top:5px;" class="center-align"><button class="btn blue darken-4" id="boutonTexte" >Valider</button></div>');
-            jQuery('.messagePoste').append(' <div style="width:100%;margin-top:5px;" class="center-align"><button class="btn blue darken-4" id="boutonTexte" >Annuler</button></div>');
-            
-        }
-
-        function supprimerBouton() {
-            $('#editPoste').removeClass('disabled');            
-            $('#boutonTexte').remove();
-            $('.messagePoste').attr("contenteditable", "false");
-        }
-
-            ajoutBouton();
-            
-            
-        
-
-        $('#boutonTexte').click(function () {
-            supprimerBouton();
-            console.log(bouton);
-        });
-    });
-    /* Edition des postes */
-
-    /* Edition des commentaires */
-    $('.editerCommentaire').click(function () {
-        $('.texteCommentaire').addClass('contenteditable');
-        $(".texteCommentaire").attr("contenteditable", "true");
-        $(".texteCommentaire").focus();
-
-        jQuery('.texteCommentaire').append(' <div style="width:100%;margin-top:5px;" class="center-align"><button class="btn blue darken-4" id="boutonTexte" >Valider</button></div>');
-
-        $('#boutonTexte').click(function () {
-            $('#boutonTexte').remove();
-            $('.texteCommentaire').attr("contenteditable", "false");
-        });
-    });
-
-    /* Edition des commentaires */
-
+    //Affiche le Compte
     $('#case3').click(function () {
         $('#boutonDescription').text('');
         $('#boutonDescription').addClass('disabled');
     });
 
-    $('#boutonDescription').click(function () {
+    //Supprime le compte
+    $('#supprimerCompte').click(function () {
+        confirm('T\'es sur de toi ?');
+    });
 
+    //Fonction pour ajouter les boutons d'éditions
+    function ajoutBouton(Contenu, bouton) {
+        $(Contenu).addClass('contenteditable');
+        $(bouton).addClass('disabled');
+        $(Contenu).attr("contenteditable", "true");
+        $(Contenu).focus();
+        jQuery(Contenu).append(' <div style="margin-top:5px;margin-bottom:10px;" class="center-align col s12"><button class="btn blue darken-4" id="validerEditer" >Valider</button><button class="btn blue darken-4" style="margin-left:7px;" id="annulerEditer" >Annuler</button></div>');
+    }
+
+    //Fonction pour valider l'édition
+    function validerEdition(contenu, bouton) {
+        $(bouton).removeClass('disabled');
+        $('#validerEditer').remove();
+        $('#annulerEditer').remove();
+        $(contenu).attr("contenteditable", "false");
+    }
+
+    //Fonction pour annuler l'édition
+    function annulerEdition(contenu, bouton, message) {
+        $(contenu).text(message);
+        $(bouton).removeClass('disabled');
+        $('#validerEditer').remove();
+        $('#annulerEditer').remove();
+        $(contenu).attr("contenteditable", "false");
+    }
+
+    // Edition des postes 
+    $('.editerPoste').click(function () {
+        message = $('#messagePoste').text();
+        ajoutBouton($('#textePoste'), $('#editPoste'));
+        $('#validerEditer').click(function () {
+            validerEdition($('#textePoste'), $('#editPoste'));
+        });
+        $('#annulerEditer').click(function () {
+            annulerEdition($('#textePoste'), $('#editPoste'),message );
+        });
+    });
+
+
+    //Edition des commentaires 
+    $('#editerCommentaire').click(function () {
+        message = $('#texteCommentaire').text();
+        ajoutBouton($('#texteCommentaire'), $('#editerCommentaire'));
+        $('#validerEditer').click(function () {
+            validerEdition($('#texteCommentaire'), $('#editerCommentaire'));
+        });
+        $('#annulerEditer').click(function () {
+            annulerEdition($('#texteCommentaire'), $('#editerCommentaire'),message );
+        });
+    });
+
+    //Bouton qui affiche les modal
+    $('#boutonDescription').click(function () {
         if ($('#case1').hasClass('active')) {
             $('#modal1').modal('open');
         }
-
         if ($('#case2').hasClass('active')) {
             $('#modal2').modal('open');
         }
     });
-
 });
 
 $(".button-collapse").sideNav(); 

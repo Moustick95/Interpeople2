@@ -252,19 +252,19 @@
             <!-- 1 commentaire -->
             <div class="row">
                 <!-- Auteur -->
-                <div class="col s2 left-align valign-wrapper " style="height:12em;">
+                <div class="col s2 left-align valign-wrapper auteur">
                     <div class="col s10 offset-s1 center-align">
                         <h5 style="padding-left:10px;margin-top:0;">Nom Auteur</h5>
-                        <img src="image/FondProfil.jpg" class="z-depth-2 responsive-img imagePoste" alt="Auteur">
+                        <img src="image/FondProfil.jpg" class="z-depth-2 responsive-img" width="150" alt="Auteur">
                     </div>
                 </div>
                 <!-- Auteur -->
                 <!-- Message -->
                 <div class="col s8 valign-wrapper" style="height:12em;margin-top:0.5em;">
-                    <div class="card-panel grey lighten-4 z-depth-2">
+                    <div class="card-panel grey lighten-4 z-depth-2 invisible-scrollbar" id="messagePoste">
                         <div class="card-content messageType">
                             <span class="card-title ">Card Title</span>
-                            <p class="messagePoste">I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            <p id="textePoste">I am a very simple card. I am good at containing small bits of information. I am convenient because
                                 I require little markup to use effectively.</p>
                         </div>
                     </div>
@@ -295,7 +295,7 @@
 
     <!-- Debut ligne 3-->
     <div class="row">
-        <div class="col offset-s1 ">
+        <div class="col offset-s1 TitreMessage">
             <h4>Mes commentaires</h4>
         </div>
         <!-- Commenaires de l'utilisateurs -->
@@ -303,7 +303,7 @@
             <!-- 1 commentaire -->
             <div class="row">
                 <!-- Auteur -->
-                <div class="col s2 left-align valign-wrapper " style="height:12em; ">
+                <div class="col s2 left-align valign-wrapper auteur">
                     <div class="col s10 offset-s1 center-align">
                         <h5 style="padding-left:10px;margin-top:0;">Nom Auteur</h5>
                         <img src="image/FondProfil.jpg" class="z-depth-2 responsive-img" width="150" alt="Auteur">
@@ -312,17 +312,17 @@
                 <!-- Auteur -->
                 <!-- Message -->
                 <div class="col s8 valign-wrapper" style="height:12em;margin-top:0.5em;">
-                    <div class="card-panel grey lighten-4 z-depth-2" id="messageCommentaire">
+                    <div class="card-panel grey lighten-4 z-depth-2 invisible-scrollbar" id="messageCommentaire">
                         <div class="card-content messageType">
                             <span class="card-title ">Card Title</span>
-                            <p class="texteCommentaire">I am a very simple card. I</p>
+                            <p id="texteCommentaire">I am a very simple card. I</p>
                         </div>
                     </div>
                 </div>
                 <!-- Message -->
                 <!-- Boutons  -->
                 <div class="col s2 valign-wrapper  panneauBoutons" style="display:flex;flex-direction:column;height:12em;padding-top:1.25em;margin-top:0.5em;">
-                    <button class="btn green lighten waves-effect waves-light editerCommentaire valign-wrapper" style="margin-bottom:1em;">
+                    <button class="btn green lighten waves-effect waves-light valign-wrapper" style="margin-bottom:1em;" id="editerCommentaire">
                         <i class="material-icons">edit</i>
                         <div class="plop">Editer</div>
                     </button>
