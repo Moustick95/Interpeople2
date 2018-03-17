@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta nom="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
     <!--Import Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
     <!-- Import CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -27,119 +28,141 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-     <!--Import jQuery before materialize.js-->
+    <!--Import jQuery before materialize.js-->
 
-     <!-- import JS -->
+    <!-- import JS -->
 
     <div class="row" id="ligne1">
 
-                <!-- Colonne de gauche -->
-                <div class="col s2 xl2  z-depth-5 left-align" id="colonne1">
-                    <h5>InterPeople, c'est :</h5>
-                    <br />
-                    <p>Plus de 5000 connexions par jour</p>
-                    <br />
-                    <p>Des rencontres possibles chaque jour</p>
-                    <br />
-                    <p>Notre site est disponible dans plus de 70 pays</p>
-                    <br />
-                    <p>Une plateforme sans limite</p>
-                    <br />
+        <!-- Colonne de gauche -->
+        <div class="col s2 xl2  z-depth-5 left-align" id="colonne1">
+            <h5>InterPeople, c'est :</h5>
+            <br />
+            <p>Plus de 5000 connexions par jour</p>
+            <br />
+            <p>Des rencontres possibles chaque jour</p>
+            <br />
+            <p>Notre site est disponible dans plus de 70 pays</p>
+            <br />
+            <p>Une plateforme sans limite</p>
+            <br />
+        </div>
+
+        <!-- Logo et titre centré -->
+        <div class="col s6 offset-s1 center-align" id="TitreLogo">
+            <h1>InterPeople</h1>
+            <img src="image/LogoInterpeople.png" alt="">
+        </div>
+
+        <!-- Colonne de droite -->
+        <div class="col s2 offset-s1 z-depth-5 left-align " id="colonne2">
+            <h5>Fonctionnaliés : </h5>
+            <br />
+            <p>Une liste d'amis facile à gérer</p>
+            <br />
+            <p>Partager les postes de votre mur avec vos amis</p>
+            <br />
+            <p>Gérer des groupes</p>
+            <br />
+            <p>Chatter directement avec vos amis en LIVE !</p>
+            <br />
+        </div>
+    </div>
+
+    <!-- Bouton de connexion -->
+    <div id="ensembleBouton">
+        <div class=" z-depth-3 " id="BoutonLogIn">
+            <a class="btn btn-large indigo lighten  waves-effect waves-light modal-trigger " id="connexion" href="#modal1">Connexion</a>
+        </div>
+        <div class=" z-depth-3 " id="boutonConnexion">
+            <a class="btn btn-large indigo lighten  waves-effect waves-light modal-trigger " id="inscription" href="#modal2">Inscription</a>
+        </div>
+    </div>
+    <!-- Bouton de connexion -->
+
+    <!-- Structure de  la boite Modal -->
+    <div id="modal1" class="modal">
+        <div class="modal-content center-align">
+            <h4>Connexion à InterPeople</h4>
+            <form class="center-align">
+                <div class="input-field ">
+                    <input type="email" id="email2" class="validate">
+                    <label class="active" for="email2">Email</label>
                 </div>
-    
-                <!-- Logo et titre centré -->
-                <div class="col s6 offset-s1 center-align" id="TitreLogo">
-                    <h1>InterPeople</h1>
-                    <img src="image/LogoInterpeople.png" alt="">
+                <div class="input-field">
+                    <input type="password" id="motDePasse2">
+                    <label class="active" for="motDePasse2">Mot de passe</label>
                 </div>
-    
-                <!-- Colonne de droite -->
-                <div class="col s2 offset-s1 z-depth-5 left-align " id="colonne2">
-                    <h5>Fonctionnaliés : </h5>
-                    <br />
-                    <p>Une liste d'amis facile à gérer</p>
-                    <br />
-                    <p>Partager les postes de votre mur avec vos amis</p>
-                    <br />
-                    <p>Gérer des groupes</p>
-                    <br />
-                    <p>Chatter directement avec vos amis en LIVE !</p>
-                    <br />
+            </form>
+            <p>Bienvenue cher utilisateur</p>
+        </div>
+        <div class="modal-footer center-align">
+            <a href="PageProfil.html" class=" green white-text modal-action modal-close waves-effect waves-green btn-flat">Valider</a>
+        </div>
+    </div>
+    </div>
+
+    <!-- Structure de  la boite Modal -->
+    <div id="modal2" class="modal">
+        <div class="modal-content center-align">
+            <h4>Inscription à InterPeople</h4>
+            <form class="col s12">
+                <div class="row">
                 </div>
-            </div>
+                <div class="input-field">
+                    <input type="text" id="nom">
+                    <label class="active" for="nom" required>Nom</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="prenom">
+                    <label class="active" for="prenom" required>Prénom</label>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="email" class="validate">
+                    <label class="active" for="email" data-error="Votre mail doit être de forme exemple@domaine.fr" data-success="OK" required>Email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="motDePasse">
+                    <label class="active" for="motDePasse" required>Mot de passe</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="motDePasseC">
+                    <label class="active" for="motDePasseC" required>Confirmer mot de passe</label>
+                </div>
+                <div class="input-field center-align" id="validationInscription">
+                    <button class="btn green waves-effect waves-light" type="submit" name="action">S'inscrire
+                        <i class="material-icons right">check</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
     
-    
-        <div class="row" id="ligne2">
-            <div class="col s4 offset-s4">
-                <div class="card-panel z-depth-5">
-                    <div class="row">
-                        <form class="col s12">
-                            <div class="row">
-                                <div class="col s12 center-align">
-                                    <h5>Inscrivez-vous</h5>
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" id="nom">
-                                <label class="active" for="nom" required>Nom</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="text" id="prenom">
-                                <label class="active" for="prenom" required>Prénom</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="email" id="email" class="validate">
-                                <label class="active" for="email" data-error="Votre mail doit être de forme exemple@domaine.fr" data-success="OK" required>Email</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="password" id="motDePasse">
-                                <label class="active" for="motDePasse" required>Mot de passe</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="password" id="motDePasseC">
-                                <label class="active" for="motDePasseC" required>Confirmer mot de passe</label>
-                            </div>
-                            <div class="input-field center-align" id="boutonInscription">
-                                <button class="btn green waves-effect waves-light" type="submit" name="action">Valider
-                                    <i class="material-icons right">check</i>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
+
+<footer class="page-footer z-depth-2">
+        <div class="container">
+            <div class="row" id="ligneFooter">
+                <div class="col l8 s12">
+                    <h5 class="black-text">Blop Team</h5>
+                    <p class="black-text " id="texteFooter">
+                        Nous sommes pour l'instant une équipe réduite de 2 personnes qui veulent accomplir de grandes idées.
+                        Nous mettons à profit notre passion pour un web plus éthique et respecteux envers les utilisateurs.
+                    </p>
                 </div>
             </div>
         </div>
-
-            <!-- Bouton de connexion -->
-            <div class="col  offset-s3 offset-l3 z-depth-3" id="BoutonLogIn">
-                <a class="btn btn-large indigo lighten  waves-effect waves-light modal-trigger " id="connexion" href="#modal1">Connexion</a>
-            </div>
-            <!-- Bouton de connexion -->
-
-            <!-- Structure de  la boite Modal -->
-            <div id="modal1" class="modal">
-                <div class="modal-content center-align">
-                    <h4>Connexion à InterPeople</h4>
-                        <form class="center-align">
-                            <div class="input-field ">
-                                <input type="email" id="email2" class="validate">
-                                <label class="active" for="email2">Email</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="password" id="motDePasse2">
-                                <label class="active" for="motDePasse2">Mot de passe</label>
-                            </div>
-                        </form>
-                    <p>Bienvenue cher utilisateur</p>
-                </div>
-                <div class="modal-footer center-align">
-                    <a href="PageProfil.html" class=" green white-text modal-action modal-close waves-effect waves-green btn-flat">Valider</a>
-                </div>
+        <div class="footer-copyright z-depth-1">
+            <div class="container black-text">
+                © 2018 Copyright Tanguy Legendre & Flavien Lair
+                <a class="black-text right" href="#!">Contacts</a>
             </div>
         </div>
-        <!-- Fin de la ligne1 -->
-        
+    </footer>
+    <!-- Fin de la ligne1 -->
+
     <script src="js/PageInscription.js"></script>
-        
-    </body>
-</html>         
+
+</body>
+
+</html>

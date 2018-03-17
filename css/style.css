@@ -5,7 +5,6 @@ body,html{
 }
 html{
     margin-right:-14px!important;
-    overflow-y:scroll;
     overflow-x:hidden;
 }
 
@@ -27,9 +26,36 @@ html{
 
 #ligne1
 {
-    min-height: 50vh;
+    height: 75vh;
     padding: 0;
     background-color:#E8F8FF;
+}
+
+.page-footer
+{
+    padding: 0 !important;
+    background-color: #B4DCED;
+
+}
+#ligneFooter
+{
+    margin-bottom: 0 !important;
+}
+#texteFooter
+{
+    font-size: 0.85em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer
+{
+    height:25vh;   
+}
+
+.page-footer
+{
+    padding: 0;
 }
 
 /* ---------------------- Début Formulaire --------------------------*/
@@ -41,9 +67,18 @@ html{
     margin-bottom: 0;
 }  
 
-#boutonInscription
+#validationInscription
 {
     margin-bottom: 20px;
+}
+
+#ensembleBouton
+{
+    position: absolute; 
+    top: 0;
+    left: 50%; 
+    -webkit-transform: translate(-50%, 0);
+    display: flex;
 }
 
 #formulaire
@@ -125,10 +160,8 @@ html{
 
 #BoutonLogIn
 {
-    position: absolute;
-    top: 0;
-    right: 45%;
     padding: 0;
+    margin-right: 5px;
 }
 
 /* Bouton de connexion */
@@ -141,7 +174,13 @@ h1
 
 /* Début Boite Modal */
 
-#modal1 form
+.modal {
+    width: 75vw !important ; 
+    height: 75vh !important ;
+    overflow: hidden;
+} 
+
+.modal form
 {
    width: 50%;
    display: inline-block;
@@ -164,19 +203,21 @@ h1
     transition: all 0.75s;
     margin-bottom: 0;
     background-color: #91C9E8;
+    overflow: hidden;
 }
 #colonne2
 {
     background-color: #91C9E8;    
     transition: all 0.75s;
+    overflow: hidden;
+    
 }
 
 #TitreLogo
 {
-    height: 100% !important;
-    color: rgb(19, 48, 63);
+    color: rgb(56, 56, 56);
     margin-top: 2%;
-    margin-bottom: 2%;
+    height: calc(100%-2%) !important;    
 }
 
 #TitreLogo p

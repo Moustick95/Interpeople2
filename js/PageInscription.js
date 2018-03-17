@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     function resize(divInitial, divModifier) {
-        var result = divInitial.height();
+        let result = $('#ligne1').height();
         divModifier.height(result);
     }
 
