@@ -48,44 +48,27 @@ $(document).ready(function () {
     $('.editerPoste').click(function () {
 
         message = $('.messagePoste');
-        let bouton;
-
-        console.log(bouton);
-
-        function bool(bouton, etat) {
-            if (etat == 1) {
-                bouton = true;
-            } else {
-                bouton = false
-            }
-            return bouton;
-        }
 
         function ajoutBouton() {
             $('.messagePoste').addClass('contenteditable');
+            $('#editPoste').addClass('disabled');
             $(".messagePoste").attr("contenteditable", "true");
             $(".messagePoste").focus();
             jQuery('.messagePoste').append(' <div style="width:100%;margin-top:5px;" class="center-align"><button class="btn blue darken-4" id="boutonTexte" >Valider</button></div>');
+            jQuery('.messagePoste').append(' <div style="width:100%;margin-top:5px;" class="center-align"><button class="btn blue darken-4" id="boutonTexte" >Annuler</button></div>');
+            
         }
 
         function supprimerBouton() {
+            $('#editPoste').removeClass('disabled');            
             $('#boutonTexte').remove();
             $('.messagePoste').attr("contenteditable", "false");
-            bouton = bool(bouton, 0);
         }
 
-        if (!(message.hasClass('contenteditable'))) {
-            bouton = bool(bouton, 1);
             ajoutBouton();
-            console.log(bouton);
-
-        } else {
-            if (bouton == false || bouton == null) {
-                ajoutBouton();
-                bouton = bool(bouton, 1);
-                console.log(bouton);
-            }
-        }
+            
+            
+        
 
         $('#boutonTexte').click(function () {
             supprimerBouton();
