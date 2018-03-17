@@ -1,17 +1,21 @@
 $(document).ready(function () {
 
-    var result = $("#ligne1").height();
-    $('#colonne1').height(result);
-    
-    function resize(divInitial,divModifier){
+    function resize(divInitial, divModifier) {
         var result = divInitial.height();
         divModifier.height(result);
     }
 
-    
+    $('#connexion').click(function () {
+        $('#modal1').modal('open');
+        $('#email2').focus();
+    });
+
+    resize($('#ligne1'), $('#colonne1'));
+    resize($('#ligne1'), $('#colonne2'));
 
     $(window).resize(function () {
-
+        resize($('#ligne1'), $('#colonne1'))
+        resize($('#ligne1'), $('#colonne2'))
     });
 
     $("#colonne1").hover(function () {
@@ -25,7 +29,7 @@ $(document).ready(function () {
         $(this).css("border-bottom-left-radius", "0px 0px");
     });
 
-    
+
 
     $('.modal').modal({
         dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -36,6 +40,8 @@ $(document).ready(function () {
         endingTop: '10%', // Ending top style attribute
     }
     );
+
+
 });
 
 

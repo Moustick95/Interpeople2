@@ -10,7 +10,7 @@ $(document).ready(function () {
         if ($('#ajouterCommentaire').hasClass('Annuler')) {
             $("#nouveauCommentaire").slideToggle("slow");
             $('#ajouterCommentaire').removeClass('Annuler');
-            $('#ajouterCommentaire').html('#ajouterCommentaire');            
+            $('#ajouterCommentaire').html('Ajouter un commentaire');            
         } else {                              
             $('#ajouterCommentaire').html('Annuler');
             $("#nouveauCommentaire").slideToggle("slow");

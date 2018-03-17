@@ -1,6 +1,6 @@
 html
 {
-    background-color: rgb(176,190,191);
+    background-color: #91C9E8;
 }
 
 .poste
@@ -13,6 +13,11 @@ html
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.commentaireUnique
+{
+    background-color: #B4DCED;
 }
 
 #ajouterCommentaire
@@ -48,6 +53,7 @@ html
 {
     margin-top:0.5em;
     overflow: auto;
+    background-color: #67B8DE;
 }
 
 .auteurCommentaire
@@ -91,6 +97,8 @@ html
 .tailleBlocNouveau
 {
     min-height: 125px !important;    
+    background-color: #67B8DE;
+    
 }
 
 #statsCommentaires
@@ -99,18 +107,32 @@ html
     flex-direction:columns;
 }
 
-.select-wrapper input.select-dropdown
-{
+#menuOptions {
+    margin-bottom: 5px !important;
+    padding: 0pc !important;
+    color: white;
+}
+
+.select-wrapper input.select-dropdown {
+    position: unset;
+    text-align: center;
+    border-radius: 3px;
+    border: 2px;
+    background-color:#448AFF;
     border-bottom: none !important;
-    background-color:rgb(117, 119, 209);
-    border-radius: 5px !important;
-    padding-left: 5px;
     color: white !important;
+    margin: 0px ;
+
 }
 
 .card-title {
     display: flex;
     flex-direction: row;
+}
+
+.cartePoste
+{
+    background-color: #3399CC;
 }
 
 textarea{
@@ -184,7 +206,7 @@ h6
 
 #boutonOptions
 {
-    width: 100%;
+    width: calc(100%-5px) !important;
     margin: 0 !important;
 }
 
@@ -193,4 +215,13 @@ h6
     background-color: rgb(124, 131, 223);
     margin-top: 8px;
 }
+
+textarea.materialize-textarea {
+    border-bottom-color: #000 !important; 
+}
+
+ /* label color */
+ .input-field label {
+    color: rgb(28, 34, 43); 
+  }
 

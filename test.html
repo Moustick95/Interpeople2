@@ -18,28 +18,18 @@
     <title>Interpeople Material</title>
 </head>
 <style>
-    .inputfile {
-        width: 0.1px;
-        height: 0.1px;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        z-index: -1;
+    #menuOptions {
+        margin-bottom: 5px !important;
     }
-    .inputfile + label {
-        font-size: 1.25em;
-        font-weight: 700;
-        color: white;
-        background-color: rgb(59, 133, 230);
-        display: inline-block;
-    }
-    
-    .inputfile:focus + label,
-    .inputfile + label:hover {
-        background-color: red;
-    }
-    .inputfile + label {
-        cursor: pointer; /* "hand" cursor */
+
+    .select-wrapper input.select-dropdown {
+        text-align: center;
+        border-radius: 3px;
+        border: 2px;
+        background-color: gray;
+        border-bottom: none !important;
+        padding-left: 5px;
+        color: black !important;
     }
 </style>
 
@@ -49,16 +39,24 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
     <div class="row">
-        <div class="col s3">
-
-                <i class="material-icons"></i><input type="file" name="file" id="file" class="inputfile" />add_circle</i>
-                <label for="file"> Modifier l'image </label>
+        <div class="col s3 z-depth-2">
+            <div id="menuOptions" class="input-field col s12">
+                <select>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </div>
 
         </div>
     </div>
 
 
     <script>
+        $(document).ready(function () {
+            $('select').material_select();
+        });
     </script>
 
 </body>
