@@ -1,6 +1,6 @@
 html
 {
-    background-color: #91C9E8;
+    background-color: #B4DCED;
 }
 
 .poste
@@ -54,6 +54,9 @@ html
     margin-top:0.5em;
     overflow: auto;
     background-color: #67B8DE;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
 }
 
 .auteurCommentaire
@@ -132,7 +135,7 @@ html
 
 .cartePoste
 {
-    background-color: #3399CC;
+    background-color: #91C9E8;
 }
 
 textarea{

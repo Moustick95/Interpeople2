@@ -4,6 +4,7 @@ html,body
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    background-color: #E8F8FF;
 }
 
 h4
@@ -54,11 +55,20 @@ h4
     margin-top: 6em;
 }
 
+.Commentaires
+{
+    display: block;
+    height: 400px;
+    overflow-y: scroll;
+    background-color: #B4DCED;
+}
+
 .Postes
 {
     display: block;
     height: 400px;
     overflow-y: scroll;
+    background-color: #B4DCED;
 }
 
 #test4 p
@@ -101,9 +111,22 @@ h4
 
 #carteDescription
 {
+    padding: 0 !important;
     margin:10px !important;
     margin-bottom: 20px !important;
     height: 315px !important;
+    background-color: white;
+}
+
+.card-panel
+{
+    background-color: #B4DCED;
+    
+}
+
+.card-stacked
+{
+    background-color: #91C9E8;
 }
 
 #espaceBouton
