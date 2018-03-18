@@ -274,6 +274,17 @@ p
 
 @media (max-width: 1366px)
 {
+
+    #colonne1
+    {
+        font-size: 1em;
+    }
+    #colonne2
+    {
+        font-size: 1em;
+    }
+
+
     #TitreLogo
 {
     color: rgb(56, 56, 56);

@@ -229,8 +229,20 @@ textarea.materialize-textarea {
     border-bottom-color: #000 !important; 
 }
 
+
+
  /* label color */
  .input-field label {
     color: rgb(28, 34, 43); 
   }
+
+  @media screen and (max-width: 400px)
+  {
+    .fenetreCommentaire
+    {
+        max-height: 300px;
+    }
+  }
+
+
 
