@@ -5,23 +5,19 @@ $(document).ready(function () {
     $('input#input_text, textarea#textarea1').characterCounter();
     $(".loader").hide();
     $('.modal').modal();
-    $('#groupeListe').hide();
 
-    //Fonction pour la sideNav
-    $("#groupeButton").click(function () {
-        var $this = $(this);
-
-        if ($this.data('clicked')) {
-            $this.data('clicked', false);
-            $('#groupeListe').hide();
-        }
-        else {
-            $this.data('clicked', true);
-            $('#groupeListe').show();
-        }
+    //Focus sur la modal à l'ouverture
+    $('#connexion').click(function () {
+        $('#modal1').modal('open');
+        $('#email2').focus();
     });
 
-    //Affiche la Description
+    //Fermeture du modal par le bouton
+    $('#modal2Fermer').click(function () {
+        $('#modal2').modal('close');
+    })
+
+    //Affiche la partie Description
     $('#case1').click(function () {
         $('#boutonDescription').text('Modifier la description');
         $("#boutonDescription").attr("href", "#modal1");
@@ -80,7 +76,7 @@ $(document).ready(function () {
             validerEdition($('#textePoste'), $('#editPoste'));
         });
         $('#annulerEditer').click(function () {
-            annulerEdition($('#textePoste'), $('#editPoste'),message );
+            annulerEdition($('#textePoste'), $('#editPoste'), message);
         });
     });
 
@@ -93,7 +89,7 @@ $(document).ready(function () {
             validerEdition($('#texteCommentaire'), $('#editerCommentaire'));
         });
         $('#annulerEditer').click(function () {
-            annulerEdition($('#texteCommentaire'), $('#editerCommentaire'),message );
+            annulerEdition($('#texteCommentaire'), $('#editerCommentaire'), message);
         });
     });
 
@@ -107,5 +103,3 @@ $(document).ready(function () {
         }
     });
 });
-
-$(".button-collapse").sideNav(); 

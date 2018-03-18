@@ -18,26 +18,6 @@ $(document).ready(function () {
         }
     });
 
-    //SideNav
-    $('#groupeListe').hide();
-
-    //SideNav
-    $("#groupeButton").click(function () {
-        var $this = $(this);
-
-        if ($this.data('clicked')) {
-            $this.data('clicked', false);
-            $('#groupeListe').hide();
-        }
-        else {
-            $this.data('clicked', true);
-            $('#groupeListe').show();
-        }
-    });
-
-    //SideNav
-    $(".button-collapse").sideNav();
-
     //Meme hieght du bloc Poste et Commentaire
     $(window).resize(function () {
         var result = $(".cartePoste").height();

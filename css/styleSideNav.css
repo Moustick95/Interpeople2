@@ -12,7 +12,7 @@
 {
   width: 60%;
   margin-left: 15px;
-  height: 60px;
+
 }
 
 #navTexte p
@@ -56,10 +56,11 @@
 
 #navProfil
 {
-  margin-top: 6.5em;
+  margin-top: 0em;
   display: flex;
-  align-items: baseline;
-font-family: 'Roboto',sans-serif;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Roboto',sans-serif;
 }
 
 #fondNav {

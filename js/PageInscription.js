@@ -6,11 +6,13 @@ $(document).ready(function () {
         divModifier.height(result);
     }
 
+    //Focus sur la modal à l'ouverture
     $('#connexion').click(function () {
         $('#modal1').modal('open');
         $('#email2').focus();
     });
 
+    //Fermeture du modal par le bouton
     $('#modal2Fermer').click(function(){
         $('#modal2').modal('close');        
     })
@@ -53,9 +55,6 @@ $(document).ready(function () {
         }
     });
 
-
-
-
     $("#colonne1").hover(function () {
         $(this).css("border-bottom-right-radius", "80px 80px", "fast");
     }, function () {
@@ -78,7 +77,6 @@ $(document).ready(function () {
         endingTop: '10%', // Ending top style attribute
     }
     );
-
 
 });
 

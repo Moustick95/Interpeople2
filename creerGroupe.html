@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta nom="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Import Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="css/styleCreerGroupe.css">
+    <link rel="stylesheet" href="css/styleSideNav.css">
+
+    <title>Interpeople Material</title>
+</head>
+
+<body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+
+    <!-- Navbar -->
+    <ul id="slide-out" class="side-nav grey lighten-4">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img id="fondNav" src="image/FondProfil.jpg">
+                </div>
+                <div id="navProfil">
+                    <a href="#!user">
+                        <img class="circle" src="image/index.png">
+                    </a>
+                    <div id="navTexte">
+                        <div class="white-text name" id="name">
+                            <p>John Doe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="subheader center-align">Gestion de votre profil</div>
+        </li>
+        <li>
+            <a href="pageProfil.html">
+                <i class="material-icons indigo-text ">account_circle</i> Profil</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <div class="subheader center-align">Vos relations</div>
+        </li>
+        <li>
+            <a href="pageAmis.html">
+                <i class="material-icons blue-text">contacts</i>Amis</a>
+        </li>
+        <li>
+            <a href="pageMur.html">
+                <i class="material-icons red-text">public</i>Accueil</a>
+        </li>
+        <li>
+            <a href="#" id="groupeButton">
+                <i class="material-icons green-text">group</i>Groupes</a>
+        </li>
+        <li>
+            <ul class="collection" id="groupeListe">
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 1</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 2</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 3</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="#!">Link 4</a>
+                </li>
+                <li class="collection-item">
+                    <a class="black-text" href="pageGroupe.html">
+                        <i class="material-icons">add_circle</i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <div class="subheader center-align">Autres</div>
+        </li>
+        <li>
+            <a href="#">
+                <i class="material-icons orange-text">exit_to_app</i>Logout</a>
+        </li>
+    </ul>
+    <!-- Navbar -->
+
+    <!-- Bouton Navbar -->
+    <div id="btnSide">
+        <a href="#" data-activates="slide-out" class="btn btn-large blue darken-3 white-text waves-effect button-collapse">
+            <i class="material-icons">chevron_right</i>
+        </a>
+    </div>
+    <!-- Bouton Navbar -->
+
+    <!-- Début Header -->
+    <nav>
+        <div class="nav-wrapper blue darken-1" id="navTop">
+            <a href="#" class="brand-logo center" id="titreNav">Interpeople</a>
+        </div>
+    </nav>
+    <!-- Fin Header -->
+
+    <!-- Petite ligne -->
+    <div class="col s12  white" style="height:3px;">
+    </div>
+    <!-- Petite ligne -->
+
+
+    <div class="row" style="height:100vh !important;">
+        <div class="col s4 offset-s4 z-depth-3 white" style="margin-top:15px;">
+            <div class="col s12 center-align">
+                <h5> Création du groupe</h5>
+            </div>
+            <div class="col s12 center-align">
+                <p>Remplissez ce formulaire pour créer un nouveau groupe</p>
+            </div>
+            <form class="center-align col s10 offset-s1">
+                <div class="input-field ">
+                    <input type="text" id="nomGroupe" class="validate">
+                    <label class="active" for="nomGroupe">Nom du groupe</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="description" class="materialize-textarea" data-length="150" maxlength="150"></textarea>
+                    <label for="description">Décrivez votre groupe</label>
+                </div>
+                <button class="btn green waves-effect waves-light" style="margin-bottom:10px;" type="submit" name="action">Créer
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/pageCreerGroupe.js"></script>
+    <script src="js/sideNav.js"></script>
+</body>
