@@ -12,7 +12,7 @@
 {
   width: 60%;
   margin-left: 15px;
-
+  font-family: 'Montserrat',sans-serif;
 }
 
 #navTexte p
@@ -35,6 +35,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   overflow : -moz-scrollbars-vertical;
+  font-family: 'Montserrat',sans-serif;  
 }
 
 .user-view
@@ -81,6 +82,10 @@
     left: 0px;
 }
 
+.btn
+{
+    font-family: 'Lato', sans-serif;
+}
 
 
 #btnSide i
@@ -90,7 +95,11 @@
 
 #titreNav
 {
-    font-family: 'Oswald';
+    font-family: 'Poppins';
     font-size: 2.5em;
-    
+}
+
+#titreGroupe
+{
+  font-family: 'Poppins';  
 }

@@ -20,6 +20,11 @@ html{
     margin-bottom: 0;
 }
 
+.btn
+{
+    font-family: 'Lato',sans-serif;
+}
+
 
 
 /* ---------------------- Début Ligne 1 --------------------------*/
@@ -175,7 +180,7 @@ footer
 
 h1
 {
-    font-family: 'Patua One', cursive;
+    font-family: 'Poppins', cursive;
     font-size: 7em;
 }
 
