@@ -26,7 +26,7 @@ html{
 
 #ligne1
 {
-    height: 75vh;
+    height: 80vh;
     padding: 0;
     background-color:#E8F8FF;
 }
@@ -50,7 +50,14 @@ html{
 
 footer
 {
-    height:25vh;   
+    height:20vh;   
+}
+
+.footer-copyright
+{
+    position: absolute;
+    bottom:0;
+    width: 100%;
 }
 
 .page-footer
@@ -175,8 +182,8 @@ h1
 /* Début Boite Modal */
 
 .modal {
-    width: 75vw !important ; 
-    height: 75vh !important ;
+    width: 35vw !important ; 
+    height: 65vh !important ;
     overflow: hidden;
 } 
 
@@ -204,20 +211,34 @@ h1
     margin-bottom: 0;
     background-color: #91C9E8;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.25em;
 }
 #colonne2
 {
     background-color: #91C9E8;    
     transition: all 0.75s;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.25em;
     
+}
+
+h5
+{
+    font-size: 1.90em;
+    font-weight: bold;
 }
 
 #TitreLogo
 {
     color: rgb(56, 56, 56);
-    margin-top: 2%;
-    height: calc(100%-2%) !important;    
+    margin-top: 5%;
+    height: calc(100%-5%) !important;    
 }
 
 #TitreLogo p
@@ -246,9 +267,101 @@ p
     font-family: 'Poppins', sans-serif;
 }
 
+@media (max-width: 1366px)
+{
+    #TitreLogo
+{
+    color: rgb(56, 56, 56);
+    margin-top: 2%;
+    height: calc(100%-2%) !important;    
+}
 
-/*----------------------------- Ligne 2 -----------------------*/
+    #ligne1
+    {
+        height: 75vh;
+        padding: 0;
+        background-color:#E8F8FF;
+    }
 
+.footer-copyright
+{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+}
+
+footer
+{
+    height:25vh;   
+}
+}
+
+@media (max-width: 960px)
+{
+#TitreLogo h1 {
+    font-size: 7em;
+}
+
+#colonne1 h5
+{
+    font-size: 1.25em;
+}
+
+#colonne2 h5
+{
+    font-size: 1.25em;
+}
+
+#connexion
+{
+    height: 35px;
+    line-height: 35px;
+}
+
+#inscription
+{
+    height: 35px;
+    line-height: 35px;
+}
+
+.modal {
+    width: 75vw !important ; 
+    height: 75vh !important ;
+    overflow: scroll;
+} 
+
+}
+
+@media (max-width: 385px)
+{
+    html{
+        margin-right:-0 !important;
+        overflow-x:hidden;
+    }
+
+    .row
+    {
+        width: 100vw !important;
+    }
+
+    #TitreLogo h1 {
+        font-size: 4.2em;
+    }
+
+    #TitreLogo img {
+        width: 95%;
+    }
+    footer
+    {
+        height:35vh;   
+    }
+    #ligne1
+    {
+        height: 65vh;
+        padding: 0;
+        background-color:#E8F8FF;
+    }
+}
 
 
 

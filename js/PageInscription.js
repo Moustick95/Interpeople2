@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
-    function resize(divInitial, divModifier) {
+    function resize(divInitial, divModifier,ecran) {    
         let result = $('#ligne1').height();
+        result-=ecran;
         divModifier.height(result);
     }
 
@@ -23,13 +24,37 @@ $(document).ready(function () {
         $('#email2').focus();
     });
 
-    resize($('#ligne1'), $('#colonne1'));
-    resize($('#ligne1'), $('#colonne2'));
+    resize($('#ligne1'), $('#colonne1'),100);
+    resize($('#ligne1'), $('#colonne2'),100);
 
     $(window).resize(function () {
-        resize($('#ligne1'), $('#colonne1'))
-        resize($('#ligne1'), $('#colonne2'))
+        resize($('#ligne1'), $('#colonne1'),100)
+        resize($('#ligne1'), $('#colonne2'),100)
     });
+
+    $(function() { 
+        var windowswidth= $(window).width();
+        console.log(windowswidth);
+        if(windowswidth < 1366){
+            resize($('#ligne1'), $('#colonne1'),0);
+            resize($('#ligne1'), $('#colonne2'),0);
+            $(window).resize(function () {
+                resize($('#ligne1'), $('#colonne1'),0)
+                resize($('#ligne1'), $('#colonne2'),0)
+            });
+        }
+    });
+
+    $(function() { 
+        var windowswidth= $(window).width();
+        if(windowswidth < 1000){
+            $('#colonne1').hide();
+            $('#colonne2').hide();            
+        }
+    });
+
+
+
 
     $("#colonne1").hover(function () {
         $(this).css("border-bottom-right-radius", "80px 80px", "fast");
