@@ -19,6 +19,7 @@ html
 .commentaireUnique
 {
     background-color: #B4DCED;
+    
 }
 
 #ajouterCommentaire
@@ -106,8 +107,7 @@ html
 .tailleBlocNouveau
 {
     min-height: 125px !important;    
-    background-color: #67B8DE;
-    background-color: rgb(139, 170, 196);    
+    background-color: #B4DCED;
 }
 
 #statsCommentaires
@@ -142,6 +142,8 @@ html
 .cartePoste
 {
     background-color: rgb(139, 170, 196);
+    background-color: #B4DCED;
+    
 }
 
 textarea{

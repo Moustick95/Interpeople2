@@ -104,7 +104,7 @@ footer
     flex-wrap: wrap;
     background-color: #FCFFF5;
 }
-
+/*
 #formulaire form
 {
     max-width: 100%;
@@ -114,12 +114,15 @@ footer
     justify-content: center;
     flex-wrap: wrap;
 }
-
+*/
+/*
 #formulaire div
 {
     width: 65% ;
     display: inline-block;
 }
+*/
+
 
 #formulaire .input-field
 {
@@ -134,32 +137,32 @@ footer
 }
 
   /* label color */
-  .input-field label {
+.input-field label {
     color: rgb(12, 69, 83)!important ;
     font-weight: bold;
     font-family: "Roboto", sans-serif;
-  }
+}
 
   /* label underline focus color */
-  .input-field input[type=text]:focus {
+.input-field input[type=text]:focus {
     border-bottom: 1px solid rgb(78, 105, 255) !important;
     box-shadow: 0 1px 0 0 rgb(24, 31, 71) !important;
-  }
+}
 
-  .input-field input[type=email]:focus {
+.input-field input[type=email]:focus {
     border-bottom: 1px solid rgb(78, 105, 255) !important;
     box-shadow: 0 1px 0 0 rgb(24, 31, 71) !important;
-  }
+}
 
-  .input-field input[type=password]:focus {
+.input-field input[type=password]:focus {
     border-bottom: 1px solid rgb(78, 105, 255) !important;
     box-shadow: 0 1px 0 0 rgb(24, 31, 71) !important;
-  }
+}
 
    /* label focus color */
-   .input-field input[type=text]:focus + label {
+.input-field input[type=text]:focus + label {
     color: rgb(34, 33, 56) !important;
-  }
+}
 
 /* ---------------------- Fin Input --------------------------*/
 
@@ -186,17 +189,21 @@ h1
 
 /* Début Boite Modal */
 
+/*
 .modal {
     width: 35vw !important ; 
     height: 65vh !important ;
     overflow: hidden;
 } 
+*/
 
+/*
 .modal form
 {
    width: 50%;
    display: inline-block;
 }
+*/
 
 /*Fin Boite Modal */
 
@@ -274,11 +281,13 @@ p
 
 @media (max-width: 1366px)
 {
+    /*
     #modal2 {
         width: 45vw !important;
         overflow-y: scroll;
     }
-    
+    */
+
     .btn-large {
         height: 45px !important;
         line-height: 45px !important;
@@ -313,12 +322,12 @@ p
     bottom:0;
     width: 100%;
 }
-
+/*
 form
 {
     width: 75%;
 }
-
+*/
 footer
 {
     height:25vh;   
@@ -354,11 +363,13 @@ footer
     line-height: 35px;
 }
 
+/*
 .modal {
     width: 75vw !important ; 
     height: 75vh !important ;
     overflow: scroll;
 } 
+*/
 
 }
 
@@ -369,16 +380,26 @@ footer
         overflow-x:hidden;
     }
 
+
+/*
+    .modal {
+        width: 75vw !important ; 
+        height: 75vh !important ;
+        overflow: scroll;
+    } 
+*/
     .row
     {
         width: 100vw !important;
     }
 
     #TitreLogo h1 {
+        margin-top: 45px;
         font-size: 4.2em;
     }
 
     #TitreLogo img {
+        margin-top: 5px;
         width: 95%;
     }
     footer

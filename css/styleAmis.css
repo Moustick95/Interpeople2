@@ -1,3 +1,12 @@
+html{
+    background-color: #E8F8FF;    
+}
+
+.input-field
+{
+    border-radius: 8px;
+} 
+
 .Carte
 {
     width: 10em;

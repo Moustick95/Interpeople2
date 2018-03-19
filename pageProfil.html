@@ -27,11 +27,15 @@
 
 </head>
 
+
+
 <body>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--Import jQuery before materialize.js-->
+
+
 
     <!-- Animation durant le chargement de la page -->
     <div class="loader center-align">
@@ -164,15 +168,15 @@
         </div>
 
         <!-- Image Profil -->
-        <div class="col s3 offset-s1" id="imageProfil">
-            <div class="card-panel z-depth-3 center-align hauteur" id="carteImageProfil">
+        <div class="col s12 m5 l3 offset-l1" id="imageProfil">
+            <div class="card-panel z-depth-3 center-align hauteur" id="carteImageProfil" style="height:320px !important;">
                 <img class="responsive-img z-depth-1" src="image/test.jpg" id="imageUtilisateur" alt="Image-Profil">
                 <div style="width:100%;">
                     <form action="#">
                         <div class="file-field input-field" id="formChangerImage">
                             <div class="btn">
                                 <span id="boutonChangerImage">
-                                    <p>Changer l'image</p>
+                                    Changer l'image
                                 </span>
                                 <input type="file">
                             </div>
@@ -188,7 +192,7 @@
         <!-- Image Profil -->
 
         <!-- Description Utilisateur -->
-        <div class="col s12 m6 offset-m1">
+        <div class="col s12 m7 l6 offset-l1">
             <div class="card horizontal z-depth-3">
                 <div class="card-stacked " id="carteFenetreDescription">
                     <div class="card-content z-depth-1" id="carteDescription">
@@ -370,7 +374,7 @@
             <h4>Description</h4>
             <div class="container">
                 <div class="row">
-                    <div class="col s8 offset-s2">
+                    <div class="col m12 l8 offset-l2">
                         <!-- Formulaire -->
                         <form action="">
                             <label for="formDescription">Saisissez votre nouvelle description</label>
@@ -399,22 +403,24 @@
                 <h4>Informations générales</h4>
                 <div class="row">
                     <!-- Formulaire -->
-                    <div class="input-field col s4 offset-s4">
-                        <input value="John" id="prenom" type="text" class="validate">
-                        <label class="active" for="prenom">Prénom</label>
-                    </div>
-                    <div class="input-field col s4 offset-s4">
-                        <input value="Doe" id="nom" type="text" class="validate">
-                        <label class="active" for="nom">Nom</label>
-                    </div>
-                    <div class="input-field col s4 offset-s4">
-                        <input value="01/02/1995" id="dateNaissance" type="text" class="validate">
-                        <label class="active" for="dateNaissance">Date de naissance</label>
-                    </div>
-                    <div class="input-field col s4 offset-s4">
-                        <input value="Musique" id="hobbie" type="text" class="validate">
-                        <label class="active" for="hobbie">Hobbies</label>
-                    </div>
+                    <form action="" class="col s4 offset-s4 m12">
+                        <div class="input-field ">
+                            <input value="John" id="prenom" type="text" class="validate">
+                            <label class="active" for="prenom">Prénom</label>
+                        </div>
+                        <div class="input-field col ">
+                            <input value="Doe" id="nom" type="text" class="validate">
+                            <label class="active" for="nom">Nom</label>
+                        </div>
+                        <div class="input-field col ">
+                            <input value="01/02/1995" id="dateNaissance" type="text" class="validate">
+                            <label class="active" for="dateNaissance">Date de naissance</label>
+                        </div>
+                        <div class="input-field col ">
+                            <input value="Musique" id="hobbie" type="text" class="validate">
+                            <label class="active" for="hobbie">Hobbies</label>
+                        </div>
+                    </form>
                     <!-- Formulaire -->
                 </div>
             </div>

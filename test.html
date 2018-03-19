@@ -1,66 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <meta nom="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
+    <!--Import Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="css/styleProfil.css">
+    <link rel="stylesheet" href="css/styleSideNav.css">
+    <!-- Import CSS -->
 
-    <title>Interpeople Material</title>
+    <title>Profil/Interpeople</title>
+
 </head>
+
 <style>
-    .page-footer
-    {
-        padding: 0 !important;
-    }
-    #ligneFooter
-    {
-        margin-bottom: 0 !important;
-    }
-    #texteFooter
-    {
-        font-size: 0.85em;
-    }
+
 </style>
 
 <body>
     <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+        <a href="#modal1" class="btn blue accent-2 hoverable waves-effect z-depth-2 modal-trigger" id="boutonDescription">Modifier la description</a>
 
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row" id="ligneFooter">
-                <div class="col l8 s12">
-                    <h5 class="white-text">Blop Team</h5>
-                    <p class="grey-text text-lighten-4" id="texteFooter">
-                        Nous sommes pour l'instant une équipe réduite de 2 personnes qui veulent accomplir de grandes idées.
-                        Nous mettons à profit notre passion pour un web plus éthique et respecteux envers les utilisateurs
-                    </p>
+  <!-- Modal Description -->
+  <div id="modal1" class="modal">
+        <div class="modal-content center-align">
+            <div class="col s12 right-align">
+                <button class="btn red" id="modal1Fermer">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+            <h4>Description</h4>
+            <div class="container">
+                <div class="row">
+                    <div class="col m12 l8 offset-l2">
+                        <!-- Formulaire -->
+                        <form action="">
+                            <label for="formDescription">Saisissez votre nouvelle description</label>
+                            <textarea id="formDescription" class="materialize-textarea blue lighten-5" data-length="120" maxlength="120"></textarea>
+                        </form>
+                        <!-- Formulaire -->
+                        <button id="nouvelleDescription" class="modal-action modal-close waves-effect waves-green btn-flat blue lighten-4 black-text">Confirmer</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2018 Copyright Tanguy Legendre & Flavien Lair
-                <a class="grey-text text-lighten-4 right" href="#!">Contacts</a>
-            </div>
+        <div class="modal-footer">
         </div>
-    </footer>
+    </div>
+    <!-- Modal Description  -->
 
-    <script>
+    <script src="js/pageProfil.js"></script>
+    <script src="js/sideNav.js"></script>
 
-    </script>
+
 
 </body>
-
+<script>
+        $(document).ready(function(){
+                $('.modal').modal({
+                dismissible: false, // Modal can be dismissed by clicking outside of the modal
+                opacity: .25, // Opacity of modal background
+                inDuration: 300, // Transition in duration
+                outDuration: 150, // Transition out duration
+                startingTop: '4%', // Starting top style attribute
+                endingTop: '10%', // Ending top style attribute
+            }
+            );
+        
+            $('#modal1Fermer').click(function () {
+                $('#modal1').modal('close');
+            })
+        });
+</script>
 </html>
