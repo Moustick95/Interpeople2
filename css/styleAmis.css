@@ -64,6 +64,13 @@
     width: 100% !important;
 }
 
+.row img
+{
+    height:150px !important;
+    width:150px !important;
+    object-fit: fill !important;
+}
+
 .btn
 {
     border-top-left-radius: 0px !important; 
