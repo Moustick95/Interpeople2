@@ -1,6 +1,6 @@
 html
 {
-    background-color: #B4DCED;
+    background-color:#E8F8FF;
 }
 
 .poste
@@ -57,7 +57,8 @@ html
     font-family: 'Poppins',sans-serif;    
     margin-top:0.5em;
     overflow: auto;
-    background-color: #67B8DE;
+    background-color:#E8F8FF;
+    
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     
@@ -99,13 +100,14 @@ html
 #nouveauMessage
 {
     margin-top: 10px;
+    
 }
 
 .tailleBlocNouveau
 {
     min-height: 125px !important;    
     background-color: #67B8DE;
-    
+    background-color: rgb(139, 170, 196);    
 }
 
 #statsCommentaires
@@ -139,7 +141,7 @@ html
 
 .cartePoste
 {
-    background-color: #91C9E8;
+    background-color: rgb(139, 170, 196);
 }
 
 textarea{

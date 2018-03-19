@@ -274,6 +274,10 @@ p
 
 @media (max-width: 1366px)
 {
+    #modal2 {
+        width: 45vw !important;
+        overflow-y: scroll;
+    }
     
     .btn-large {
         height: 45px !important;

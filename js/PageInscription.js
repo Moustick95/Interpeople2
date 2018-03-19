@@ -37,7 +37,7 @@ $(document).ready(function () {
     $(function() { 
         var windowswidth= $(window).width();
         console.log(windowswidth);
-        if(windowswidth < 1366){
+        if(windowswidth < 1367){
             resize($('#ligne1'), $('#colonne1'),0);
             resize($('#ligne1'), $('#colonne2'),0);
             $(window).resize(function () {

@@ -2,9 +2,36 @@ $(document).ready(function () {
 
     Materialize.updateTextFields();
 
+    $('.modal').modal({
+        dismissible: false, // Modal can be dismissed by clicking outside of the modal
+        opacity: .25, // Opacity of modal background
+        inDuration: 300, // Transition in duration
+        outDuration: 150, // Transition out duration
+        startingTop: '4%', // Starting top style attribute
+        endingTop: '10%', // Ending top style attribute
+    }
+    );
+
+    $('#modal1Fermer').click(function(){
+        $('#modal1').modal('close');        
+    })
+    $('#modal2Fermer').click(function(){
+        $('#modal2').modal('close');        
+    })
+    $('#modal3Fermer').click(function(){
+        $('#modal3').modal('close');        
+    })
+    $('#modal4Fermer').click(function(){
+        $('#modal4').modal('close');        
+    })
+    $('#modal5Fermer').click(function(){
+        $('#modal5').modal('close');        
+    })
+
+    
+
     $('input#input_text, textarea#textarea1').characterCounter();
     $(".loader").hide();
-    $('.modal').modal();
 
     //Focus sur la modal à l'ouverture
     $('#connexion').click(function () {
@@ -37,6 +64,7 @@ $(document).ready(function () {
         $('#boutonDescription').addClass('disabled');
     });
 
+
     //Supprime le compte
     $('#supprimerCompte').click(function () {
         confirm('T\'es sur de toi ?');
@@ -53,6 +81,7 @@ $(document).ready(function () {
 
     //Fonction pour valider l'édition
     function validerEdition(contenu, bouton) {
+        Materialize.toast('Modification validé', 2500)        
         $(bouton).removeClass('disabled');
         $('#validerEditer').remove();
         $('#annulerEditer').remove();
@@ -61,6 +90,7 @@ $(document).ready(function () {
 
     //Fonction pour annuler l'édition
     function annulerEdition(contenu, bouton, message) {
+        Materialize.toast('Modification annulé', 2500)
         $(contenu).text(message);
         $(bouton).removeClass('disabled');
         $('#validerEditer').remove();
@@ -92,6 +122,8 @@ $(document).ready(function () {
             annulerEdition($('#texteCommentaire'), $('#editerCommentaire'), message);
         });
     });
+
+
 
     //Bouton qui affiche les modal
     $('#boutonDescription').click(function () {

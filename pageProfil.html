@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <!-- Import CSS -->
     <link rel="stylesheet" href="css/styleProfil.css">
@@ -98,19 +98,10 @@
         <li>
             <ul class="collection" id="groupeListe">
                 <li class="collection-item">
-                    <a class="black-text" href="#!">Link 1</a>
+                    <a class="black-text" href="pageGroupe.html">Link 1</a>
                 </li>
                 <li class="collection-item">
-                    <a class="black-text" href="#!">Link 2</a>
-                </li>
-                <li class="collection-item">
-                    <a class="black-text" href="#!">Link 3</a>
-                </li>
-                <li class="collection-item">
-                    <a class="black-text" href="#!">Link 4</a>
-                </li>
-                <li class="collection-item">
-                    <a class="black-text" href="pageGroupe.html">
+                    <a class="black-text" href="creerGroupe.html">
                         <i class="material-icons">add_circle</i>
                     </a>
                 </li>
@@ -137,6 +128,9 @@
     </div>
     <!-- Bouton Navbar -->
 
+
+
+
     <!-- Composant de la page -->
     <!-- ------------------------- -->
 
@@ -144,7 +138,17 @@
     <nav>
         <div class="nav-wrapper blue darken-1" id="navTop">
             <a href="#" class="brand-logo center" id="titreNav">Interpeople</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <li>
+                        <a href="#" id="boutonAjouterAmi">
+                            <i class="material-icons left">add_circle</i>Ajouter un ami</a>
+                    </li>
+                </li>
+            </ul>
+
         </div>
+
     </nav>
     <!-- Fin Header -->
 
@@ -164,17 +168,28 @@
             <div class="card-panel z-depth-3 center-align hauteur" id="carteImageProfil">
                 <img class="responsive-img z-depth-1" src="image/test.jpg" id="imageUtilisateur" alt="Image-Profil">
                 <div style="width:100%;">
-                    <button class="btn red valign-wrapper" id="profilBouton">
-                    <div class="plop"> Changer l'image</div>
-                </button>
-            </div>
+                    <form action="#">
+                        <div class="file-field input-field" id="formChangerImage">
+                            <div class="btn">
+                                <span id="boutonChangerImage">
+                                    <p>Changer l'image</p>
+                                </span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
             </div>
         </div>
         <!-- Image Profil -->
 
         <!-- Description Utilisateur -->
         <div class="col s12 m6 offset-m1">
-            <div class="card horizontal z-depth-3" >
+            <div class="card horizontal z-depth-3">
                 <div class="card-stacked " id="carteFenetreDescription">
                     <div class="card-content z-depth-1" id="carteDescription">
                         <div class="card-tabs ">
@@ -347,6 +362,11 @@
     <!-- Modal Description -->
     <div id="modal1" class="modal">
         <div class="modal-content center-align">
+            <div class="col s12 right-align">
+                <button class="btn red" id="modal1Fermer">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
             <h4>Description</h4>
             <div class="container">
                 <div class="row">
@@ -370,6 +390,11 @@
     <!-- Modal Informations générales -->
     <div id="modal2" class="modal">
         <div class="modal-content center-align">
+            <div class="col s12 right-align">
+                <button class="btn red" id="modal2Fermer">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
             <div class="container">
                 <h4>Informations générales</h4>
                 <div class="row">
@@ -403,6 +428,11 @@
     <!-- Modal Structure Nouveau mot de passe -->
     <div id="modal3" class="modal">
         <div class="modal-content center-align">
+            <div class="col s12 right-align">
+                <button class="btn red" id="modal3Fermer">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
             <div class="container">
                 <h4>Changement de mot passe</h4>
                 <div class="row">
@@ -430,6 +460,11 @@
     <!-- Modal Structure Nouveau Mail -->
     <div id="modal4" class="modal">
         <div class="modal-content center-align">
+            <div class="col s12 right-align">
+                <button class="btn red" id="modal4Fermer">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
             <div class="container">
                 <h4>Changement de mail</h4>
                 <div class="row">
@@ -454,6 +489,11 @@
     <!-- Modal Structure Nouveau Mail -->
     <div id="modal5" class="modal">
         <div class="modal-content center-align">
+            <div class="col s12 right-align">
+                <button class="btn red" id="modal5Fermer">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
             <div class="container">
                 <h4>Changement d'image</h4>
                 <div class="row">
