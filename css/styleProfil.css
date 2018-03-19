@@ -263,6 +263,14 @@ color: grey !important;
     align-items: center;
 }
 
+#imageUtilisateur
+{
+    height: auto; 
+    width: auto; 
+    max-width: 100%; 
+    max-height: auto;
+}
+
 .fileupload input {
     position: absolute;
     top: 0;

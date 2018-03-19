@@ -235,7 +235,7 @@ h1
 
 h5
 {
-    font-size: 1.90em;
+    font-size: medium;
     font-weight: bold;
 }
 
@@ -274,6 +274,11 @@ p
 
 @media (max-width: 1366px)
 {
+    
+    .btn-large {
+        height: 45px !important;
+        line-height: 45px !important;
+    }
 
     #colonne1
     {
@@ -283,7 +288,6 @@ p
     {
         font-size: 1em;
     }
-
 
     #TitreLogo
 {
@@ -306,10 +310,16 @@ p
     width: 100%;
 }
 
+form
+{
+    width: 75%;
+}
+
 footer
 {
     height:25vh;   
 }
+
 }
 
 @media (max-width: 960px)
