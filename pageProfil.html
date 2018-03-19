@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <!-- Import CSS -->
     <link rel="stylesheet" href="css/styleProfil.css">
@@ -164,17 +164,26 @@
             <div class="card-panel z-depth-3 center-align hauteur" id="carteImageProfil">
                 <img class="responsive-img z-depth-1" src="image/test.jpg" id="imageUtilisateur" alt="Image-Profil">
                 <div style="width:100%;">
-                    <button class="btn red valign-wrapper" id="profilBouton">
-                    <div class="plop"> Changer l'image</div>
-                </button>
-            </div>
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn" >
+                                <span id="boutonChangerImage"> <p>Changer l'image</p> </span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                              </div>
+                        </div>
+                    </form>
+
+                </div>
             </div>
         </div>
         <!-- Image Profil -->
 
         <!-- Description Utilisateur -->
         <div class="col s12 m6 offset-m1">
-            <div class="card horizontal z-depth-3" >
+            <div class="card horizontal z-depth-3">
                 <div class="card-stacked " id="carteFenetreDescription">
                     <div class="card-content z-depth-1" id="carteDescription">
                         <div class="card-tabs ">
