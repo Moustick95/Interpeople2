@@ -269,6 +269,22 @@ color: grey !important;
     margin-top: 0px;
 }
 
+#formChangerImage
+{
+    margin-left: 15%;
+    height: 50px;
+    width: 190px;
+    overflow: hidden;
+
+}
+
+#toast-container {
+    top: auto !important;
+    right: auto !important;
+    bottom: 5%;
+    left :83%;
+}
+
 #imageUtilisateur
 {
     height: auto; 
